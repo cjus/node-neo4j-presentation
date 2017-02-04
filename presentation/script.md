@@ -12,7 +12,7 @@ Let's begin. But first what is a graph?
 
 In this presentation we won't concern ourselves with these types of graphs:
 
-<center><img src="not-these-graphs.png" width="400"/></center>
+<img src="not-these-graphs.png" width="400"/>
 
 The graphs we'll consider consists of circles and lines and are commonly known as network graphs.
 
