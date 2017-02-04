@@ -16,21 +16,21 @@ In this presentation we won't concern ourselves with these types of graphs:
 
 The graphs we'll consider consists of circles and lines and are commonly known as network graphs.
 
-<center><img src="graph1.png" style="width: 400px;"/></center>
+<img src="graph1.png" width="400"/>
 
 This is a graph defined in scientific terms, i.e. mathematics and computer science.
 
-<center><img src="graph2.png" style="width: 400px;"/></center>
+<img src="graph2.png" width="400"/>
 
 A thing is represented by a **vertex** and a link is referred to as an **edge**. We can think of the vertices as representing things and the edges as the relationship between them. In this presentation we'll simply refer to them as nodes and links. 
 
 A graph can take on real world meaning, such as the relationships between people. In this graph Tom knows Alex but doesn't directly know Bill or even his neighbors Susan and Jane. If Tom wanted to meet Susan he could ask Alex to introduce them.
 
-<center><img src="graph3.png" style="width: 400px;"/></center>
+<img src="graph3.png" width="400"/>
 
 Graphs can become quite complex, such as with social acquaintances on LinkedIn or Facebook.
 
-<center><img src="graph4.png" style="width: 400px;"/></center>
+<img src="graph4.png" width="400"/>
 
 We'll see additional examples of graphs throughout this presentation.
 
@@ -38,7 +38,7 @@ We'll see additional examples of graphs throughout this presentation.
 
 Graphs diagrams came about as the leisurely pursuit of [Leonard Euler](https://en.m.wikipedia.org/wiki/Leonhard_Euler) a Swiss born mathematician who is widely regarded as the most prolific mathematician of all time.
 
-<center><img src="Leonhard_Euler.jpg" style="width: 200px;"/></center>
+<img src="Leonhard_Euler.jpg" width="200"/>
 
 In 1736, from his home in Saint Petersburg, Euler turned his attention to a problem which was much talked about by the people of the nearby town of Königsberg - which is now Kaliningrad in Russia. During a time of great prosperity the people of Königsberg created seven bridges across the Pregel River to connect two large islands with the surrounding land.
 
@@ -60,26 +60,27 @@ In truth, graphs are everywhere.
 
 If you consider a map of the New York City subway system - or any subway in the world for that matter - and if you label the train stations as nodes and the routes connecting stations as links you'll quickly see a graph emerge.
 
-<center><img src="nycsubway.jpg" style="width: 500px;"/></center>
+<img src="nycsubway.jpg" width="500"/>
 
 A look at cities throughout the world reveal airports, and in larger cities - airport hubs - which connect flights to destinations around the globe.  
 
-<center><img src="onworld-map.jpg" style="width: 500px;"/></center>
+<img src="onworld-map.jpg" width="500"/>
 
 Graphs are heavily employed in logistics which tries to find efficient paths for the delivery of goods. This allows companies such as FedEx to maintain competitive advantages in global distribution.
 
-<center><img src="fedex.jpg" style="width: 500px;"/></center>
+<img src="fedex.jpg" width="500"/>
 
 Consider 3D games, the characters and terrains are built from wireframe models called meshes, which are essentially graphs.  
 
-<center><img src="3dcharacter.png" style="width: 500px;"/></center>
-<center><img src="TerrainWireframe.jpg" style="width: 500px;"/></center>
+<img src="3dcharacter.png" width="500"/>
+<img src="TerrainWireframe.jpg" width="500"/>
 
 > As a quick aside, the process of applying a skin (texture) to a wireframe model is essentially the mapping of an image onto the area (faces) created by vertices and edges.
 
 That's all very cool - but we need go no further than our own thoughts to realize that the neurons in our own brains form a network graph.
 
-<center><img src="brain.png" style="width: 400px;"/></center>
+<img src="brain.png" width="400"/>
+
 Indeed graphs are everywhere.
 
 ## Graphs power Google search and social networks
@@ -102,7 +103,7 @@ Rather than organize data as collections of tables, rows and columns - or even a
 
 Let's take a closer look. In this next graph we have vertices (nodes) and edges (links) that both have associated properties. We have an age property associated with each person, and we could have easily added other personal characteristics. In the links we've associated information about when a relationship began.
 
-<center><img src="graph5.png" style="width: 400px;"/></center>
+<img src="graph5.png" width="400"/>
 
 ## Enter Neo4j
 
