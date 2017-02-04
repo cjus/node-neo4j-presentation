@@ -48,7 +48,7 @@ In a short paper, Euler offered a proof that such a path could not exist. Don't 
 
 Euler represented the land masses as vertices and used links to represents the bridges. He then labeled each vertex with a letter from A to D. That is believed to be the first example of a topology being represented as a graph.
 
-<img src="Seven_Bridges_of_Konigsberg.png" width="800"/>
+<img src="Seven_Bridges_of_Konigsberg.png"/>
 
 With this, Euler inadvertently founded an extensive branch of mathematics called graph theory - to which many other well known mathematicians have since contributed.
 
