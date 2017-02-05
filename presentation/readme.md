@@ -63,12 +63,12 @@ Graphs are heavily employed in logistics which finds efficient paths for the del
 
 <img src="fedex.jpg" width="500"/>
 
-Consider 3D games, the characters and terrains are built from wireframe models called meshes, which are essentially graphs.  
+Consider 3D games, the characters and terrains are built from wire frame models called meshes, which are essentially graphs.  
 
 <img src="TerrainWireframe.jpg" width="500"/>
 <img src="3dcharacter.png" width="500"/>
 
-> As a quick aside, the process of applying a skin (texture) to a wireframe model involves mapping an image onto the area within vertices and edges in a process known as texture mapping.
+> As a quick aside, the process of applying a skin (texture) to a wire frame model involves mapping an image onto the area within vertices and edges in a process known as texture mapping.
 
 Researchers are using graphs to understand diverse topics such as biodiversity, terrorist networks, and spread of global epidemics. 
 
@@ -109,7 +109,7 @@ Such a graph could become the basis for an intelligent contact management applic
 
 ## Enter Neo4j
 
-To explore graph databases we're going to use the world's most popular graph database, Neo4j. Affectionally referred to by fans, as Neo.
+To explore graph databases we're going to use the world's most popular graph database, Neo4j. Affectionately referred to by fans, as Neo.
 
 You can download and install a free copy of Neo from https://neo4j.com/download/community-edition
 However, also being a big fan of Docker, I prefer to run Neo4j from a Docker container.
@@ -191,7 +191,7 @@ MATCH (p1:Person {name: "Susan"})-[r:Knows*2]-(p2:Person {interest: "business"})
 RETURN p1, r, p2;
 ```
 
-The new bit is the syntax `-[r:Knows*2]-`.  Here we saying "Match a Person node with the property name="Susan" with one or more Knows relationships to a person with an interest in "business".  Here lies the power of graph queries, the ability to traverse a network of relationships to answer questions such as find me a friend of a friend (or more) who matches a criteria. This is also where relational database systems and their use of joins becomes far less than ideal at scale.  Such queries are also how recommendation engines can be used promote new products. For example: when Amazon lists products also purchased in conjunction with a product your considering.
+The new bit is the syntax `-[r:Knows*2]-`.  Here we're saying "Match a Person node with the property name="Susan" with one or more Knows relationships to a person with an interest in "business".  Here lies the power of graph queries, the ability to traverse a network of relationships to answer questions such as find me a friend of a friend (or more) who matches a particlar criteria. This is also where relational database systems and their use of joins becomes far less than ideal at scale.  Such queries are also how recommendation engines can be used promote new products. For example: when Amazon lists products also purchased in conjunction with a product you're considering.
 
 ## Accessing Neo4j from JavaScript
 
