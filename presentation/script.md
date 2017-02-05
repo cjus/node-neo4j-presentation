@@ -14,7 +14,7 @@ In this presentation we won't concern ourselves with these types of graphs:
 
 <img src="not-these-graphs.png" width="400"/>
 
-The graphs we'll consider consists of circles and lines and are commonly known as network graphs.
+The graphs we're interested in consists of circles and lines and are commonly known as network graphs.
 
 <img src="graph1.png" width="400"/>
 
@@ -22,11 +22,11 @@ This is a graph defined in scientific terms, i.e. mathematics and computer scien
 
 <img src="graph2.png" width="400"/>
 
-A thing is represented by a **vertex** and a link is referred to as an **edge**. We can think of the vertices as representing things and the edges as the relationship between them. In this presentation we'll simply refer to them as nodes and links. 
+A "thing" is represented by a **vertex** and a "link" is referred to as an **edge**. We can think of the vertices as representing nodes and the edges as the relationship between them. In this presentation we'll simply refer to them as nodes and links. 
 
 A graph can take on real world meaning, such as the relationships between people. In this graph Tom knows Alex but doesn't directly know Bill or even his neighbors Susan and Jane. If Tom wanted to meet Susan he could ask Alex to introduce them.
 
-<img src="graph3.png" width="400"/>
+<img src="alex-introduces-tom-and-susan.png" width="400"/>
 
 Graphs can become quite complex, such as with social acquaintances on LinkedIn or Facebook.
 
@@ -40,11 +40,11 @@ Graphs diagrams came about as the leisurely pursuit of [Leonard Euler](https://e
 
 <img src="Leonhard_Euler.jpg" width="200"/>
 
-In 1736, from his home in Saint Petersburg, Euler turned his attention to a problem which was much talked about by the people of the nearby town of Königsberg - which is now Kaliningrad in Russia. During a time of great prosperity the people of Königsberg created seven bridges across the Pregel River to connect two large islands with the surrounding land.
+In 1736, from his home in Saint Petersburg, Euler turned his attention to a problem which was much talked about by the people of the nearby town of Königsberg - which is now the city of Kaliningrad in Russia. During a time of great prosperity the people of Königsberg created seven bridges across the Pregel River to connect two large islands with the surrounding landscape.
 
 The people of Königsberg pondered whether it was possible to cross the seven bridges without crossing one twice.
 
-In a short paper, Euler offered a proof that such a path could not exist. Don't worry we wont get into the proof here. For this discussion it isn't the proof that we're interested in but rather the way in which Euler approached the problem.
+In a short paper, Euler offered a proof that such a path could not exist. Don't worry we wont get into the proof here. For this discussion it isn't the proof that we're interested in, but rather the way in which Euler approached the problem.
 
 Euler represented the land masses as vertices and used links to represents the bridges. He then labeled each vertex with a letter from A to D. That is believed to be the first example of a topology being represented as a graph.
 
@@ -58,7 +58,7 @@ However, graphs didn't start with Euler, his keen contribution was in how to vis
 
 In truth, graphs are everywhere.
 
-If you consider a map of the New York City subway system - or any subway in the world for that matter - and if you label the train stations as nodes and the routes connecting stations as links you'll quickly see a graph emerge.
+If you consider a map of the New York City subway system - or any subway in the world for that matter - and if you label the train stations as nodes and the routes connecting stations as links - you'll quickly see a graph emerge.
 
 <img src="nycsubway.jpg" width="500"/>
 
@@ -72,26 +72,22 @@ Graphs are heavily employed in logistics which tries to find efficient paths for
 
 Consider 3D games, the characters and terrains are built from wireframe models called meshes, which are essentially graphs.  
 
-<img src="3dcharacter.png" width="500"/>
 <img src="TerrainWireframe.jpg" width="500"/>
+<img src="3dcharacter.png" width="500"/>
 
-> As a quick aside, the process of applying a skin (texture) to a wireframe model is essentially the mapping of an image onto the area (faces) created by vertices and edges.
+> As a quick aside, the process of applying a skin (texture) to a wireframe model involves mapping an image onto the area within vertices and edges in a process known as texture mapping.
 
 That's all very cool - but we need go no further than our own thoughts to realize that the neurons in our own brains form a network graph.
 
-<img src="brain.png" width="400"/>
+<img src="brain.png" width="500"/>
 
-Indeed graphs are everywhere.
+In his 1854 speech on ecology, Chief Seattle - a leader for the Suquamish and Duwamish indian tribes, proclaimed: "All things are connected like the blood which unites one family".
 
-## Graphs power Google search and social networks
-
-If it were not for a study of graphs we wouldn't have Google (page rank), Facebook, LinkedIn and Twitter. 
+Indeed graphs are everywhere. 
 
 ## Why graphs
 
-Graphs are appealing because they closely model how we think.
-
-That is, since infancy we catalog objects and assign properties to them. We then map objects to one another based on their relationship, and we continue refining our understanding throughout our lives.
+Graphs are appealing because they closely model how we think.  Since infancy we catalog objects and assign properties to them. We then map objects to one another based on their relationship, and we continue refining our understanding throughout our lives.
 
 Think about any complex topic you've had to learn. Perhaps you began by reading introductory material that provided you a high level overview. During that process you were exposed to new terms and as you learned more about them you were able to associate characteristics or properties to those terms. As you continued learning you were able to identify relationships allowing you to associate a topic in relations to other topics you already understood.
 
@@ -101,19 +97,31 @@ Indeed it's highly unlikely that you built a relational table and created foreig
 
 Rather than organize data as collections of tables, rows and columns - or even as collections of documents - graph databases allow you to model data and relationships in a way that closely mirrors how you naturally see and describe them.
 
-Let's take a closer look. In this next graph we have vertices (nodes) and edges (links) that both have associated properties. We have an age property associated with each person, and we could have easily added other personal characteristics. In the links we've associated information about when a relationship began.
+Let's take a closer look. In this next graph we have nodes and links that both have associated properties. We have an age property associated with each person, and we could have easily added other personal characteristics. In the links we've associated information about when a relationship began.
 
 <img src="graph5.png" width="400"/>
+
+Such a graph could become the basis for an intelligent contact management application.
 
 ## Enter Neo4j
 
 To explore graph databases we're going to use the world's most popular graph database, Neo4j. Affectionally referred to as Neo by fans.
 
-There are install packages for setting up an instance of Neo4j on the company website. However I personally prefer to run Neo4j from a Docker container.
+You can download and install a free copy of Neo from https://neo4j.com/download/community-edition
+However I personally prefer to run Neo4j from a Docker container.
+
+```
+$ docker pull neo4j:3.1.0
+$ docker run -d -p 7474:7474 -p 7687:7687 -v ~/data:/data --name neo4j neo4j:3.1.0
+```
 
 ## Neo4j dashboard
 
-Neo4j comes a web-based dashboard that allows you to interact with Neo. It's a great way to initially learn about Neo and later create and test your data models. Not only is it an indispensable tool, it's also a real pleasure to use. 
+Neo4j comes with a web-based dashboard that allows you to interact with Neo. It's a great way to initially learn about Neo and later create and test your data models. Not only is it an indispensable tool, it's also a real pleasure to use. 
+
+<img src="neo4j_browser.png" width="400"/>
+
+You can connect to a local instance of Neo4j by pointing your web browser to http://localhost:7474
 
 ## Neo4j queries
 
@@ -138,7 +146,7 @@ RETURN p;
 
 There are a few important characteristics in the query shown. On the first line we see that we're trying to match a node, represented by a query enclosed in parentheses. The p:Person fragment says "create a variable called p with a label of Person". So here we learn that nodes can have labels (Person) and that we can assign them to variables (p).  On line two we simply return the contents of p.
 
-We can also specify the use of properties and query values by listing them within curly braces. so, `{name: "Alex"}` says we're interested in only matching nodes which have a name property with the value of "Alex".
+We can also specify the use of properties and query values by listing them within curly braces. So, `{name: "Alex"}` says we're interested in only matching nodes which have a name property with the value of "Alex".
 
 If we wanted to return all the people in our graph, our query would be even simpler:
 
@@ -179,7 +187,7 @@ MATCH (p1:Person {name: "Susan"})-[r:Knows*2]-(p2:Person {interest: "business"})
 RETURN p1, r, p2;
 ```
 
-The new bit is the syntax `-[r:Knows*2]-`.  Here we saying "Match a Person node with the property name="Susan" with one or more Knows relationships to a person with an interest of "business".  Here lies the power of graph queries, the ability to traverse a network of relationships to answer questions such as find me a friend of a friend (or more) who matches a particular criteria. This is also where relational database systems and their use of joins becomes far less than ideal at scale.  Such queries are also how recommendation engines can be used promote new products. For example: listing products also purchased in conjunction with a product your considering.
+The new bit is the syntax `-[r:Knows*2]-`.  Here we saying "Match a Person node with the property name="Susan" with one or more Knows relationships to a person with an interest of "business".  Here lies the power of graph queries, the ability to traverse a network of relationships to answer questions such as find me a friend of a friend (or more) who matches a particular criteria. This is also where relational database systems and their use of joins becomes far less than ideal at scale.  Such queries are also how recommendation engines can be used promote new products. For example: when Amazon lists products also purchased in conjunction with a product your considering.
 
 ## Accessing Neo4j from JavaScript
 
@@ -189,9 +197,116 @@ I also wrote a limited and highly opinionated Node library that facilitates conn
 
 Neo Technologies, the company behind Neo4j, has created the [Neo4j Driver for Javascript](https://www.npmjs.com/package/neo4j-driver) NPM package. That's the library we'll use in this presentation.
 
+### Installing
 
+```shell
+$ mkdir neo-test; cd neo-test
+$ npm init -y
+$ npm install neo4j-driver
+```
 
+### Connecting to Neo
 
+Here is the `alex.js` example from this [presentation's repo](https://github.com/cjus/node-neo4j-presentation). We begin by defining the location of our neo4j database instance. I'm running mine on my laptop so I specify `localhost`.  The `bolt://` portion tells Neo that we'd like to use the faster binary connection protocol, instead of the HTTP version. You can find out more about bolt [here](https://neo4j.com/blog/neo4j-3-0-language-drivers).
+
+We then require the neo4j-driver and prepare an auth object to pass to the neo4j.driver setup. With a driver created we define an error handler.
+
+```javascript
+const database = 'bolt://localhost';
+const neo4j = require('neo4j-driver').v1;
+const auth = neo4j.auth.basic('neo4j', 'omega16');
+const driver = neo4j.driver(database, auth);
+
+driver.onError = (error) => {
+  console.log('Driver instantiation failed', error);
+};
+```
+
+Next we create a driver session and run (execute) a Cypher query.  Note that the run function both accepts to parameter and returns a promise. The first parameter to run is the query template and the second is an object with query parameters. This allows Neo to cache query plans for added efficiency. We then use the `.then` and `.catch` to handle the resolve or reject of the promise returned by the run function. 
+
+```javascript
+let session = driver.session();
+session
+  .run(
+    'MATCH (p:Person {name: {nameParam}}) RETURN p.name, p.age, p.interest',
+    {nameParam: 'Alex'}
+  )
+  .then((result) => {
+    result.records.forEach((record) => {
+      console.log(`Name: ${record.get('p.name')}`);
+      console.log(`Age: ${record.get('p.age')}`);
+      console.log(`Interest: ${record.get('p.interest')}`);
+    });
+  })
+  .catch((err) => {
+    console.log('err', err);
+  })
+  .then(() => {
+    session.close();
+    driver.close();
+  });
+```
+
+Here is the output from the previous code. We display display the information returned from the Cypher query.
+
+```shell
+$ node alex.js
+Name: Alex
+Age: 34
+Interest: parties
+```
+
+To learn more about the neo4j-driver checkout the project [documentation](http://neo4j.com/docs/api/javascript-driver/current).
+
+In this next example we run the query where Susan is checking her network for a person who has an interest in business.  She knows Bill who is her dad and a retired Harvard professor, but she doesn't directly know Jane who's took Bill's game theory course at Harvard. 
+
+<img src="susan-knows-bill-who-knows-jane.png" width="400"/>
+
+Our query attempts to find a path from Susan to a person with an interest in business.  That person turns out to be Jane.
+
+```javascript
+const database = 'bolt://localhost';
+const neo4j = require('neo4j-driver').v1;
+const auth = neo4j.auth.basic('neo4j', 'omega16');
+const driver = neo4j.driver(database, auth);
+
+driver.onError = (error) => {
+  console.log('Driver instantiation failed', error);
+};
+
+let session = driver.session();
+session
+  .run(`
+    MATCH (p1:Person {name: {seeker}})-[r:Knows*2]-(p2:Person {interest: {interest}})
+    RETURN (p1.name + " discovered " + p2.name) AS output`,
+    {seeker: 'Susan', interest: 'business'}
+  )
+  .then((result) => {
+    result.records.forEach((record) => {
+      console.log(record._fields[0]);
+    });
+  })
+  .catch((err) => {
+    console.log('err', err);
+  })
+  .then(() => {
+    session.close();
+    driver.close();
+  });
+```
+
+And the output is:
+
+```shell
+$ node business.js
+Susan discovered Jane
+```
+
+## Recap
+
+We saw how a graph database allowed us to model data and relationships. Far more complex examples are possible. For example you could build a NodeJS service that analyzes data on a graph and adds or updates properties on relationship links. Such a process underpins machine learning and recommendation engines.
+
+If you're building non-trivial applications then familiarity with graph databases should be an asset!
 
 ## Next steps
 
