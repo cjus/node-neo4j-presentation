@@ -191,7 +191,7 @@ MATCH (p1:Person {name: "Susan"})-[r:Knows*2]-(p2:Person {interest: "business"})
 RETURN p1, r, p2;
 ```
 
-The new bit is the syntax `-[r:Knows*2]-`.  Here we're saying "Match a Person node with the property name="Susan" with one or more Knows relationships to a person with an interest in "business".  Here lies the power of graph queries, the ability to traverse a network of relationships to answer questions such as find me a friend of a friend (or more) who matches a particlar criteria. This is also where relational database systems and their use of joins becomes far less than ideal at scale.  Such queries are also how recommendation engines can be used promote new products. For example: when Amazon lists products also purchased in conjunction with a product you're considering.
+The new bit is the syntax `-[r:Knows*2]-`.  Here we're saying "Match a Person node with the property name="Susan" with one or more Knows relationships to a person with an interest in "business".  Here lies the power of graph queries, the ability to traverse a network of relationships to answer questions such as find me a friend of a friend (or more) who matches a particular criteria. This is also where relational database systems and their use of joins becomes far less than ideal at scale.  Such queries are also how recommendation engines can be used promote new products. For example: when Amazon lists products also purchased in conjunction with a product you're considering.
 
 ## Accessing Neo4j from JavaScript
 
