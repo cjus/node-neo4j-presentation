@@ -30,7 +30,7 @@ Graph diagrams came about as the leisurely pursuit of [Leonard Euler](https://en
 
 <img src="Leonhard_Euler.jpg" width="200"/>
 
-In 1736, from his home in Saint Petersburg, Euler turned his attention to a puzzle which was much talked about by the people of the nearby town of Königsberg - which is now the city of Kaliningrad in Russia. During a time of great prosperity, the people of Königsberg constructed seven bridges across the Pregel River to connect two large islands with the surrounding landscape.
+In 1736, from his home in Saint Petersburg, Euler turned his attention to a puzzle which was much talked about by the people of the nearby town of Königsberg - which is now the Russian city of Kaliningrad. During a time of great prosperity, the people of Königsberg constructed seven bridges across the Pregel River to connect two islands to the surrounding landscape.
 
 The people of Königsberg pondered whether it was possible to cross the seven bridges without crossing one twice.
 
@@ -44,7 +44,9 @@ Euler represented the land masses as vertices and used links to represents the b
 
 However, graphs didn't start with Euler, his keen contribution was in how to visualize and discuss them in the context of mathematics.
 
-Today, researchers are also using graphs to understand diverse topics such as biodiversity, terrorist networks, and the spread of global epidemics. Here is a graph that links 40 of the earliest known AIDS patients by sexual contact.
+Today, researchers are using graphs to understand diverse topics such as biodiversity, terrorist networks, and the spread of global epidemics. 
+
+Here is a graph that links 40 of the earliest known AIDS patients by sexual contact.
 
 <img src="aids.png" width="500"/>
 
@@ -63,11 +65,13 @@ Consider 3D games, the characters and terrains are built from wire frame models 
 
 The process of applying a skin (texture) to a wire frame model involves mapping an image onto the area within vertices and edges - a process known as texture mapping.
 
-Here we see the remains of leaves which have been devoured by insects. The veins that remains shows the passages by which water was once delivered. Our own nervous system and arteries look unremarkably similar! 
+Dijkstra's algorithm, employed in computer game AI, is used for path finding using a weighted graph.
+
+Turning our attention to nature, here we see the remains of leaves which have been devoured by insects. The veins that remains shows the passages by which water was once delivered. Our own nervous system and arteries look unremarkably similar! 
 
 <img src="leaf-eaten.png" width="500"/>
 
-We need go no further than our thoughts to realize that the neurons in our own brains form a network graph. Indeed graphs are everywhere.
+In fact, we need go no further than our thoughts to realize that the neurons in our own brains form a network graph. Indeed graphs are everywhere.
 
 <img src="brain.png" width="500"/>
 
@@ -79,13 +83,15 @@ Since infancy, we catalog objects and assign properties to them. We then map obj
 
 Think about any complex topic you've had to learn. Perhaps you began by reading introductory material that provided you a high-level overview. During that process, you were exposed to new terms and as you learned more about them you were able to associate characteristics or properties to those terms. As you continued learning, you were able to identify relationships allowing you to associate a topic to other topics you already understood.
 
-It turns out that our memories are a sort of graph database. Not only do our brains build graphs, we've thought machines to do so as well, using the science of machine learning.
+It turns out that our memories are a sort of graph database. In fact one way of improving memory is to create new links (or associations) to existing memories.  
+
+Not only do our brains build graphs, we've thought machines to do so as well, using the science of machine learning.
 
 ## Graph databases
 
 This all brings us to Graph Databases - software tools for building and working with graphs.
 
-Rather than organize data as collections of tables, rows, and columns - or even as collections of documents - graph databases allow us to model data and relationships in ways that closely mirror how we naturally think about them.
+Rather than organize data as collections of tables, rows, and columns - or even as collections of documents - graph databases allow us to model data and relationships in the ways that closely mirror how we naturally think about them.
 
 Let's take a closer look. In this graph, we have nodes and links that both have associated properties. This type of graph is often referred to as a property graph. We have `age` and `interest` properties associated with each person, and we could have easily added other personal characteristics. In the links, we've associated information about when a relationship began.
 
@@ -99,7 +105,7 @@ To explore graph databases we're going to use the world's most popular graph dat
 
 You can download and install a free copy of Neo from https://neo4j.com/download/community-edition
 
-However, being a big fan of Docker, I prefer to run Neo4j from a Docker container.
+However, being a big fan of Docker, I prefer to download and run Neo4j from a Docker container.
 
 ```
 $ docker pull neo4j:3.1.0
@@ -110,7 +116,7 @@ $ docker run -d -p 7474:7474 -p 7687:7687 -v ~/data:/data --name neo4j neo4j:3.1
 
 Neo4j comes with a web-based dashboard that allows you to interact with Neo. It's a great way to initially learn about Neo and later create and test your data models. Not only is it an indispensable tool, it's also a real pleasure to use.
 
-Here we see a dashboard view which allows us to enter queries and graphically see the results.  You can connect to a local instance of Neo by pointing your web browser to http://localhost:7474
+Here we see a dashboard view which allows us to enter queries and graphically see the results.  Connecting to an instance of Neo is as simple as pointing your browser to http://localhost:7474
 
 <img src="neo4j_browser.png" width="400"/>
 
@@ -123,6 +129,7 @@ In Cypher a node is represented inside of parentheses and links are referred to 
 For example:
 
 ```
+ (NODE)        [RELATIONSHIP]          (NODE)
 (Person)-[:KNOWS {since: "20120225"}]-(Person)
 ```
 
