@@ -1,16 +1,10 @@
 # Graphs, GraphDBs and JavaScript
 
-## Introduction
-
-In this talk, we're going to look at a class of NoSQL DB's called graph databases. We'll examine how graph databases depart sharply from the relational and document types of databases that many of us are familiar with.
-
-## Graphs
-
-Undoubtedly you're all familiar with graphs - those charts showing colored bars, pie slices and points along a line. Perhaps you first learned about them in grade school and later encountered them in a variety situations. However, in this presentation, we won't concern ourselves with these types of graphs.
+Undoubtedly you're familiar with graphs - those charts showing colored bars, pie slices and points along a line. They're great data visualization tools that are designed to quickly convey information. In this presentation, we won't concern ourselves with those types of graphs.
 
 <img src="not-these-graphs.png" width="400"/>
 
-The graphs we're interested in consists of circles and lines and are commonly known as network graphs.
+Instead, the graphs we're interested in consists of circles and lines and are commonly known as network graphs.
 
 <img src="graph1.png" width="400"/>
 
@@ -24,11 +18,9 @@ Graphs can take on real world meaning, such as the relationships between people.
 
 <img src="alex-introduces-tom-and-susan.png" width="400"/>
 
-Graphs can also become quite complex, such as the web of social acquaintances on LinkedIn or Facebook.
+Graphs can also become quite complex, such as the web of social acquaintances on Facebook and LinkedIn.
 
 <img src="graph4.png" width="400"/>
-
-We'll see additional examples of graphs throughout this presentation.
 
 ## Graphs revealed
 
@@ -36,32 +28,27 @@ Graph diagrams came about as the leisurely pursuit of [Leonard Euler](https://en
 
 <img src="Leonhard_Euler.jpg" width="200"/>
 
-In 1736, from his home in Saint Petersburg, Euler turned his attention to a problem which was much talked about by the people of the nearby town of Königsberg - which is now the city of Kaliningrad in Russia. During a time of great prosperity, the people of Königsberg created seven bridges across the Pregel River to connect two large islands with the surrounding landscape.
+In 1736, from his home in Saint Petersburg, Euler turned his attention to a puzzle which was much talked about by the people of the nearby town of Königsberg - which is now the city of Kaliningrad in Russia. During a time of great prosperity, the people of Königsberg constructed seven bridges across the Pregel River to connect two large islands with the surrounding landscape.
 
 The people of Königsberg pondered whether it was possible to cross the seven bridges without crossing one twice.
 
 In a short paper, Euler offered a proof that such a path could not exist. Don't worry, we won't get into the proof here because it isn't the proof that we're interested in, but rather the way in which Euler approached the problem.
 
-Euler represented the land masses as vertices and used links to represents the bridges. He then labeled each vertex with a letter from A to D.
 <img src="Seven_Bridges_of_Konigsberg.png"/>
 
-With this, Euler inadvertently founded an extensive branch of mathematics called graph theory - to which many other well-known mathematicians have since contributed.
+Euler represented the land masses as vertices and used links to represents the bridges. He then labeled each vertex with a letter from A to D. With this, Euler inadvertently founded an extensive branch of mathematics called graph theory - to which many other well-known mathematicians have since contributed.
 
 ## Graphs are everywhere
 
 However, graphs didn't start with Euler, his keen contribution was in how to visualize and discuss them in the context of mathematics.
 
-In truth, graphs are everywhere. If you consider a map of the New York City subway system - or any subway in the world for that matter - and if you label the train stations as nodes and the routes connecting stations as links - you'll quickly see a graph emerge.
+In truth, graphs are all around us. If you consider a map of the New York City subway system - or any subway in the world for that matter - and if you label the train stations as nodes and the routes connecting stations as links - you'll quickly see a graph emerge.
 
 <img src="nycsubway.jpg" width="500"/>
 
 A look at cities throughout the world reveal airports, and in larger cities - airport hubs - which connect flights to destinations around the globe.  
 
 <img src="onworld-map.jpg" width="500"/>
-
-Graphs are heavily employed in logistics which finds efficient paths for the delivery of goods. This allows companies such as FedEx to maintain competitive advantages in global distribution.
-
-<img src="fedex.jpg" width="500"/>
 
 Consider 3D games, the characters and terrains are built from wire frame models called meshes, which are essentially graphs.  
 
@@ -70,36 +57,29 @@ Consider 3D games, the characters and terrains are built from wire frame models 
 
 > As a quick aside, the process of applying a skin (texture) to a wire frame model involves mapping an image onto the area within vertices and edges in a process known as texture mapping.
 
-Researchers are using graphs to understand diverse topics such as biodiversity, terrorist networks, and spread of global epidemics. 
-
-Here is a graph that links 40 of the earliest known AIDS patients by sexual contact. 
+Researchers are also using graphs to understand diverse topics such as biodiversity, terrorist networks, and spread of global epidemics. Here is a graph that links 40 of the earliest known AIDS patients by sexual contact. 
 
 <img src="aids.png" width="500"/>
 
-We also see graphs in nature. Spiders are quite adept in building graphs called webs.
-
-<img src="web.jpg" width="500"/>
-
-Here we see the remains of leaves which have been devoured by insects. The graph that remains shows the passages by which water was once delivered. Our own nervous system and arteries look unremarkably similar!
+Here we see the remains of leaves which have been devoured by insects. The vains that remains shows the passages by which water was once delivered. Our own nervous system and arteries look unremarkably similar!
 
 <img src="leaf-eaten.png" width="500"/>
 
-Indeed graphs are everywhere.
-We need go no further than our thoughts to realize that the neurons in our own brains form a network graph.
+We need go no further than our thoughts to realize that the neurons in our own brains form a network graph. Indeed graphs are everywhere.
 
 <img src="brain.png" width="500"/>
 
-## Why graphs
+## Wet-ware
 
-Besides being able to find graphs everywhere we look, they're also appealing because they closely model how we think.  Since infancy, we catalog objects and assign properties to them. We then map objects to one another based on their relationship, and we continue refining our understanding throughout our lives.
+Since infancy, we catalog objects and assign properties to them. We then map objects to one another based on their relationship, and we continue refining our understanding throughout our lives.
 
 Think about any complex topic you've had to learn. Perhaps you began by reading introductory material that provided you a high-level overview. During that process, you were exposed to new terms and as you learned more about them you were able to associate characteristics or properties to those terms. As you continued learning, you were able to identify relationships allowing you to associate a topic to other topics you already understood.
 
-Now only do our brains build graphs, we've thought machines to do so as well, using the science of machine learning.
+It turns out that our brains are a sort of graph database. Now only do our brains build graphs, we've thought machines to do so as well, using the science of machine learning.
 
 ## Graph databases
 
-Rather than organize data as collections of tables, rows, and columns - or even as collections of documents - graph databases allow us to model data and relationships in ways that closely mirrors how you naturally see and describe them.
+Rather than organize data as collections of tables, rows, and columns - or even as collections of documents - graph databases allow us to model data and relationships in ways that closely mirror how we naturally think about them.
 
 Let's take a closer look. In this graph, we have nodes and links that both have associated properties. This type of graph is often referred to as a property graph. We have an age property associated with each person and an interest. We could have easily added other personal characteristics. In the links, we've associated information about when a relationship began.
 
