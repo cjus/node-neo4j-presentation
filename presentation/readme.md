@@ -81,7 +81,7 @@ It turns out that our brains are a sort of graph database. Not only do our brain
 
 Rather than organize data as collections of tables, rows, and columns - or even as collections of documents - graph databases allow us to model data and relationships in ways that closely mirror how we naturally think about them.
 
-Let's take a closer look. In this graph, we have nodes and links that both have associated properties. This type of graph is often referred to as a property graph. We have an age property associated with each person and an interest. We could have easily added other personal characteristics. In the links, we've associated information about when a relationship began.
+Let's take a closer look. In this graph, we have nodes and links that both have associated properties. This type of graph is often referred to as a property graph. We have `age` and `interest` properties associated with each person, and we could have easily added other personal characteristics. In the links, we've associated information about when a relationship began.
 
 <img src="graph5.png" width="400"/>
 
