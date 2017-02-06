@@ -12,7 +12,7 @@ This is the same graph defined in scientific terms, i.e. mathematics and compute
 
 <img src="graph2.png" width="400"/>
 
-A "thing" is represented by a **vertex** and a "link" is referred to as an **edge**. We can think of the vertices as representing nodes and the edges as the relationship between them. From here on out we'll simply refer to them as **nodes** and **links**. 
+A "thing" is represented by a **vertex** and a "link" is referred to as an **edge**. We can think of the vertices as representing nodes and the edges as the relationship between them. From here on out we'll simply refer to them as **nodes** and **links**.
 
 Graphs can take on real world meaning, such as the relationships between people. In this graph, Tom knows Alex but doesn't directly know Bill or even his neighbors, Susan and Jane. If Tom wanted to meet Susan, he could ask Alex to introduce them.
 
@@ -55,9 +55,9 @@ Consider 3D games, the characters and terrains are built from wire frame models 
 <img src="TerrainWireframe.jpg" width="500"/>
 <img src="3dcharacter.png" width="500"/>
 
-> As a quick aside, the process of applying a skin (texture) to a wire frame model involves mapping an image onto the area within vertices and edges in a process known as texture mapping.
+> As a quick aside, the process of applying a skin (texture) to a wire frame model involves mapping an image onto the area within vertices and edges - a process known as texture mapping.
 
-Researchers are also using graphs to understand diverse topics such as biodiversity, terrorist networks, and spread of global epidemics. Here is a graph that links 40 of the earliest known AIDS patients by sexual contact. 
+Researchers are also using graphs to understand diverse topics such as biodiversity, terrorist networks, and spread of global epidemics. Here is a graph that links 40 of the earliest known AIDS patients by sexual contact.
 
 <img src="aids.png" width="500"/>
 
@@ -101,7 +101,7 @@ $ docker run -d -p 7474:7474 -p 7687:7687 -v ~/data:/data --name neo4j neo4j:3.1
 
 ## Neo4j dashboard
 
-Neo4j comes with a web-based dashboard that allows you to interact with Neo. It's a great way to initially learn about Neo and later create and test your data models. Not only is it an indispensable tool, it's also a real pleasure to use. 
+Neo4j comes with a web-based dashboard that allows you to interact with Neo. It's a great way to initially learn about Neo and later create and test your data models. Not only is it an indispensable tool, it's also a real pleasure to use.
 
 Here we see a dashboard view which allows us to enter queries and graphically see the results.  You can connect to a local instance of Neo by pointing your web browser to http://localhost:7474
 
@@ -175,7 +175,7 @@ The new bit is the syntax `-[r:Knows*2]-`.  Here we're saying "Match a Person no
 
 ## Accessing Neo4j from JavaScript
 
-Neo4j has an HTTP restful API that makes it possible for remote clients to connect to it. You can find a number of libraries on NPM which essential act as wrappers for Neo's restful endpoints. 
+Neo4j has an HTTP restful API that makes it possible for remote clients to connect to it. You can find a number of libraries on NPM which essential act as wrappers for Neo's restful endpoints.
 
 I also wrote a limited and highly opinionated Node library that facilitates connecting to Neo4j and optionally caching results using Redis. You can find it on NPM under the name of Neo4j-redis.
 
@@ -242,7 +242,7 @@ Interest: parties
 
 To learn more about the neo4j-driver check out the project [documentation](http://neo4j.com/docs/api/javascript-driver/current).
 
-In this next example, we run the query where Susan is checking her network for a person who has an interest in business.  She knows Bill who is her dad and a retired Harvard professor, but she doesn't directly know Jane who took Bill's game theory course at Harvard. 
+In this next example, we run the query where Susan is checking her network for a person who has an interest in business.  She knows Bill who is her dad and a retired Harvard professor, but she doesn't directly know Jane who took Bill's game theory course at Harvard.
 
 <img src="susan-knows-bill-who-knows-jane.png" width="400"/>
 
