@@ -1,5 +1,7 @@
 # Graphs, GraphDBs and JavaScript
 
+In this presentation we're going to look at Graph Databases. Before we explore them, we'll consider the importance of graphs and the underlying data structure that allows GraphDBs to exist.
+
 Undoubtedly you're familiar with graphs - those charts showing colored bars, pie slices and points along a line. They're great data visualization tools that are designed to quickly convey information. In this presentation, we won't concern ourselves with those types of graphs.
 
 <img src="not-these-graphs.png" width="400"/>
@@ -42,11 +44,15 @@ Euler represented the land masses as vertices and used links to represents the b
 
 However, graphs didn't start with Euler, his keen contribution was in how to visualize and discuss them in the context of mathematics.
 
-In truth, graphs are all around us. If you consider a map of the New York City subway system - or any subway in the world for that matter - and if you label the train stations as nodes and the routes connecting stations as links - you'll quickly see a graph emerge.
+Today, researchers are also using graphs to understand diverse topics such as biodiversity, terrorist networks, and the spread of global epidemics. Here is a graph that links 40 of the earliest known AIDS patients by sexual contact.
+
+<img src="aids.png" width="500"/>
+
+You may have taken a train on your way to this presentation. Did you enjoy riding a graph? If you consider a map of the New York City subway system - or any subway in the world for that matter - and if you label the train stations as nodes and the routes connecting stations as links - you'll quickly see a graph emerge.
 
 <img src="nycsubway.jpg" width="500"/>
 
-A look at cities throughout the world reveal airports, and in larger cities - airport hubs - which connect flights to destinations around the globe.  
+A look at cities throughout the world reveal airports, and in larger cities - airport hubs - which connect flights to destinations around the globe.  Yes, the paths of air travel, and ships, form a network graph.
 
 <img src="onworld-map.jpg" width="500"/>
 
@@ -55,13 +61,9 @@ Consider 3D games, the characters and terrains are built from wire frame models 
 <img src="TerrainWireframe.jpg" width="500"/>
 <img src="3dcharacter.png" width="500"/>
 
-> As a quick aside, the process of applying a skin (texture) to a wire frame model involves mapping an image onto the area within vertices and edges - a process known as texture mapping.
+The process of applying a skin (texture) to a wire frame model involves mapping an image onto the area within vertices and edges - a process known as texture mapping.
 
-Researchers are also using graphs to understand diverse topics such as biodiversity, terrorist networks, and spread of global epidemics. Here is a graph that links 40 of the earliest known AIDS patients by sexual contact.
-
-<img src="aids.png" width="500"/>
-
-Here we see the remains of leaves which have been devoured by insects. The vains that remains shows the passages by which water was once delivered. Our own nervous system and arteries look unremarkably similar!
+Here we see the remains of leaves which have been devoured by insects. The veins that remains shows the passages by which water was once delivered. Our own nervous system and arteries look unremarkably similar! 
 
 <img src="leaf-eaten.png" width="500"/>
 
@@ -71,13 +73,17 @@ We need go no further than our thoughts to realize that the neurons in our own b
 
 ## Wet-ware
 
-Since infancy, we catalog objects and assign properties to them. We then map objects to one another based on their relationship, and we continue refining our understanding throughout our lives.
+Not only do our own bodies consists of graphs, it turns out that graphs are fundamental to how we actually think!
+
+Since infancy, we catalog objects and assign properties to them. We then map objects to one another based on their relationship. This process continues in our minds throughout our lives.
 
 Think about any complex topic you've had to learn. Perhaps you began by reading introductory material that provided you a high-level overview. During that process, you were exposed to new terms and as you learned more about them you were able to associate characteristics or properties to those terms. As you continued learning, you were able to identify relationships allowing you to associate a topic to other topics you already understood.
 
-It turns out that our brains are a sort of graph database. Not only do our brains build graphs, we've thought machines to do so as well, using the science of machine learning.
+It turns out that our memories are a sort of graph database. Not only do our brains build graphs, we've thought machines to do so as well, using the science of machine learning.
 
 ## Graph databases
+
+This all brings us to Graph Databases - software tools for building and working with graphs.
 
 Rather than organize data as collections of tables, rows, and columns - or even as collections of documents - graph databases allow us to model data and relationships in ways that closely mirror how we naturally think about them.
 
@@ -92,7 +98,8 @@ Such a graph could become the basis for an intelligent contact management applic
 To explore graph databases we're going to use the world's most popular graph database, Neo4j. Affectionately referred to by fans, as Neo.
 
 You can download and install a free copy of Neo from https://neo4j.com/download/community-edition
-However, also being a big fan of Docker, I prefer to run Neo4j from a Docker container.
+
+However, being a big fan of Docker, I prefer to run Neo4j from a Docker container.
 
 ```
 $ docker pull neo4j:3.1.0
@@ -206,7 +213,7 @@ driver.onError = (error) => {
 };
 ```
 
-Next, we create a driver session and run (execute) a Cypher query.  Note that the run function both accepts two parameters and returns a promise. The first parameter to run is the query template and the second is an object with query parameters. This allows Neo to cache query plans for added efficiency. We then use the `.then` and `.catch` to handle the promise resolve or reject cases.
+Next, we create a driver session and run (execute) a Cypher query.  Note that the run function accepts two parameters and returns a JavaScript promise. The first parameter to run is the query template and the second is an object with query parameters. This allows Neo to cache query plans for added efficiency. We then use the `.then` and `.catch` to handle the promise resolve or reject cases.
 
 ```javascript
 let session = driver.session();
