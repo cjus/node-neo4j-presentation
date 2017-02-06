@@ -75,7 +75,7 @@ Since infancy, we catalog objects and assign properties to them. We then map obj
 
 Think about any complex topic you've had to learn. Perhaps you began by reading introductory material that provided you a high-level overview. During that process, you were exposed to new terms and as you learned more about them you were able to associate characteristics or properties to those terms. As you continued learning, you were able to identify relationships allowing you to associate a topic to other topics you already understood.
 
-It turns out that our brains are a sort of graph database. Now only do our brains build graphs, we've thought machines to do so as well, using the science of machine learning.
+It turns out that our brains are a sort of graph database. Not only do our brains build graphs, we've thought machines to do so as well, using the science of machine learning.
 
 ## Graph databases
 
