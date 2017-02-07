@@ -20,7 +20,7 @@ Graphs can take on real world meaning, such as revealing the relationships betwe
 
 <img src="alex-introduces-tom-and-susan.png" width="400"/>
 
-when lots of nodes and links exists, graphs can become quite complex, such as the web of social acquaintances on Facebook and LinkedIn.
+Graphs can become quite complex when lots of nodes and links exists, such as with a web of social acquaintances on Facebook and LinkedIn.
 
 <img src="graph4.png" width="400"/>
 
@@ -30,15 +30,15 @@ Graph diagrams came about as a side effect of a leisurely pursuit of [Leonard Eu
 
 <img src="Leonhard_Euler.jpg" width="200"/>
 
-In 1736, from his home in Saint Petersburg, Euler turned his attention to a puzzle which was proposed by the people of the nearby town of Königsberg - which is now the Russian city of Kaliningrad. During a time of great prosperity, the people of Königsberg constructed seven bridges across the Pregel River to connect two islands to the surrounding landscape.
+In 1736, from his home in Saint Petersburg, Euler turned his attention to a puzzle which was proposed by the people in the nearby town of Königsberg - which is now the Russian city of Kaliningrad. During a time of great prosperity, the people of Königsberg constructed seven bridges across the Pregel River to connect two islands to the surrounding landscape.
 
-The people of Königsberg pondered whether it was possible to cross the seven bridges without crossing one twice.
+The town's people pondered whether it was possible to cross the seven bridges without crossing one twice.
 
 In a short paper, Euler offered a proof that such a path could not exist. We won't get into the proof here because it isn't the proof that we're interested in, but rather the way in which Euler approached the problem.
 
 <img src="Seven_Bridges_of_Konigsberg.png"/>
 
-Euler represented the land masses as nodes and used links to represents the bridges. He then assigned each of the nodes  a letter from A to D. With this, Euler inadvertently founded an extensive branch of mathematics called graph theory - to which many other well-known mathematicians have since contributed.
+Euler represented the land masses as nodes and used links to represents the bridges. He then assigned each of the nodes a letter from A to D. With this, Euler inadvertently founded an extensive branch of mathematics called graph theory - to which many other well-known mathematicians have since contributed.
 
 ## Graphs are everywhere
 
@@ -81,9 +81,9 @@ Not only do our own bodies consists of graphs, it turns out that graphs are fund
 
 Since infancy, we catalog objects and assign properties to them. We then map objects to one another based on their relationship. This process continues in our minds throughout our lives.
 
-Think about any complex topic you've had to learn. Perhaps you began by reading introductory material that provided you a high-level overview. During that process, you were exposed to new terms and as you learned more about them you were able to associate characteristics or properties to those terms. As you continued learning, you were able to identify relationships allowing you to associate a topic to other topics you already understood.
+Think about any complex topic you've had to learn. Perhaps you began by reading introductory material that provided you a high-level overview. During that process, you were exposed to new terms. And as you learned more about them you were able to associate characteristics or properties to those terms. As you continued learning, you were able to identify relationships allowing you to associate a topic to other topics you already understood.
 
-It turns out that our memories are a sort of graph database. In fact one way of improving memory is to create new links (or associations) to existing memories.  
+It turns out that our memories are a sort of graph database. In fact, one way of improving memory is to create new links (or associations) to existing memories.  
 
 Not only do our brains build graphs, we've thought machines to do so as well, using the science of machine learning.
 
@@ -124,7 +124,7 @@ Here we see a dashboard view which allows us to enter queries and graphically se
 
 Neo4j has a declarative query language called Cypher. Cypher queries consist of statements that use patterns to specify paths within a graph.
 
-In Cypher a node is represented inside of parentheses and links are referred to by lines and square brackets. Node or link properties are specified using curly braces.
+In Cypher a node is represented inside of parentheses and links are referred to by lines and square brackets. Node and link properties are specified using curly braces.
 
 For example:
 
@@ -302,7 +302,7 @@ Susan discovered Jane
 
 ## Recap
 
-We saw how a graph database allowed us to model data and relationships. Far more complex examples are possible. For example, you could build a NodeJS service that analyzes data on a graph and adds or updates properties on relationship links. Such a process underpins machine learning and recommendation engines.
+We began by learning about network graphs and how they are literally everywhere. We then saw how a graph database allowed us to model data and relationships. Far more complex examples are possible. For example, you could build a NodeJS service that analyzes data on a graph and adds or updates properties on relationship links. Such a process underpins machine learning and recommendation engines.
 
 If you're building non-trivial applications then familiarity with graph databases should be an asset!
 
