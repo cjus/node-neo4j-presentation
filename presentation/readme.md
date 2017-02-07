@@ -67,7 +67,7 @@ The process of applying a skin (texture) to a wire frame model involves mapping 
 
 Ever wonder how computer game characters find their way within a game word? Dijkstra's algorithm, employed in computer game AI, is used for path finding using a weighted graph.
 
-Turning our attention to nature, here we see the remains of leaves which have been devoured by insects. The veins that remains shows the passages by which water was once delivered to vibrant leafy greens. If you recall you high school biology class then this image might also look unremarkably similar to our own nervous system and arteries!
+Turning our attention to nature, here we see the remains of leaves which have been devoured by insects. The veins that remains shows the passages by which water was once delivered to vibrant leafy greens. If you recall your high school biology class then this image might also look unremarkably similar to our own nervous system and arteries!
 
 And that's no coincidence. Doctors save lives by manipulating those network graphs! True story!
 
@@ -81,13 +81,13 @@ In fact, we need go no further than our thoughts to realize that the neurons in 
 
 Not only do our own bodies consists of graphs, it turns out that graphs are fundamental to how we actually think!
 
-Since infancy, we catalog objects and assign properties to them. We then map objects to one another based on their relationship. This process continues in our minds throughout our lives.
+Since infancy, we catalog objects and assign properties to them, we then map objects to one another based on their relationship. This process continues in our minds throughout our lives.
 
 Think about any complex topic you've had to learn. Perhaps you began by reading introductory material that provided you a high-level overview. During that process, you were exposed to new terms. And as you learned more about them you were able to associate characteristics or properties to those terms. As you continued learning, you were able to identify relationships allowing you to associate a topic to other topics you already understood.
 
 It turns out that our memories are a sort of graph database. In fact, one way of improving memory is to create new links (or associations) to existing memories.  
 
-Not only do our brains build graphs, we've thought machines to do so as well, using the science of machine learning.
+Not only do our brains build graphs, we've taught machines to do so as well, using the science of machine learning.
 
 ## Graph databases
 
@@ -189,11 +189,16 @@ MATCH (p1:Person {name: "Susan"})-[r:Knows*2]-(p2:Person {interest: "business"})
 RETURN p1, r, p2;
 ```
 
-The new bit is the syntax `-[r:Knows*2]-`.  
+The new bit is the syntax `-[r:Knows*2]-`. This is known as a variable length relationship. Here we're saying "Match a Person node with the property name="Susan" with one or two Knows relationships to a person with an interest in "business".  Specifying the length is important in order to limit the depth (or hops) that the query traverses to find a match. In a large graph a long traversal might take longer than we'd like.
 
->TODO: explain the use of *2
+Referring back to our graph, we can see that if Jane were looking for a chess player we'd have to specify `-[r:Knows*3]-` or three hops to get to Tom - following the green path shown.
 
-Here we're saying "Match a Person node with the property name="Susan" with one or more Knows relationships to a person with an interest in "business".  Here lies the power of graph queries, the ability to traverse a network of relationships to answer questions such as find me a friend of a friend (or more) who matches a particular criteria. This is also where relational database systems and their use of joins becomes far less than ideal at scale.  Such queries are also how recommendation engines can be used promote new products. For example: when Amazon lists products also purchased in conjunction with a product you're considering.
+<img src="graph6.png" width="400"/>
+
+You may also notice that there is also a red path from Jane leading to Tom, which involves four hops. Neo4j returns the shorter of the two paths.
+
+This ability to find nodes along variable paths is one of the strengths of Graph Databases. 
+Here lies the power of graph queries, the ability to traverse a network of relationships to answer questions such as find me a friend of a friend (or more) who matches a particular criteria. This is also where relational database systems and their use of joins becomes far less than ideal at scale.  Such queries are also how recommendation engines can be used to promote new products. For example: when Amazon lists products also purchased in conjunction with a product you're considering.
 
 ## Accessing Neo4j from JavaScript
 
@@ -310,13 +315,11 @@ $ node business.js
 Susan discovered Jane
 ```
 
-Using the code patterns we've seen you'd able to perform insert, update and delete operations to build more complex applications.
-
-Neo4j is really quite approachable.
+Using the code patterns we've seen you'd able to perform insert, update and delete operations to build more complex applications. Neo4j is really quite approachable.
 
 ## Recap
 
-We began our journey by learning about network graphs. Along the way we discovered that graphs are literally everywhere we look. In fact, network graphs could not be closer to our hearts - if you consider the network of arteries within our own bodies. 
+We began our journey by learning about network graphs. Along the way we discovered that graphs are literally everywhere we look. In fact, network graphs could not be closer to our hearts - if you consider the network of arteries within our own bodies.
 
 We also learned that we actually think in terms of graphs and that graph databases are a natural extension for representing our data models and their relationships.
 
