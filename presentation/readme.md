@@ -213,7 +213,7 @@ $ npm install neo4j-driver
 
 ### Connecting to Neo
 
-Here is the `alex.js` example from this [presentation's repo](https://github.com/cjus/node-neo4j-presentation). We begin by defining the location of our neo4j database instance. I'm running mine on my laptop, so I specify `localhost`.  The `bolt://` portion tells Neo that we'd like to use the faster binary connection protocol, instead of the HTTP version. 
+Here is the `alex.js` example from this [presentation's repo](https://github.com/cjus/node-neo4j-presentation). We begin by defining the location of our neo4j database instance. I'm running mine on my laptop, so I specify `localhost`.  The `bolt://` portion tells Neo that we'd like to use the faster binary connection protocol, instead of the HTTP version.
 
 > You can find out more about bolt [here](https://neo4j.com/blog/neo4j-3-0-language-drivers).
 
@@ -310,17 +310,17 @@ $ node business.js
 Susan discovered Jane
 ```
 
-Using the code patterns we've seen you'd able to perform insert, update and delete operations to build more complex applications. 
+Using the code patterns we've seen you'd able to perform insert, update and delete operations to build more complex applications.
 
-Neo4j is really quite approachable. 
+Neo4j is really quite approachable.
 
 ## Recap
 
-We began our journey by learning about network graphs. Along the way we discovered that graphs are literally everywhere we look. In fact, network graphs could not be closer to our heaths - if you consider the network of arteries within our own bodies. 
+We began our journey by learning about network graphs. Along the way we discovered that graphs are literally everywhere we look. In fact, network graphs could not be closer to our hearts - if you consider the network of arteries within our own bodies. 
 
-We also learned that we actually think in terms of graphs and that graph databases are a natural extension for representing our data models and their relationships. 
+We also learned that we actually think in terms of graphs and that graph databases are a natural extension for representing our data models and their relationships.
 
-If you're building non-trivial applications then familiarity with graph databases should be an asset! I invite you to take these next steps. 
+If you're building non-trivial applications then familiarity with graph databases should be an asset! I invite you to take these next steps.
 
 ## Next steps
 
