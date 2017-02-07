@@ -1,8 +1,8 @@
 # Graphs, GraphDBs and JavaScript
 
-In this presentation we're going to look at Graph Databases. Before we explore them, we'll consider the importance of graphs and the underlying data structure that allows GraphDBs to exist.
+In this presentation we're going to look at Graph Databases. Before we explore them, we'll consider the importance of graphs, the underlying data structure that allows GraphDBs to exist.
 
-Undoubtedly you're familiar with graphs - those charts showing colored bars, pie slices and points along a line. They're great data visualization tools that are designed to quickly convey information. In this presentation, we won't concern ourselves with those types of graphs.
+Undoubtedly you're familiar with graphs - those charts showing colored bars, pie slices and points along a line. They're great data visualization tools designed to quickly convey information. However, those are not the type of graphs we'll consider.
 
 <img src="not-these-graphs.png" width="400"/>
 
@@ -16,41 +16,41 @@ This is the same graph defined in scientific terms, i.e. mathematics and compute
 
 A "thing" is represented by a **vertex** and a "link" is referred to as an **edge**. We can think of the vertices as representing nodes and the edges as the relationship between them. From here on out we'll simply refer to them as **nodes** and **links**.
 
-Graphs can take on real world meaning, such as the relationships between people. In this graph, Tom knows Alex but doesn't directly know Bill or even his neighbors, Susan and Jane. If Tom wanted to meet Susan, he could ask Alex to introduce them.
+Graphs can take on real world meaning, such as revealing the relationships between people. For example, in this graph, Tom knows Alex but doesn't directly know Bill or even his neighbors, Susan and Jane. If Tom wanted to meet Susan, he could ask Alex to introduce them.
 
 <img src="alex-introduces-tom-and-susan.png" width="400"/>
 
-Graphs can also become quite complex, such as the web of social acquaintances on Facebook and LinkedIn.
+when lots of nodes and links exists, graphs can become quite complex, such as the web of social acquaintances on Facebook and LinkedIn.
 
 <img src="graph4.png" width="400"/>
 
 ## Graphs revealed
 
-Graph diagrams came about as the leisurely pursuit of [Leonard Euler](https://en.m.wikipedia.org/wiki/Leonhard_Euler) a Swiss-born mathematician who is widely regarded as the most prolific mathematician of all time.
+Graph diagrams came about as a side effect of a leisurely pursuit of [Leonard Euler](https://en.m.wikipedia.org/wiki/Leonhard_Euler) a Swiss-born mathematician who is widely regarded as the most prolific mathematician of all time.
 
 <img src="Leonhard_Euler.jpg" width="200"/>
 
-In 1736, from his home in Saint Petersburg, Euler turned his attention to a puzzle which was much talked about by the people of the nearby town of Königsberg - which is now the Russian city of Kaliningrad. During a time of great prosperity, the people of Königsberg constructed seven bridges across the Pregel River to connect two islands to the surrounding landscape.
+In 1736, from his home in Saint Petersburg, Euler turned his attention to a puzzle which was proposed by the people of the nearby town of Königsberg - which is now the Russian city of Kaliningrad. During a time of great prosperity, the people of Königsberg constructed seven bridges across the Pregel River to connect two islands to the surrounding landscape.
 
 The people of Königsberg pondered whether it was possible to cross the seven bridges without crossing one twice.
 
-In a short paper, Euler offered a proof that such a path could not exist. Don't worry, we won't get into the proof here because it isn't the proof that we're interested in, but rather the way in which Euler approached the problem.
+In a short paper, Euler offered a proof that such a path could not exist. We won't get into the proof here because it isn't the proof that we're interested in, but rather the way in which Euler approached the problem.
 
 <img src="Seven_Bridges_of_Konigsberg.png"/>
 
-Euler represented the land masses as vertices and used links to represents the bridges. He then labeled each vertex with a letter from A to D. With this, Euler inadvertently founded an extensive branch of mathematics called graph theory - to which many other well-known mathematicians have since contributed.
+Euler represented the land masses as nodes and used links to represents the bridges. He then assigned each of the nodes  a letter from A to D. With this, Euler inadvertently founded an extensive branch of mathematics called graph theory - to which many other well-known mathematicians have since contributed.
 
 ## Graphs are everywhere
 
-However, graphs didn't start with Euler, his keen contribution was in how to visualize and discuss them in the context of mathematics.
-
-Today, researchers are using graphs to understand diverse topics such as biodiversity, terrorist networks, and the spread of global epidemics. 
+Today, researchers are using graphs to understand diverse topics such as biodiversity, terrorist networks, and the spread of global epidemics.
 
 Here is a graph that links 40 of the earliest known AIDS patients by sexual contact.
 
 <img src="aids.png" width="500"/>
 
-You may have taken a train on your way to this presentation. Did you enjoy riding a graph? If you consider a map of the New York City subway system - or any subway in the world for that matter - and if you label the train stations as nodes and the routes connecting stations as links - you'll quickly see a graph emerge.
+You may have taken a train on your way to this presentation. Did you enjoy riding a graph?
+
+If you consider a map of the New York City subway system - or any subway in the world for that matter - and if you label the train stations as nodes and the routes connecting stations as links - you'll quickly see a graph emerge.
 
 <img src="nycsubway.jpg" width="500"/>
 
@@ -63,11 +63,11 @@ Consider 3D games, the characters and terrains are built from wire frame models 
 <img src="TerrainWireframe.jpg" width="500"/>
 <img src="3dcharacter.png" width="500"/>
 
-The process of applying a skin (texture) to a wire frame model involves mapping an image onto the area within vertices and edges - a process known as texture mapping.
+The process of applying a skin (texture) to a wire frame model involves mapping an image onto the surface area within vertices and edges - a process known as texture mapping.
 
-Dijkstra's algorithm, employed in computer game AI, is used for path finding using a weighted graph.
+Ever wonder how computer game characters find their way within a game word? Dijkstra's algorithm, employed in computer game AI, is used for path finding using a weighted graph.
 
-Turning our attention to nature, here we see the remains of leaves which have been devoured by insects. The veins that remains shows the passages by which water was once delivered. Our own nervous system and arteries look unremarkably similar! 
+Turning our attention to nature, here we see the remains of leaves which have been devoured by insects. The veins that remains shows the passages by which water was once delivered to vibrant green areas. If you remember you high school biology then this image might also look unremarkably similar to our own nervous system and arteries!
 
 <img src="leaf-eaten.png" width="500"/>
 
