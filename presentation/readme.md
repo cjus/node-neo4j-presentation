@@ -26,11 +26,11 @@ Graphs can become quite complex when lots of nodes and links exists, such as wit
 
 ## Graphs revealed
 
-Graph diagrams came about as a side effect of a leisurely pursuit of [Leonard Euler](https://en.m.wikipedia.org/wiki/Leonhard_Euler) a Swiss-born mathematician who is widely regarded as the most prolific mathematician of all time.
+Graph diagrams came about as a leisurely pursuit of [Leonard Euler](https://en.m.wikipedia.org/wiki/Leonhard_Euler) a Swiss-born mathematician who is widely regarded as the most prolific mathematician of all time.
 
 <img src="Leonhard_Euler.jpg" width="200"/>
 
-In 1736, from his home in Saint Petersburg, Euler turned his attention to a puzzle which was proposed by the people in the nearby town of Königsberg - which is now the Russian city of Kaliningrad. During a time of great prosperity, the people of Königsberg constructed seven bridges across the Pregel River to connect two islands to the surrounding landscape.
+In 1736, from his home in Saint Petersburg, Euler turned his attention to a puzzle which was proposed by the people of the nearby town of Königsberg - which is now the Russian city of Kaliningrad. During a time of great prosperity, the people of Königsberg constructed seven bridges across the Pregel River to connect two islands to the surrounding landscape.
 
 The town's people pondered whether it was possible to cross the seven bridges without crossing one twice.
 
@@ -38,7 +38,7 @@ In a short paper, Euler offered a proof that such a path could not exist. We won
 
 <img src="Seven_Bridges_of_Konigsberg.png"/>
 
-Euler represented the land masses as nodes and used links to represents the bridges. He then assigned each of the nodes a letter from A to D. With this, Euler inadvertently founded an extensive branch of mathematics called graph theory - to which many other well-known mathematicians have since contributed.
+Euler represented land masses as nodes and used links to represents bridges. He then assigned each of the nodes a letter from A to D. With this, Euler inadvertently founded an extensive branch of mathematics called graph theory - to which many other well-known mathematicians have since contributed.
 
 ## Graphs are everywhere
 
@@ -54,7 +54,7 @@ If you consider a map of the New York City subway system - or any subway in the 
 
 <img src="nycsubway.jpg" width="500"/>
 
-A look at cities throughout the world reveal airports, and in larger cities - airport hubs - which connect flights to destinations around the globe.  Yes, the paths of air travel, and ships, form a network graph.
+A look at cities throughout the world reveal airports, and in larger cities - airport hubs - which connect flights to other flights and destinations around the globe. Yes, the paths of air travel, and ships, also form a network graph.
 
 <img src="onworld-map.jpg" width="500"/>
 
@@ -67,7 +67,9 @@ The process of applying a skin (texture) to a wire frame model involves mapping 
 
 Ever wonder how computer game characters find their way within a game word? Dijkstra's algorithm, employed in computer game AI, is used for path finding using a weighted graph.
 
-Turning our attention to nature, here we see the remains of leaves which have been devoured by insects. The veins that remains shows the passages by which water was once delivered to vibrant green areas. If you remember you high school biology then this image might also look unremarkably similar to our own nervous system and arteries!
+Turning our attention to nature, here we see the remains of leaves which have been devoured by insects. The veins that remains shows the passages by which water was once delivered to vibrant leafy greens. If you recall you high school biology class then this image might also look unremarkably similar to our own nervous system and arteries!
+
+And that's no coincidence. Doctors save lives by manipulating those network graphs! True story!
 
 <img src="leaf-eaten.png" width="500"/>
 
@@ -124,7 +126,7 @@ Here we see a dashboard view which allows us to enter queries and graphically se
 
 Neo4j has a declarative query language called Cypher. Cypher queries consist of statements that use patterns to specify paths within a graph.
 
-In Cypher a node is represented inside of parentheses and links are referred to by lines and square brackets. Node and link properties are specified using curly braces.
+In Cypher syntax, a node is represented inside of parentheses and links are referred to by lines and square brackets. Node and link properties are specified using curly braces.
 
 For example:
 
@@ -132,6 +134,8 @@ For example:
  (NODE)        [RELATIONSHIP]          (NODE)
 (Person)-[:KNOWS {since: "20120225"}]-(Person)
 ```
+
+So not only are queries declarative, they're also visually descriptive.
 
 Let's take a closer look.
 
@@ -144,7 +148,7 @@ RETURN p;
 
 There are a few important characteristics in the query shown. On the first line, we see that we're trying to match a node, represented by a query enclosed in parentheses. The p:Person fragment says "create a variable called p with a label of Person". So here we learn that nodes can have labels (Person) and that we can assign them to variables (p).  On line two we simply return the contents of p.
 
-We can also specify the use of properties and query values by listing them within curly braces. So, `{name: "Alex"}` says we're interested in only matching nodes which have a name property with the value of "Alex".
+We can also specify the use of properties and query values by listing them within curly braces. So, `{name: "Alex"}` says we're interested in only matching nodes which have a name property containing the value of "Alex".
 
 If we wanted to return all the people in our graph, our query would be even simpler:
 
@@ -162,14 +166,14 @@ RETURN p1, r, p2;
 
 Notice that we assign the variable `r` to the relationship link. We also use the label `Knows` to specify the type of link we're interested in.
 
-Let's say that Alex is planning a party and would like to invite his closest acquaintances. Here we omit the query fragment for the Person's name property so we get any person that Alex directly knows.
+Let's say that Alex is planning a party and would like to invite his closest acquaintances. Here we omit the query fragment for the Person's name property so we match any person that Alex directly knows.
 
 ```
 MATCH (p1:Person {name: "Alex"})-[r:Knows]-(p2:Person)
 RETURN p1, r, p2;
 ```
 
-Now let's say that Alex is at a bar and is feeling good. Perhaps better than usual. He yells out to the bartender "The next round is on me!".  Here we omit the `Knows` relationship label because it's unlikely that Alex knows everyone in the bar.
+Now let's say that Alex is at a bar and is feeling pretty good. Perhaps better than usual. He yells out to the bartender "The next round is on me!".  Here we omit the `Knows` relationship label because it's unlikely that Alex knows everyone in the bar.
 
 ```
 MATCH (p1:Person)-[]-(p2:Person)
@@ -185,15 +189,19 @@ MATCH (p1:Person {name: "Susan"})-[r:Knows*2]-(p2:Person {interest: "business"})
 RETURN p1, r, p2;
 ```
 
-The new bit is the syntax `-[r:Knows*2]-`.  Here we're saying "Match a Person node with the property name="Susan" with one or more Knows relationships to a person with an interest in "business".  Here lies the power of graph queries, the ability to traverse a network of relationships to answer questions such as find me a friend of a friend (or more) who matches a particular criteria. This is also where relational database systems and their use of joins becomes far less than ideal at scale.  Such queries are also how recommendation engines can be used promote new products. For example: when Amazon lists products also purchased in conjunction with a product you're considering.
+The new bit is the syntax `-[r:Knows*2]-`.  
+
+>TODO: explain the use of *2
+
+Here we're saying "Match a Person node with the property name="Susan" with one or more Knows relationships to a person with an interest in "business".  Here lies the power of graph queries, the ability to traverse a network of relationships to answer questions such as find me a friend of a friend (or more) who matches a particular criteria. This is also where relational database systems and their use of joins becomes far less than ideal at scale.  Such queries are also how recommendation engines can be used promote new products. For example: when Amazon lists products also purchased in conjunction with a product you're considering.
 
 ## Accessing Neo4j from JavaScript
 
 Neo4j has an HTTP restful API that makes it possible for remote clients to connect to it. You can find a number of libraries on NPM which essential act as wrappers for Neo's restful endpoints.
 
-I also wrote a limited and highly opinionated Node library that facilitates connecting to Neo4j and optionally caching results using Redis. You can find it on NPM under the name of Neo4j-redis.
+In fact I wrote a limited and highly opinionated Node library that facilitates connecting to Neo4j and optionally caching results using Redis. You can find it on NPM under the name of Neo4j-redis.
 
-Neo Technologies, the company behind Neo4j, has created the [Neo4j Driver for Javascript](https://www.npmjs.com/package/neo4j-driver) NPM package. That's the library we'll use in this presentation.
+Neo Technologies, the company behind Neo4j, has created the now official [Neo4j Driver for Javascript](https://www.npmjs.com/package/neo4j-driver) NPM package. That's the library we'll use in this presentation. However, I encourage you to look at others which may be more comfortable to use.  
 
 ### Installing
 
@@ -205,7 +213,9 @@ $ npm install neo4j-driver
 
 ### Connecting to Neo
 
-Here is the `alex.js` example from this [presentation's repo](https://github.com/cjus/node-neo4j-presentation). We begin by defining the location of our neo4j database instance. I'm running mine on my laptop so I specify `localhost`.  The `bolt://` portion tells Neo that we'd like to use the faster binary connection protocol, instead of the HTTP version. You can find out more about bolt [here](https://neo4j.com/blog/neo4j-3-0-language-drivers).
+Here is the `alex.js` example from this [presentation's repo](https://github.com/cjus/node-neo4j-presentation). We begin by defining the location of our neo4j database instance. I'm running mine on my laptop, so I specify `localhost`.  The `bolt://` portion tells Neo that we'd like to use the faster binary connection protocol, instead of the HTTP version. 
+
+> You can find out more about bolt [here](https://neo4j.com/blog/neo4j-3-0-language-drivers).
 
 We then require the neo4j-driver and prepare an auth object to pass to the neo4j.driver setup. With a driver created we define an error handler.
 
@@ -220,7 +230,7 @@ driver.onError = (error) => {
 };
 ```
 
-Next, we create a driver session and run (execute) a Cypher query.  Note that the run function accepts two parameters and returns a JavaScript promise. The first parameter to run is the query template and the second is an object with query parameters. This allows Neo to cache query plans for added efficiency. We then use the `.then` and `.catch` to handle the promise resolve or reject cases.
+Next, we create a driver session and run (execute) a Cypher query.  Note that the run function accepts two parameters and returns a JavaScript promise. The first parameter to run is the query template and the second is an object with the  query's parameters. This allows Neo to cache query plans (template) for added efficiency. We then use the `.then` and `.catch` functions to handle the promise resolve or reject cases.
 
 ```javascript
 let session = driver.session();
@@ -245,7 +255,7 @@ session
   });
 ```
 
-Here is the output from the previous code. We display the information returned from the Cypher query.
+Here is the output from the previous code. We see the information returned from the Cypher query.
 
 ```shell
 $ node alex.js
@@ -254,7 +264,7 @@ Age: 34
 Interest: parties
 ```
 
-To learn more about the neo4j-driver check out the project [documentation](http://neo4j.com/docs/api/javascript-driver/current).
+> To learn more about the neo4j-driver check out the project [documentation](http://neo4j.com/docs/api/javascript-driver/current).
 
 In this next example, we run the query where Susan is checking her network for a person who has an interest in business.  She knows Bill who is her dad and a retired Harvard professor, but she doesn't directly know Jane who took Bill's game theory course at Harvard.
 
@@ -300,15 +310,21 @@ $ node business.js
 Susan discovered Jane
 ```
 
+Using the code patterns we've seen you'd able to perform insert, update and delete operations to build more complex applications. 
+
+Neo4j is really quite approachable. 
+
 ## Recap
 
-We began by learning about network graphs and how they are literally everywhere. We then saw how a graph database allowed us to model data and relationships. Far more complex examples are possible. For example, you could build a NodeJS service that analyzes data on a graph and adds or updates properties on relationship links. Such a process underpins machine learning and recommendation engines.
+We began our journey by learning about network graphs. Along the way we discovered that graphs are literally everywhere we look. In fact, network graphs could not be closer to our heaths - if you consider the network of arteries within our own bodies. 
 
-If you're building non-trivial applications then familiarity with graph databases should be an asset!
+We also learned that we actually think in terms of graphs and that graph databases are a natural extension for representing our data models and their relationships. 
+
+If you're building non-trivial applications then familiarity with graph databases should be an asset! I invite you to take these next steps. 
 
 ## Next steps
 
-* Star and clone this presentation: https://github.com/cjus/node-neo4j-presentation
+* If you enjoyed this presentation say thanks by staring the github repo. https://github.com/cjus/node-neo4j-presentation
 * Visit the Neo4j website: https://neo4j.com/
 * Download their free book: https://neo4j.com/graph-databases-book
 * Enroll in a free online training course: https://neo4j.com/graphacademy/online-training/introduction-graph-databases
