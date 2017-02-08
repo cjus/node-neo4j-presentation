@@ -6,7 +6,7 @@ Undoubtedly you're familiar with graphs - those charts showing colored bars, pie
 
 <img src="not-these-graphs.png" width="400"/>
 
-Instead, the graphs we're interested in consists of circles and lines and are commonly known as network graphs.
+The graphs we're interested in consists of circles and lines and are commonly known as network graphs.
 
 <img src="graph1.png" width="400"/>
 
@@ -20,7 +20,7 @@ Graphs can take on real world meaning, such as revealing the relationships betwe
 
 <img src="alex-introduces-tom-and-susan.png" width="400"/>
 
-Graphs can become quite complex when lots of nodes and links exists, such as with a web of social acquaintances on Facebook and LinkedIn.
+When lots of nodes and links exists, Graphs can become quite complex, such as with a web of social acquaintances on Facebook and LinkedIn.
 
 <img src="graph4.png" width="400"/>
 
@@ -42,7 +42,7 @@ Euler represented land masses as nodes and used links to represents bridges. He 
 
 ## Graphs are everywhere
 
-Today, researchers are using graphs to understand diverse topics such as biodiversity, terrorist networks, and the spread of global epidemics.
+Hundreds of years later, researchers are unabatedly using graphs to understand diverse topics such as biodiversity, terrorist networks, and the spread of global epidemics.
 
 Here is a graph that links 40 of the earliest known AIDS patients by sexual contact.
 
@@ -65,11 +65,11 @@ Consider 3D games, the characters and terrains are built from wire frame models 
 
 The process of applying a skin (texture) to a wire frame model involves mapping an image onto the surface area within vertices and edges - a process known as texture mapping.
 
-Ever wonder how computer game characters find their way within a game word? Dijkstra's algorithm, employed in computer game AI, is used for path finding using a weighted graph.
+Ever wonder how computer game characters find their way within a game world? Dijkstra's algorithm, employed in computer game AI, is used for finding routes using a weighted graph.
 
-Turning our attention to nature, here we see the remains of leaves which have been devoured by insects. The veins that remains shows the passages by which water was once delivered to vibrant leafy greens. If you recall your high school biology class then this image might also look unremarkably similar to our own nervous system and arteries!
+Turning our attention to nature, here we see the remains of leaves which have been devoured by insects. The veins that remains shows the passages by which water and nutrients were once delivered to vibrant leafy greens. If you recall your high school biology class then this image might also look unremarkably similar to our own nervous system and arteries!
 
-And that's no coincidence. Doctors save lives by manipulating those network graphs! True story!
+And that's no coincidence. Doctors save lives by manipulating those network graphs. True story!
 
 <img src="leaf-eaten.png" width="500"/>
 
@@ -95,7 +95,7 @@ This all brings us to Graph Databases - software tools for building and working 
 
 Rather than organize data as collections of tables, rows, and columns - or even as collections of documents - graph databases allow us to model data and relationships in the ways that closely mirror how we naturally think about them.
 
-Let's take a closer look. In this graph, we have nodes and links that both have associated properties. This type of graph is often referred to as a property graph. We have `age` and `interest` properties associated with each person, and we could have easily added other personal characteristics. In the links, we've associated information about when a relationship began.
+Let's take a closer look. In this graph, we have nodes and links that have associated properties. This type of graph is often referred to as a property graph. We have `age` and `interest` properties associated with each person, and we could have easily added other personal characteristics. In the relationship links, we've stored information about when a relationship began.
 
 <img src="graph5.png" width="400"/>
 
@@ -116,7 +116,7 @@ $ docker run -d -p 7474:7474 -p 7687:7687 -v ~/data:/data --name neo4j neo4j:3.1
 
 ## Neo4j dashboard
 
-Neo4j comes with a web-based dashboard that allows you to interact with Neo. It's a great way to initially learn about Neo and later create and test your data models. Not only is it an indispensable tool, it's also a real pleasure to use.
+Neo4j comes with a web-based dashboard that allows you to interact with Neo. It's a great way to learn about Neo and later create and test your data models. Not only is it an indispensable tool, it's also a real pleasure to use.
 
 Here we see a dashboard view which allows us to enter queries and graphically see the results.  Connecting to an instance of Neo is as simple as pointing your browser to http://localhost:7474
 
