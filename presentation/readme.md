@@ -1,8 +1,8 @@
 # Graphs, GraphDBs and JavaScript
 
-In this presentation we're going to look at Graph Databases. Before we explore them, we'll consider the importance of graphs, the underlying data structure that allows GraphDBs to exist.
+In this article we're going to look at Graph Databases. Before we explore them, we'll consider the importance of graphs, the underlying data structure that allows GraphDBs to exist.
 
-Undoubtedly you're familiar with graphs - those charts showing colored bars, pie slices and points along a line. They're great data visualization tools designed to quickly convey information. However, those are not the type of graphs we'll consider.
+Undoubtedly you're familiar with graphs - those charts showing colored bars, pie slices and points along a line. They're great data visualization tools designed to quickly convey information. However, those are not the types of graphs we'll consider.
 
 <img src="not-these-graphs.png" width="400"/>
 
@@ -42,13 +42,13 @@ Euler represented land masses as nodes and used links to represents bridges. He 
 
 ## Graphs are everywhere
 
-Hundreds of years later, researchers are unabatedly using graphs to understand diverse topics such as biodiversity, terrorist networks, and the spread of global epidemics.
+Hundreds of years later, researchers are unabatedly using graphs to understand diverse topics such as biodiversity, terrorist networks, and the global spread of epidemics.
 
 Here is a graph that links 40 of the earliest known AIDS patients by sexual contact.
 
 <img src="aids.png" width="500"/>
 
-You may have taken a train on your way to this presentation. Did you enjoy riding a graph?
+This morning you may taken a train. Did you enjoy riding a graph?
 
 If you consider a map of the New York City subway system - or any subway in the world for that matter - and if you label the train stations as nodes and the routes connecting stations as links - you'll quickly see a graph emerge.
 
@@ -63,17 +63,17 @@ Consider 3D games, the characters and terrains are built from wire frame models 
 <img src="TerrainWireframe.jpg" width="500"/>
 <img src="3dcharacter.png" width="500"/>
 
-The process of applying a skin (texture) to a wire frame model involves mapping an image onto the surface area within vertices and edges - a process known as texture mapping.
+In fact, the process of applying a skin (texture) to a wire frame model involves mapping an image onto the surface area within vertices and edges - a process known as texture mapping.
 
 Ever wonder how computer game characters find their way within a game world? Dijkstra's algorithm, employed in computer game AI, is used for finding routes using a weighted graph.
 
-Turning our attention to nature, here we see the remains of leaves which have been devoured by insects. The veins that remains shows the passages by which water and nutrients were once delivered to vibrant leafy greens. If you recall your high school biology class then this image might also look unremarkably similar to our own nervous system and arteries!
+Turning our attention to nature, here we see the remains of leaves which have been devoured by insects. The veins that remains show the passages by which water and nutrients were once delivered to vibrant leafy greens. If you recall your high school biology class then this image might also look unremarkably similar to our own nervous system and arteries!
 
 And that's no coincidence. Doctors save lives by manipulating those network graphs. True story!
 
 <img src="leaf-eaten.png" width="500"/>
 
-In fact, we need go no further than our thoughts to realize that the neurons in our own brains form a network graph. Indeed graphs are everywhere.
+In truth, we need go no further than our thoughts to realize that the neurons in our own brains form a network graph. Indeed graphs are everywhere.
 
 <img src="brain.png" width="500"/>
 
@@ -93,7 +93,7 @@ Not only do our brains build graphs, we've taught machines to do so as well, usi
 
 This all brings us to Graph Databases - software tools for building and working with graphs.
 
-Rather than organize data as collections of tables, rows, and columns - or even as collections of documents - graph databases allow us to model data and relationships in the ways that closely mirror how we naturally think about them.
+Rather than organize data as collections of tables, rows, and columns - or even as collections of documents - graph databases allow us to model data and relationships in ways that closely mirror how we naturally think about them.
 
 Let's take a closer look. In this graph, we have nodes and links that have associated properties. This type of graph is often referred to as a property graph. We have `age` and `interest` properties associated with each person, and we could have easily added other personal characteristics. In the relationship links, we've stored information about when a relationship began.
 
@@ -197,8 +197,7 @@ Referring back to our graph, we can see that if Jane were looking for a chess pl
 
 You may also notice that there is also a red path from Jane leading to Tom, which involves four hops. Neo4j returns the shorter of the two paths.
 
-This ability to find nodes along variable paths is one of the strengths of Graph Databases. 
-Here lies the power of graph queries, the ability to traverse a network of relationships to answer questions such as find me a friend of a friend (or more) who matches a particular criteria. This is also where relational database systems and their use of joins becomes far less than ideal at scale.  Such queries are also how recommendation engines can be used to promote new products. For example: when Amazon lists products also purchased in conjunction with a product you're considering.
+This is one of the great strengths of Graph Databases, the ability to traverse a network of relationships to answer questions such as find me a friend of a friend (or more) who matches a particular criteria. This is also where relational database systems and their use of joins becomes far less than ideal at scale.  Such queries are also how recommendation engines can be used to promote new products. For example: when Amazon lists products also purchased in conjunction with a product you're considering.
 
 ## Accessing Neo4j from JavaScript
 
@@ -206,7 +205,7 @@ Neo4j has an HTTP restful API that makes it possible for remote clients to conne
 
 In fact I wrote a limited and highly opinionated Node library that facilitates connecting to Neo4j and optionally caching results using Redis. You can find it on NPM under the name of Neo4j-redis.
 
-Neo Technologies, the company behind Neo4j, has created the now official [Neo4j Driver for Javascript](https://www.npmjs.com/package/neo4j-driver) NPM package. That's the library we'll use in this presentation. However, I encourage you to look at others which may be more comfortable to use.  
+Neo Technologies, the company behind Neo4j, has created the now official [Neo4j Driver for Javascript](https://www.npmjs.com/package/neo4j-driver) NPM package. That's the library we'll use in this article. However, I encourage you to look at others which may be more comfortable to use.  
 
 ### Installing
 
@@ -218,7 +217,7 @@ $ npm install neo4j-driver
 
 ### Connecting to Neo
 
-Here is the `alex.js` example from this [presentation's repo](https://github.com/cjus/node-neo4j-presentation). We begin by defining the location of our neo4j database instance. I'm running mine on my laptop, so I specify `localhost`.  The `bolt://` portion tells Neo that we'd like to use the faster binary connection protocol, instead of the HTTP version.
+Here is the `alex.js` example from the [Github repo](https://github.com/cjus/node-neo4j-presentation) associated with this article. We begin by defining the location of our neo4j database instance. I'm running mine on my laptop, so I specify `localhost`. The `bolt://` portion tells Neo that we'd like to use the faster binary connection protocol, instead of the HTTP version.
 
 > You can find out more about bolt [here](https://neo4j.com/blog/neo4j-3-0-language-drivers).
 
