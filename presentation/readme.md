@@ -83,11 +83,9 @@ Not only do our own bodies consists of graphs, it turns out that graphs are fund
 
 Since infancy, we catalog objects and assign properties to them, we then map objects to one another based on their relationship. This process continues in our minds throughout our lives.
 
-Think about any complex topic you've had to learn. Perhaps you began by reading introductory material that provided you a high-level overview. During that process, you were exposed to new terms. And as you learned more about them you were able to associate characteristics or properties to those terms. As you continued learning, you were able to identify relationships allowing you to associate a topic to other topics you already understood.
+Think about any complex topic you've had to learn. Perhaps you began by reading introductory material that provided you with a high-level overview. During that process, you were exposed to new terms. And as you learned more about them you were able to associate characteristics or properties to those terms. As you continued learning, you were able to identify relationships allowing you to associate a topic to other topics you already understood.
 
-It turns out that our memories are a sort of graph database. In fact, one way of improving memory is to create new links (or associations) to existing memories.  
-
-Not only do our brains build graphs, we've taught machines to do so as well, using the science of machine learning.
+Our minds definitely organize information by creating mental graphs. It turns out that our memories are a sort of graph database. In fact, one way of improving memory is to build more mental graphs by creating new links (or associations) to existing memories. 
 
 ## Graph databases
 
@@ -116,7 +114,7 @@ $ docker run -d -p 7474:7474 -p 7687:7687 -v ~/data:/data --name neo4j neo4j:3.1
 
 ## Neo4j dashboard
 
-Neo4j comes with a web-based dashboard that allows you to interact with Neo. It's a great way to learn about Neo and later create and test your data models. Not only is it an indispensable tool, it's also a real pleasure to use.
+Neo4j comes with a web-based dashboard that allows you to interact with Neo. It's a great way to learn about Neo and later create and test your data models. The dashboard is an indispensable tool and a real pleasure to use.
 
 Here we see a dashboard view which allows us to enter queries and graphically see the results.  Connecting to an instance of Neo is as simple as pointing your browser to http://localhost:7474
 
@@ -135,7 +133,7 @@ For example:
 (Person)-[:KNOWS {since: "20120225"}]-(Person)
 ```
 
-So not only are queries declarative, they're also visually descriptive.
+So in addition to queries being declarative, they're also visually descriptive.
 
 Let's take a closer look.
 
