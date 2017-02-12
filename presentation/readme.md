@@ -58,7 +58,7 @@ If you consider a map of the New York City subway system - or any subway in the 
 
 <img src="subwaymap.png" width="500"/>
 
-In New York City train stations have network hubs (at 34th and 42 streets and Time Square) which allow one to switch trains and travel other parts of the subway's network graph.
+In New York City, train stations have network hubs (at 34th and 42 streets and Time Square) which allow one to switch trains and travel other parts of the subway's network graph.
 
 <img src="station-letters.png" width="300"/>
 
