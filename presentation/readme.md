@@ -32,8 +32,6 @@ Graph diagrams came about as a leisurely pursuit of [Leonard Euler](https://en.m
 
 In 1736, from his home in Saint Petersburg, Euler turned his attention to a puzzle which was debated by the people of the nearby town of Königsberg - which is now the Russian city of Kaliningrad. During a time of prosperity, the people of Königsberg constructed seven bridges across the Pregel River to connect two islands to the surrounding landscape.
 
-<img src="konigsberg.jpg" width="500"/>
-
 The town's people pondered whether it was possible to cross the seven bridges without crossing one twice.
 
 In a short paper, Euler offered a proof that such a path could not exist. We won't get into the proof here because it isn't the proof that we're interested in, but rather the way in which Euler approached the problem.
@@ -52,19 +50,17 @@ Here is a graph that links 40 of the earliest known AIDS patients by sexual cont
 
 You may have recently taken a train ride. Did you enjoy riding a graph?
 
-<img src="train-ride.jpg" width="300"/>
-
 If you consider a map of the New York City subway system - or any subway in the world for that matter - and if you label the train stations as nodes and the routes connecting stations as links - you'll quickly see a graph emerge.
 
 <img src="subwaymap.png" width="500"/>
 
-In New York City, train stations have network hubs (at 34th and 42 streets and Time Square) which allow one to switch trains and travel other parts of the subway's network graph.
-
-<img src="station-letters.png" width="300"/>
+In New York City, train stations have network hubs (at 34th and 42nd streets) which allow one to switch trains and travel other parts of the subway's network graph.
 
 A look at cities throughout the world reveal airports, and in larger cities - airport hubs - which connect flights to other flights and destinations around the globe. Yes, the paths of air and ocean travel, also form a network graph.
 
 <img src="airports.png" width="300"/>
+
+If you look closely you can see where lots of lines converge indicating airport hubs.
 
 Consider 3D games, the characters and terrains are built from wire frame models called meshes, which are essentially graphs.  
 
@@ -75,7 +71,7 @@ In fact, the process of applying a skin (texture) to a wire frame model involves
 
 Ever wonder how computer game characters find their way within a game world? Dijkstra's algorithm, employed in computer game AI, is used for finding routes using a weighted graph.
 
-Turning our attention to nature, trees and plants exhibit graphs. In a tree the point where a branch splits into two or more branches can be considered a node and the branch itself a link between nodes.
+Turning our attention to nature, trees and plants exhibit graphs. In a tree, the points where a branches splits into two or more branches can be considered a nodes, and the branches themselves - links between nodes.
 
 <img src="tree.jpg" width="300"/>
 
@@ -87,7 +83,7 @@ Upon even closer examination the leaves of a tree reveal a network of passages w
 
 <img src="leaf.jpg" width="300"/>
 
-If you recall your high school biology class then this image might also look unremarkably similar to our own nervous system and arteries! And that's no coincidence. Doctors save lives by manipulating those network graphs.
+If you recall your high school biology class then this image might seem similar to our own nervous system and arteries! And that's no coincidence. Doctors save lives by manipulating those network graphs.
 
 In truth, we need go no further than our thoughts to realize that the neurons in our own brains form a network graph. Indeed graphs are everywhere.
 
@@ -191,8 +187,6 @@ RETURN p1, r, p2;
 
 Now let's say that Alex is at a bar and is feeling pretty good. Perhaps better than usual. He yells out to the bartender "The next round is on me!".  
 
-<img src="barscene.jpg" width="300"/>
-
 Here we omit the `Knows` relationship label because it's unlikely that Alex knows everyone in the bar.
 
 ```
@@ -201,8 +195,6 @@ RETURN p1, p2;
 ```
 
 Let's consider one final example. Susan is planning to open her first dance studio and needs business advice. She doesn't immediately know a person with an interest in business, but her dad Bill does.
-
-<img src="dance-instructor.jpg" width="300"/>
 
 Here's one way to write the query:
 
@@ -352,5 +344,3 @@ If you're building non-trivial applications then familiarity with graph database
 * Visit the Neo4j website: https://neo4j.com/
 * Download their free book: https://neo4j.com/graph-databases-book
 * Enroll in a free online training course: https://neo4j.com/graphacademy/online-training/introduction-graph-databases
-
-<img src="graphs-are-everywhere.jpg" width="300"/>
