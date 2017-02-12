@@ -8,21 +8,21 @@ Undoubtedly you're familiar with graphs - those charts showing colored bars, pie
 
 The graphs we're interested in consists of circles and lines and are commonly known as network graphs.
 
-<img src="graph1.png" width="400"/>
+<img src="graph1.png" width="300"/>
 
 This is the same graph defined in scientific terms, i.e. mathematics and computer science.
 
-<img src="graph2.png" width="400"/>
+<img src="graph2.png" width="300"/>
 
-A "thing" is represented by a **vertex** and a "link" is referred to as an **edge**. We can think of the vertices as representing nodes and the edges as the relationship between them. From here on out we'll simply refer to them as **nodes** and **links**.
+A "thing" is represented by a **vertex** and a "link" is referred to as an **edge**. We can think of the vertices as representing nodes and the edges as the relationships between them. From here on out we'll simply refer to them as **nodes** and **links**.
 
-Graphs can take on real world meaning, such as revealing the relationships between people. For example, in this graph, Tom knows Alex but doesn't directly know Bill or even his neighbors, Susan and Jane. If Tom wanted to meet Susan, he could ask Alex to introduce them.
+Graphs can take on real world meaning, such as revealing relationships between people. For example, in this graph, Tom knows Alex but doesn't directly know Bill or even his neighbors, Susan and Jane. If Tom wanted to meet Susan, he could ask Alex to introduce them.
 
-<img src="alex-introduces-tom-and-susan.png" width="400"/>
+<img src="alex-introduces-tom-and-susan.png" width="300"/>
 
-When lots of nodes and links exists, Graphs can become quite complex, such as with a web of social acquaintances on Facebook and LinkedIn.
+When lots of nodes and links exists, graphs can become quite complex, such as the web of social and business relationships found on Facebook and LinkedIn.
 
-<img src="graph4.png" width="400"/>
+<img src="graph4.jpg" width="500"/>
 
 ## Graphs revealed
 
@@ -30,7 +30,9 @@ Graph diagrams came about as a leisurely pursuit of [Leonard Euler](https://en.m
 
 <img src="Leonhard_Euler.jpg" width="200"/>
 
-In 1736, from his home in Saint Petersburg, Euler turned his attention to a puzzle which was proposed by the people of the nearby town of Königsberg - which is now the Russian city of Kaliningrad. During a time of great prosperity, the people of Königsberg constructed seven bridges across the Pregel River to connect two islands to the surrounding landscape.
+In 1736, from his home in Saint Petersburg, Euler turned his attention to a puzzle which was debated by the people of the nearby town of Königsberg - which is now the Russian city of Kaliningrad. During a time of prosperity, the people of Königsberg constructed seven bridges across the Pregel River to connect two islands to the surrounding landscape.
+
+<img src="konigsberg.jpg" width="500"/>
 
 The town's people pondered whether it was possible to cross the seven bridges without crossing one twice.
 
@@ -48,34 +50,48 @@ Here is a graph that links 40 of the earliest known AIDS patients by sexual cont
 
 <img src="aids.png" width="500"/>
 
-This morning you may taken a train. Did you enjoy riding a graph?
+You may have recently taken a train ride. Did you enjoy riding a graph?
+
+<img src="train-ride.jpg" width="300"/>
 
 If you consider a map of the New York City subway system - or any subway in the world for that matter - and if you label the train stations as nodes and the routes connecting stations as links - you'll quickly see a graph emerge.
 
-<img src="nycsubway.jpg" width="500"/>
+<img src="subwaymap.png" width="500"/>
 
-A look at cities throughout the world reveal airports, and in larger cities - airport hubs - which connect flights to other flights and destinations around the globe. Yes, the paths of air travel, and ships, also form a network graph.
+In New York City train stations have network hubs (at 34th and 42 streets and Time Square) which allow one to switch trains and travel other parts of the subway's network graph.
 
-<img src="onworld-map.jpg" width="500"/>
+<img src="station-letters.png" width="300"/>
+
+A look at cities throughout the world reveal airports, and in larger cities - airport hubs - which connect flights to other flights and destinations around the globe. Yes, the paths of air and ocean travel, also form a network graph.
+
+<img src="airports.png" width="300"/>
 
 Consider 3D games, the characters and terrains are built from wire frame models called meshes, which are essentially graphs.  
 
-<img src="TerrainWireframe.jpg" width="500"/>
-<img src="3dcharacter.png" width="500"/>
+<img src="wireframe-car.jpg" width="300"/>
+<img src="grandtheftauto.jpg" width="300"/>
 
 In fact, the process of applying a skin (texture) to a wire frame model involves mapping an image onto the surface area within vertices and edges - a process known as texture mapping.
 
 Ever wonder how computer game characters find their way within a game world? Dijkstra's algorithm, employed in computer game AI, is used for finding routes using a weighted graph.
 
-Turning our attention to nature, here we see the remains of leaves which have been devoured by insects. The veins that remains show the passages by which water and nutrients were once delivered to vibrant leafy greens. If you recall your high school biology class then this image might also look unremarkably similar to our own nervous system and arteries!
+Turning our attention to nature, trees and plants exhibit graphs. In a tree the point where a branch splits into two or more branches can be considered a node and the branch itself a link between nodes.
 
-And that's no coincidence. Doctors save lives by manipulating those network graphs. True story!
+<img src="tree.jpg" width="300"/>
 
-<img src="leaf-eaten.png" width="500"/>
+The roots of a tree are almost identical to the branches as shown here in a plant.
+
+<img src="roots.jpg" width="300"/>
+
+Upon even closer examination the leaves of a tree reveal a network of passages which deliver water and nutrients to vibrant leafy greens.
+
+<img src="leaf.jpg" width="300"/>
+
+If you recall your high school biology class then this image might also look unremarkably similar to our own nervous system and arteries! And that's no coincidence. Doctors save lives by manipulating those network graphs.
 
 In truth, we need go no further than our thoughts to realize that the neurons in our own brains form a network graph. Indeed graphs are everywhere.
 
-<img src="brain.png" width="500"/>
+<img src="neurons.jpg" width="300"/>
 
 ## Wet-ware
 
@@ -83,9 +99,11 @@ Not only do our own bodies consists of graphs, it turns out that graphs are fund
 
 Since infancy, we catalog objects and assign properties to them, we then map objects to one another based on their relationship. This process continues in our minds throughout our lives.
 
+<img src="infant.jpg" width="300"/>
+
 Think about any complex topic you've had to learn. Perhaps you began by reading introductory material that provided you with a high-level overview. During that process, you were exposed to new terms. And as you learned more about them you were able to associate characteristics or properties to those terms. As you continued learning, you were able to identify relationships allowing you to associate a topic to other topics you already understood.
 
-Our minds definitely organize information by creating mental graphs. It turns out that our memories are a sort of graph database. In fact, one way of improving memory is to build more mental graphs by creating new links (or associations) to existing memories. 
+Our minds organize information by creating mental graphs called memories. It turns out that our memories are a sort of graph database. In fact, one way of improving memory is to build more mental graphs by creating new links (or associations) to existing memories.
 
 ## Graph databases
 
@@ -95,7 +113,7 @@ Rather than organize data as collections of tables, rows, and columns - or even 
 
 Let's take a closer look. In this graph, we have nodes and links that have associated properties. This type of graph is often referred to as a property graph. We have `age` and `interest` properties associated with each person, and we could have easily added other personal characteristics. In the relationship links, we've stored information about when a relationship began.
 
-<img src="graph5.png" width="400"/>
+<img src="graph5.png" width="300"/>
 
 Such a graph could become the basis for an intelligent contact management application.
 
@@ -103,7 +121,7 @@ Such a graph could become the basis for an intelligent contact management applic
 
 To explore graph databases we're going to use the world's most popular graph database, Neo4j. Affectionately referred to by fans, as Neo.
 
-You can download and install a free copy of Neo from https://neo4j.com/download/community-edition
+You can download and install a free copy of Neo [here](https://neo4j.com/download/community-edition).
 
 However, being a big fan of Docker, I prefer to download and run Neo4j from a Docker container.
 
@@ -171,7 +189,11 @@ MATCH (p1:Person {name: "Alex"})-[r:Knows]-(p2:Person)
 RETURN p1, r, p2;
 ```
 
-Now let's say that Alex is at a bar and is feeling pretty good. Perhaps better than usual. He yells out to the bartender "The next round is on me!".  Here we omit the `Knows` relationship label because it's unlikely that Alex knows everyone in the bar.
+Now let's say that Alex is at a bar and is feeling pretty good. Perhaps better than usual. He yells out to the bartender "The next round is on me!".  
+
+<img src="barscene.jpg" width="300"/>
+
+Here we omit the `Knows` relationship label because it's unlikely that Alex knows everyone in the bar.
 
 ```
 MATCH (p1:Person)-[]-(p2:Person)
@@ -179,6 +201,8 @@ RETURN p1, p2;
 ```
 
 Let's consider one final example. Susan is planning to open her first dance studio and needs business advice. She doesn't immediately know a person with an interest in business, but her dad Bill does.
+
+<img src="dance-instructor.jpg" width="300"/>
 
 Here's one way to write the query:
 
@@ -191,7 +215,7 @@ The new bit is the syntax `-[r:Knows*2]-`. This is known as a variable length re
 
 Referring back to our graph, we can see that if Jane were looking for a chess player we'd have to specify `-[r:Knows*3]-` or three hops to get to Tom - following the green path shown.
 
-<img src="graph6.png" width="400"/>
+<img src="graph6.png" width="300"/>
 
 You may also notice that there is also a red path from Jane leading to Tom, which involves four hops. Neo4j returns the shorter of the two paths.
 
@@ -270,7 +294,7 @@ Interest: parties
 
 In this next example, we run the query where Susan is checking her network for a person who has an interest in business.  She knows Bill who is her dad and a retired Harvard professor, but she doesn't directly know Jane who took Bill's game theory course at Harvard.
 
-<img src="susan-knows-bill-who-knows-jane.png" width="400"/>
+<img src="susan-knows-bill-who-knows-jane.png" width="300"/>
 
 Our query attempts to find a path from Susan to a person with an interest in business.  That person turns out to be Jane.
 
@@ -320,7 +344,7 @@ We began our journey by learning about network graphs. Along the way we discover
 
 We also learned that we actually think in terms of graphs and that graph databases are a natural extension for representing our data models and their relationships.
 
-If you're building non-trivial applications then familiarity with graph databases should be an asset! I invite you to take these next steps.
+If you're building non-trivial applications then familiarity with graph databases should be an asset! I invite you to explore graph databases.
 
 ## Next steps
 
@@ -328,3 +352,5 @@ If you're building non-trivial applications then familiarity with graph database
 * Visit the Neo4j website: https://neo4j.com/
 * Download their free book: https://neo4j.com/graph-databases-book
 * Enroll in a free online training course: https://neo4j.com/graphacademy/online-training/introduction-graph-databases
+
+<img src="graphs-are-everywhere.jpg" width="300"/>
