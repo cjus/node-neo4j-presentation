@@ -26,7 +26,7 @@ When lots of nodes and links exists, graphs can become quite complex, such as th
 
 ## Graphs revealed
 
-Graph diagrams came about as a leisurely pursuit of [Leonard Euler](https://en.m.wikipedia.org/wiki/Leonhard_Euler) a Swiss-born mathematician who is widely regarded as the most prolific mathematician of all time.
+Graph diagrams came about in paper written by [Leonard Euler](https://en.m.wikipedia.org/wiki/Leonhard_Euler) a Swiss-born mathematician who is widely regarded as the most prolific mathematician of all time.
 
 <img src="Leonhard_Euler.jpg" width="200"/>
 
@@ -34,7 +34,7 @@ In 1736, from his home in Saint Petersburg, Euler turned his attention to a puzz
 
 The town's people pondered whether it was possible to cross the seven bridges without crossing one twice.
 
-In a short paper, Euler offered a proof that such a path could not exist. We won't get into the proof here because it isn't the proof that we're interested in, but rather the way in which Euler approached the problem.
+In his short paper, Euler offered a proof that such a path could not exist. We won't get into the proof here because it isn't the proof that we're interested in, but rather the way in which Euler approached the problem.
 
 <img src="Seven_Bridges_of_Konigsberg.png"/>
 
@@ -48,15 +48,19 @@ Here is a graph that links 40 of the earliest known AIDS patients by sexual cont
 
 <img src="aids.png" width="500"/>
 
-You may have recently taken a train ride. Did you enjoy riding a graph?
+On a lighter note, you may have recently taken a train ride. Did you enjoy riding a graph?
 
 If you consider a map of the New York City subway system - or any subway in the world for that matter - and if you label the train stations as nodes and the routes connecting stations as links - you'll quickly see a graph emerge.
 
 <img src="subwaymap.png" width="500"/>
 
-In New York City, train stations have network hubs (at 34th and 42nd streets) which allow one to switch trains and travel other parts of the subway's network graph.
+Nodes are sometimes referred to as hubs when more than one path (or link) coverages. 
 
-A look at cities throughout the world reveal airports, and in larger cities - airport hubs - which connect flights to other flights and destinations around the globe. Yes, the paths of air and ocean travel, also form a network graph.
+In New York City, train stations have network hubs (at 34th and 42nd streets) which allow one to switch trains and travel other parts of the subway's network graph. In the map below we can see that at Times Square we can switch to the N, Q, R, S, W, 1, 2, 3, or 7 train. 
+
+<img src="timessquare.png" width="400"/>
+
+A look at cities throughout the world reveal airports, and in larger cities - airport hubs - which connect flights to other flights and to destinations around the globe. Yes, the paths of air and ocean travel, also form a network graph.
 
 <img src="airports.png" width="300"/>
 
@@ -75,7 +79,7 @@ Turning our attention to nature, trees and plants exhibit graphs. In a tree, the
 
 <img src="tree.jpg" width="300"/>
 
-The roots of a tree are almost identical to the branches as shown here in a plant.
+The roots of a tree are almost identical to the branches as shown here in this plant.
 
 <img src="roots.jpg" width="300"/>
 
@@ -83,7 +87,7 @@ Upon even closer examination the leaves of a tree reveal a network of passages w
 
 <img src="leaf.jpg" width="300"/>
 
-If you recall your high school biology class then this image might seem similar to our own nervous system and arteries! And that's no coincidence. Doctors save lives by manipulating those network graphs.
+If you recall your high school biology class then this image might seem similar to our own nervous system and arteries! 
 
 In truth, we need go no further than our thoughts to realize that the neurons in our own brains form a network graph. Indeed graphs are everywhere.
 
@@ -176,7 +180,7 @@ MATCH (p1:Person {name: "Alex"})-[r:Knows]-(p2:Person {name: "Susan"})
 RETURN p1, r, p2;
 ```
 
-Notice that we assign the variable `r` to the relationship link. We also use the label `Knows` to specify the type of link we're interested in.
+Notice that we assign the variable `r` to the relationship link. We also use the label `Knows` to specify the type of link we're interested in. The label could have been something else such as Worked_with. 
 
 Let's say that Alex is planning a party and would like to invite his closest acquaintances. Here we omit the query fragment for the Person's name property so we match any person that Alex directly knows.
 
@@ -209,7 +213,7 @@ Referring back to our graph, we can see that if Jane were looking for a chess pl
 
 <img src="graph6.png" width="300"/>
 
-You may also notice that there is also a red path from Jane leading to Tom, which involves four hops. Neo4j returns the shorter of the two paths.
+You may also notice that there is a red path from Jane leading to Tom, which involves four hops. Neo4j returns the shorter of the two paths.
 
 This is one of the great strengths of Graph Databases, the ability to traverse a network of relationships to answer questions such as find me a friend of a friend (or more) who matches a particular criteria. This is also where relational database systems and their use of joins becomes far less than ideal at scale.  Such queries are also how recommendation engines can be used to promote new products. For example: when Amazon lists products also purchased in conjunction with a product you're considering.
 
@@ -336,7 +340,7 @@ We began our journey by learning about network graphs. Along the way we discover
 
 We also learned that we actually think in terms of graphs and that graph databases are a natural extension for representing our data models and their relationships.
 
-If you're building non-trivial applications then familiarity with graph databases should be an asset! I invite you to explore graph databases.
+Give graph databases a try. You might just discover they're a great fit for your needs!
 
 ## Next steps
 
