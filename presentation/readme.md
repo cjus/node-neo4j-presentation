@@ -58,11 +58,11 @@ Nodes are sometimes referred to as hubs when more than one path (or link) covera
 
 In New York City, train stations have network hubs (at 34th and 42nd streets) which allow one to switch trains and travel other parts of the subway's network graph. In the map below we can see that at Times Square we can switch to the N, Q, R, S, W, 1, 2, 3, or 7 train. 
 
-<img src="timessquare.png" width="400"/>
+<img src="timessquare.png" width="300"/>
 
 A look at cities throughout the world reveal airports, and in larger cities - airport hubs - which connect flights to other flights and to destinations around the globe. Yes, the paths of air and ocean travel, also form a network graph.
 
-<img src="airports.png" width="300"/>
+<img src="airports.png" width="400"/>
 
 If you look closely you can see where lots of lines converge indicating airport hubs.
 
