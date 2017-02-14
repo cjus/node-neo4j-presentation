@@ -26,7 +26,7 @@ When lots of nodes and links exists, graphs can become quite complex, such as th
 
 ## Graphs revealed
 
-Graph diagrams came about in paper written by [Leonard Euler](https://en.m.wikipedia.org/wiki/Leonhard_Euler) a Swiss-born mathematician who is widely regarded as the most prolific mathematician of all time.
+Graph diagrams made their debut in paper written by [Leonard Euler](https://en.m.wikipedia.org/wiki/Leonhard_Euler) a Swiss-born mathematician who is widely regarded as the most prolific mathematician of all time.
 
 <img src="Leonhard_Euler.jpg" width="200"/>
 
@@ -215,15 +215,17 @@ Referring back to our graph, we can see that if Jane were looking for a chess pl
 
 You may also notice that there is a red path from Jane leading to Tom, which involves four hops. Neo4j returns the shorter of the two paths.
 
-This is one of the great strengths of Graph Databases, the ability to traverse a network of relationships to answer questions such as find me a friend of a friend (or more) who matches a particular criteria. This is also where relational database systems and their use of joins becomes far less than ideal at scale.  Such queries are also how recommendation engines can be used to promote new products. For example: when Amazon lists products also purchased in conjunction with a product you're considering.
+The ability to traverse a network of relationships is one of the great strengths of Graph Databases. You can ask questions, such as find a friend of a friend (or more) who matches a particular criteria.
+
+This is also where relational database systems and their use of joins becomes far less than ideal at scale.  Such queries are also how recommendation engines can be used to promote new products. For example: when Amazon lists products also purchased in conjunction with a product you're considering.
 
 ## Accessing Neo4j from JavaScript
 
 Neo4j has an HTTP restful API that makes it possible for remote clients to connect to it. You can find a number of libraries on NPM which essential act as wrappers for Neo's restful endpoints.
 
-In fact I wrote a limited and highly opinionated Node library that facilitates connecting to Neo4j and optionally caching results using Redis. You can find it on NPM under the name of Neo4j-redis.
+In fact, I wrote a limited and highly opinionated Node library that facilitates working with  Neo4j and optionally caching results using Redis. You can find it on NPM under the name of Neo4j-redis.
 
-Neo Technologies, the company behind Neo4j, has created the now official [Neo4j Driver for Javascript](https://www.npmjs.com/package/neo4j-driver) NPM package. That's the library we'll use in this article. However, I encourage you to look at others which may be more comfortable to use.  
+Neo Technologies, the company behind Neo4j, has created the now official [Neo4j Driver for Javascript](https://www.npmjs.com/package/neo4j-driver). That's the library we'll use in this article. 
 
 ### Installing
 
