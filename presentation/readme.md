@@ -4,7 +4,7 @@ In this article we're going to look at Graph Databases. Before we explore them, 
 
 Undoubtedly you're familiar with graphs - those charts showing colored bars, pie slices and points along a line. They're great data visualization tools designed to quickly convey information. However, those are not the types of graphs we'll consider.
 
-<img src="not-these-graphs.png" width="400"/>
+<img src="not-these-graphs.png" width="300"/>
 
 The graphs we're interested in consists of circles and lines and are commonly known as network graphs.
 
