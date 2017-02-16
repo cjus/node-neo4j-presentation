@@ -54,9 +54,9 @@ If you consider a map of the New York City subway system - or any subway in the 
 
 <img src="subwaymap.png" width="500"/>
 
-Nodes are sometimes referred to as hubs when more than one path (or link) coverages. 
+Nodes are sometimes referred to as hubs when more than one path (or link) coverages.
 
-In New York City, train stations have network hubs (at 34th and 42nd streets) which allow one to switch trains and travel other parts of the subway's network graph. In the map below we can see that at Times Square we can switch to the N, Q, R, S, W, 1, 2, 3, or 7 train. 
+In New York City, train stations have network hubs (at 34th and 42nd streets) which allow one to switch trains and travel other parts of the subway's network graph. In the map below we can see that at Times Square we can switch to the N, Q, R, S, W, 1, 2, 3, or 7 train.
 
 <img src="timessquare.png" width="300"/>
 
@@ -87,7 +87,7 @@ Upon even closer examination the leaves of a tree reveal a network of passages w
 
 <img src="leaf.jpg" width="300"/>
 
-If you recall your high school biology class then this image might seem similar to our own nervous system and arteries! 
+If you recall your high school biology class then this image might seem similar to our own nervous system and arteries!
 
 In truth, we need go no further than our thoughts to realize that the neurons in our own brains form a network graph. Indeed graphs are everywhere.
 
@@ -180,7 +180,7 @@ MATCH (p1:Person {name: "Alex"})-[r:Knows]-(p2:Person {name: "Susan"})
 RETURN p1, r, p2;
 ```
 
-Notice that we assign the variable `r` to the relationship link. We also use the label `Knows` to specify the type of link we're interested in. The label could have been something else such as Worked_with. 
+Notice that we assign the variable `r` to the relationship link. We also use the label `Knows` to specify the type of link we're interested in. The label could have been something else such as Worked_with.
 
 Let's say that Alex is planning a party and would like to invite his closest acquaintances. Here we omit the query fragment for the Person's name property so we match any person that Alex directly knows.
 
@@ -225,15 +225,19 @@ Neo4j has an HTTP restful API that makes it possible for remote clients to conne
 
 In fact, I wrote a limited and highly opinionated Node library that facilitates working with  Neo4j and optionally caching results using Redis. You can find it on NPM under the name of Neo4j-redis.
 
-Neo Technologies, the company behind Neo4j, has created the now official [Neo4j Driver for Javascript](https://www.npmjs.com/package/neo4j-driver). That's the library we'll use in this article. 
+Neo Technologies, the company behind Neo4j, has created the now official [Neo4j Driver for Javascript](https://www.npmjs.com/package/neo4j-driver). That's the library we'll use in this article.
 
 ### Installing
+
+Installing the Neo4j driver for JavaScript involves a single command. In this example, we create a test project folder called `neo-test` and then use the node npm command to initialize a test project.  Lastly, we install the `neo4j-driver` package.
 
 ```shell
 $ mkdir neo-test; cd neo-test
 $ npm init -y
 $ npm install neo4j-driver
 ```
+
+Our project [Github repo](https://github.com/cjus/node-neo4j-presentation) was initialized this way.
 
 ### Connecting to Neo
 
