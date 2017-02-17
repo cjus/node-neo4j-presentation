@@ -352,7 +352,7 @@ The data was compiled into a Google spreadsheet making it difficult to clearly s
 
 #### 20,000 foot view
 
-Let's imagine that we're investigative journalist following leads. We begin by accessing Neo4j and looking at the 20,000 foot view of TrumpWorld.
+Let's imagine that we're investigative journalist following leads. We begin by accessing the Neo4j dashboard and looking at the 20,000 foot view of TrumpWorld.
 
 ```
 MATCH (n1)-[r]->(n2) RETURN r, n1, n2
@@ -360,10 +360,11 @@ MATCH (n1)-[r]->(n2) RETURN r, n1, n2
 
 <img src="trumpworld-highlevel.png" width="500"/>
 
-Here we only see 300 of the 2,620 available nodes.
+Here we see only 300 of the 2,620 available nodes. The dashboard limits the size of graph visualizations in order to make interacting with them manageable.
 
 #### Follow the money
 
+We can query the graph for banks and their connections to organizations and individuals. The orange node at the center is, you guessed it, Mr. Trump.
 
 ```
 MATCH (bank:Organization)--(other)
@@ -375,6 +376,8 @@ RETURN *
 
 #### Most connected organizations
 
+Here we see which organizations are the most connected. Neo4j returns a table view because the query focused on aggregation of the relationship type (r).
+
 ```
 MATCH (o:Organization)-[r]-()
 RETURN o.name, count(*), collect(distinct type(r)) AS types
@@ -384,7 +387,9 @@ LIMIT 5
 
 <img src="trumpworld-connected-orgs.png"/>
 
-#### Putin & Trump
+#### Trump and Putin
+
+We can uncover the social ties between Trump and Putin using the following query.
 
 ```
 MATCH (vp:Person {name:"VLADIMIR PUTIN"}),(dt:Person {name:"DONALD J. TRUMP"})
@@ -393,6 +398,14 @@ RETURN path
 ```
 
 <img src="trumpworld-putin.png" />
+
+By clicking on the links we discover the following:
+
+* In 2014, Donald Trump and Sergei Millian appeared together in a Facebook photo
+* Putin awarded Sergei Millian a prize in Jan. 2015 for developing ties between Russia and American businesspeople
+* In 2012, Putin awarded Order of Friendship to Rex Tillerson
+* Donald Trump tapped Rex Tillerson as Nominee for Secretary of State
+
 
 ## Recap
 
