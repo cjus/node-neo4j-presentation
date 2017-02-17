@@ -376,7 +376,7 @@ RETURN *
 
 #### Most connected organizations
 
-Here we see which organizations are the most connected. Neo4j returns a table view because the query focused on aggregation of the relationship type (r).
+Here we see which organizations are the most connected. Neo4j returns a table view because the following query focuses on the aggregation of the relationship type (r).
 
 ```
 MATCH (o:Organization)-[r]-()
@@ -397,7 +397,7 @@ MATCH path = allShortestPaths( (vp)-[*]-(dt) )
 RETURN path
 ```
 
-<img src="trumpworld-putin.png" />
+<img src="trumpworld-putin.png" width="200"/>
 
 By clicking on the links we discover the following:
 
@@ -406,6 +406,7 @@ By clicking on the links we discover the following:
 * In 2012, Putin awarded Order of Friendship to Rex Tillerson
 * Donald Trump tapped Rex Tillerson as Nominee for Secretary of State
 
+Insights like these help journalist focus their resources and energies.
 
 ## Recap
 
