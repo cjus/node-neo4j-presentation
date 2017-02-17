@@ -121,9 +121,7 @@ Such a graph could become the basis for an intelligent contact management applic
 
 There are lots of [graph databases](https://en.wikipedia.org/wiki/Graph_database) to choose from. In this article we're going to use the world's most popular graph database, Neo4j. Affectionately referred to by fans, as Neo.
 
-You can download and install a free copy of Neo [here](https://neo4j.com/download/community-edition).
-
-However, being a big fan of Docker, I prefer to download and run Neo4j from a Docker container.
+You can [download and install](https://neo4j.com/download/community-edition) a free copy of Neo. However, being a big fan of Docker, I prefer to download and run Neo4j from a Docker container.
 
 ```
 $ docker pull neo4j:3.1.0
@@ -350,16 +348,51 @@ On January 15th 2017, as many New Yorkers were resting on a cold and lazy Sunday
 
 The data was compiled into a Google spreadsheet making it difficult to clearly see the rats nest of underlying interconnections. Enter, the team at Neo Technologies who downloaded the data and loaded it into a Neo4j graph. Mark Needham, at Neo Technologies, created a [docker container](https://hub.docker.com/r/markhneedham/neo4j-3.1-trumpworld/) packaging both Neo and the TrumpWorld dataset making it easy for anyone to explore the rabbit hole that is Trump World.
 
-Let's imagine that we're investigative journalist following leads. We begin by accessing Neo4j and looking at the 20,000 foot view of TrumpWorld.
-
 <img src="trumpworld-graph-dataset-neo4j-analysis-buzzfeed.png" width="500"/>
+
+#### 20,000 foot view
+
+Let's imagine that we're investigative journalist following leads. We begin by accessing Neo4j and looking at the 20,000 foot view of TrumpWorld.
 
 ```
 MATCH (n1)-[r]->(n2) RETURN r, n1, n2
 ```
 
+<img src="trumpworld-highlevel.png" width="500"/>
+
 Here we only see 300 of the 2,620 available nodes.
 
+#### Follow the money
+
+
+```
+MATCH (bank:Organization)--(other)
+WHERE bank.name contains "BANK"
+RETURN *
+```
+
+<img src="trumpworld-banks.png" width="500"/>
+
+#### Most connected organizations
+
+```
+MATCH (o:Organization)-[r]-()
+RETURN o.name, count(*), collect(distinct type(r)) AS types
+ORDER BY count(*) DESC
+LIMIT 5
+```
+
+<img src="trumpworld-connected-orgs.png" width="700"/>
+
+#### Putin & Trump
+
+```
+MATCH (vp:Person {name:"VLADIMIR PUTIN"}),(dt:Person {name:"DONALD J. TRUMP"})
+MATCH path = allShortestPaths( (vp)-[*]-(dt) )
+RETURN path
+```
+
+<img src="trumpworld-putin.png" />
 
 ## Recap
 
@@ -380,11 +413,11 @@ Give graph databases a try. You might just discover they're a great fit for your
 
 ### Books
 
-* Graph Databases - Ian Robison, Jim Webber & Emil Eifrem
-* Learning Neo4j - by Rik Bruggen
-* Linked: The New Science Of Networks Science Of Networks - Albert-laszlo Barabasi
-‪* The Tipping Point: How Little Things Can Make a Big Difference - by Malcolm Gladwell
-* Six Degrees: The Science of a Connected Age - by Duncan J. Watts
+* Graph Databases by Ian Robison, Jim Webber & Emil Eifrem
+* Learning Neo4j by Rik Bruggen
+* Linked: The New Science Of Networks Science Of Networks by Albert-laszlo Barabasi
+* The Tipping Point: How Little Things Can Make a Big Difference by Malcolm Gladwell
+* Six Degrees: The Science of a Connected Age by Duncan J. Watts
 
 ---
 Photos / diagrams created by author or licensed from iStockPhoto.
