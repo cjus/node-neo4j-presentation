@@ -382,7 +382,7 @@ ORDER BY count(*) DESC
 LIMIT 5
 ```
 
-<img src="trumpworld-connected-orgs.png" width="700"/>
+<img src="trumpworld-connected-orgs.png"/>
 
 #### Putin & Trump
 
