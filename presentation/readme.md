@@ -1,5 +1,7 @@
 # Graphs, GraphDBs and JavaScript
 
+# **THIS ARTICLE IS STILL A WORK IN PROGRESS!**
+
 In this article we're going to look at Graph Databases. Before we explore them, we'll consider the importance of graphs, the underlying data structure that allows GraphDBs to exist.
 
 Undoubtedly you're familiar with graphs - those charts showing colored bars, pie slices and points along a line. They're great data visualization tools designed to quickly convey information. However, those are not the types of graphs we'll consider.
@@ -26,23 +28,21 @@ When lots of nodes and links exists, graphs can become quite complex, such as th
 
 ## Graphs revealed
 
-Graph diagrams made their debut in paper written by [Leonard Euler](https://en.m.wikipedia.org/wiki/Leonhard_Euler) a Swiss-born mathematician who is widely regarded as the most prolific mathematician of all time.
+Graph diagrams made their debut in paper written by [Leonard Euler](https://en.m.wikipedia.org/wiki/Leonhard_Euler) a Swiss-born mathematician who is  regarded as one of the most prolific mathematician of all time.
 
 <img src="Leonhard_Euler.jpg" width="200"/>
 
-In 1736, from his home in Saint Petersburg, Euler turned his attention to a puzzle which was debated by the people of the nearby town of Königsberg - which is now the Russian city of Kaliningrad. During a time of prosperity, the people of Königsberg constructed seven bridges across the Pregel River to connect two islands to the surrounding landscape.
+In 1735, from his home in Saint Petersburg, Euler turned his attention to a puzzle which was debated by the people of the nearby town of Königsberg - which is now the Russian city of Kaliningrad. During a time of prosperity, the people of Königsberg constructed seven bridges across the Pregel River to connect two islands to the surrounding landscape. The town's people later pondered whether it was possible to cross the seven bridges without crossing one twice.
 
-The town's people pondered whether it was possible to cross the seven bridges without crossing one twice.
-
-In his short paper, Euler offered a proof that such a path could not exist. We won't get into the proof here because it isn't the proof that we're interested in, but rather the way in which Euler approached the problem.
+In his [short paper](http://eulerarchive.maa.org//docs/originals/E053.pdf) entitled "The solution of a problem relating to the geometry of position", Euler offered a proof that such a path could not exist. We won't get into the proof here because it isn't the proof that we're interested in, but rather the way in which Euler approached the problem.
 
 <img src="Seven_Bridges_of_Konigsberg.png"/>
 
-Euler represented land masses as nodes and used links to represents bridges. He then assigned each of the nodes a letter from A to D. With this, Euler inadvertently founded an extensive branch of mathematics called graph theory - to which many other well-known mathematicians have since contributed.
+Euler represented land masses as nodes and used links to represents bridges. He then assigned each of the nodes a letter from A to D. With this, Euler, unknowingly founded an extensive branch of mathematics called graph theory.
 
 ## Graphs are everywhere
 
-Hundreds of years later, researchers are unabatedly using graphs to understand diverse topics such as biodiversity, terrorist networks, and the global spread of epidemics.
+Hundreds of years later, researchers are using graphs to understand diverse topics such as biodiversity, terrorist networks, and the global spread of epidemics.
 
 Here is a graph that links 40 of the earliest known AIDS patients by sexual contact.
 
@@ -89,7 +89,7 @@ Upon even closer examination the leaves of a tree reveal a network of passages w
 
 If you recall your high school biology class then this image might seem similar to our own nervous system and arteries!
 
-In truth, we need go no further than our thoughts to realize that the neurons in our own brains form a network graph. Indeed graphs are everywhere.
+In truth, we need reflex no further than our thoughts to realize that the neurons in our own brains form a network graph. Indeed graphs are everywhere.
 
 <img src="neurons.jpg" width="300"/>
 
@@ -119,7 +119,7 @@ Such a graph could become the basis for an intelligent contact management applic
 
 ## Enter Neo4j
 
-To explore graph databases we're going to use the world's most popular graph database, Neo4j. Affectionately referred to by fans, as Neo.
+There are lots of [graph databases](https://en.wikipedia.org/wiki/Graph_database) to choose from. In this article we're going to use the world's most popular graph database, Neo4j. Affectionately referred to by fans, as Neo.
 
 You can download and install a free copy of Neo [here](https://neo4j.com/download/community-edition).
 
@@ -340,17 +340,51 @@ Susan discovered Jane
 
 Using the code patterns we've seen you'd able to perform insert, update and delete operations to build more complex applications. Neo4j is really quite approachable.
 
+## Exploring TrumpWorld
+
+As we close out our exploration into Graphs and GraphDBs, I'd like to share a practical example of how graphs are being used in the context of our current political climate here in the United States.
+
+No, I'm not referring to the NSA - but more about the power of data in the hands of journalist and citizens armed with technology.
+
+On January 15th 2017, as many New Yorkers were resting on a cold and lazy Sunday morning, social news and entertainment media company, BuzzFeed, posted an article entitled [Help Us Map TrumpWorld](https://www.buzzfeed.com/johntemplon/help-us-map-trumpworld) which compiled a listing of 1,500 people and organizations associated with, in one way or another, to Donald Trump's varied business interests. In the article the authors asked the public to help validate and contribute to the existing list.
+
+The data was compiled into a Google spreadsheet making it difficult to clearly see the rats nest of underlying interconnections. Enter, the team at Neo Technologies who downloaded the data and loaded it into a Neo4j graph. Mark Needham, at Neo Technologies, created a [docker container](https://hub.docker.com/r/markhneedham/neo4j-3.1-trumpworld/) packaging both Neo and the TrumpWorld dataset making it easy for anyone to explore the rabbit hole that is Trump World.
+
+Let's imagine that we're investigative journalist following leads. We begin by accessing Neo4j and looking at the 20,000 foot view of TrumpWorld.
+
+<img src="trumpworld-graph-dataset-neo4j-analysis-buzzfeed.png" width="500"/>
+
+```
+MATCH (n1)-[r]->(n2) RETURN r, n1, n2
+```
+
+Here we only see 300 of the 2,620 available nodes.
+
+
 ## Recap
 
 We began our journey by learning about network graphs. Along the way we discovered that graphs are literally everywhere we look. In fact, network graphs could not be closer to our hearts - if you consider the network of arteries within our own bodies.
 
 We also learned that we actually think in terms of graphs and that graph databases are a natural extension for representing our data models and their relationships.
 
+Finally, we saw the power of using graph databases to better understand current events.
+
 Give graph databases a try. You might just discover they're a great fit for your needs!
 
 ## Next steps
 
-* If you enjoyed this presentation say thanks by staring the github repo. https://github.com/cjus/node-neo4j-presentation
-* Visit the Neo4j website: https://neo4j.com/
-* Download their free book: https://neo4j.com/graph-databases-book
+* If you enjoyed this article say thanks by staring the github repo. https://github.com/cjus/node-neo4j-presentation
+* Visit the Neo4j website: https://neo4j.com and download their free book: https://neo4j.com/graph-databases-book
 * Enroll in a free online training course: https://neo4j.com/graphacademy/online-training/introduction-graph-databases
+* Explore the [TrumpWorld graph](https://github.com/neo4j-contrib/trumpworld-graph)
+
+### Books
+
+* Graph Databases - Ian Robison, Jim Webber & Emil Eifrem
+* Learning Neo4j - by Rik Bruggen
+* Linked: The New Science Of Networks Science Of Networks - Albert-laszlo Barabasi
+‪* The Tipping Point: How Little Things Can Make a Big Difference - by Malcolm Gladwell
+* Six Degrees: The Science of a Connected Age - by Duncan J. Watts
+
+---
+Photos / diagrams created by author or licensed from iStockPhoto.
