@@ -71,7 +71,7 @@ Consider 3D games, the characters and terrains are built from wire frame models 
 <img src="wireframe-car.jpg" width="300"/>
 <img src="grandtheftauto.jpg" width="300"/>
 
-In fact, the process of applying a skin (texture) to a wire frame model involves mapping an image onto the surface area within vertices and edges - a process known as texture mapping.
+In fact, the process of applying a texture to a wire frame model involves mapping an image onto the surface area within vertices and edges - a process known as texture mapping.
 
 Ever wonder how computer game characters find their way within a game world? Dijkstra's algorithm, employed in computer game AI, is used for finding routes using a weighted graph.
 
@@ -83,15 +83,17 @@ The roots of a tree are almost identical to the branches as shown here in this p
 
 <img src="roots.jpg" width="300"/>
 
-Upon even closer examination the leaves of a tree reveal a network of passages which deliver water and nutrients to vibrant leafy greens.
+Upon even closer examination - the leaves of a tree reveal a network of passages which deliver water and nutrients to vibrant leafy greens.
 
 <img src="leaf.jpg" width="300"/>
 
 If you recall your high school biology class then this image might seem similar to our own nervous system and arteries!
 
-In truth, we need reflex no further than our thoughts to realize that the neurons in our own brains form a network graph. Indeed graphs are everywhere.
+In truth, we need reflect no further than our thoughts to realize that the neurons in our own brains form a network graph.
 
 <img src="neurons.jpg" width="300"/>
+
+Indeed graphs are everywhere.
 
 ## Wet-ware
 
@@ -164,9 +166,9 @@ MATCH (p:Person {name: "Alex"})
 RETURN p;
 ```
 
-There are a few important characteristics in the query shown. On the first line, we see that we're trying to match a node, represented by a query enclosed in parentheses. The p:Person fragment says "create a variable called p with a label of Person". So here we learn that nodes can have labels (Person) and that we can assign them to variables (p).  On line two we simply return the contents of p.
+There are a few important characteristics in the query shown. On the first line, we see that we're trying to match a node, represented by a query enclosed in parentheses. The p:Person fragment says "map a variable called p with a label of Person". So here we learn that nodes can have labels (Person) and that we can assign them to variables (p).  On line two we simply return the contents of p.
 
-We can also specify the use of properties and query values by listing them within curly braces. So, `{name: "Alex"}` says we're interested in only matching nodes which have a name property containing the value of "Alex".
+We can enhance our queries by specify the use of properties and values and listing them within curly braces. So, `{name: "Alex"}` says we're interested in only matching nodes which have a name property containing the value of "Alex".
 
 If we wanted to return all the people in our graph, our query would be even simpler:
 
@@ -175,14 +177,14 @@ MATCH (p:Person)
 RETURN p;
 ```
 
-Alex is connected to Susan by a relationship link with a label of `Knows`. That link also has a property called `since`. We could write a query that includes the relationship by using square brackets:
+Alex is connected to Susan by a relationship link with a label of `Knows`. That link also has a property called `since`. We could write a query that includes the `Knows` relationship by using square brackets:
 
 ```
 MATCH (p1:Person {name: "Alex"})-[r:Knows]-(p2:Person {name: "Susan"})
 RETURN p1, r, p2;
 ```
 
-Notice that we assign the variable `r` to the relationship link. We also use the label `Knows` to specify the type of link we're interested in. The label could have been something else such as Worked_with.
+Notice that we assign the variable `r` to the relationship link. We also use the label `Knows` to specify the type of link we're interested in. The label could have been something else such as worked_with or hired_by.
 
 Let's say that Alex is planning a party and would like to invite his closest acquaintances. Here we omit the query fragment for the Person's name property so we match any person that Alex directly knows.
 
@@ -200,7 +202,7 @@ MATCH (p1:Person)-[]-(p2:Person)
 RETURN p1, p2;
 ```
 
-Let's consider one final example. Susan is planning to open her first dance studio and needs business advice. She doesn't immediately know a person with an interest in business, but her dad Bill does.
+Let's consider another example. Susan is planning to open her first dance studio and needs business advice. She doesn't immediately know a person with an interest in business, but her dad Bill does.
 
 Here's one way to write the query:
 
@@ -209,9 +211,9 @@ MATCH (p1:Person {name: "Susan"})-[r:Knows*2]-(p2:Person {interest: "business"})
 RETURN p1, r, p2;
 ```
 
-The new bit is the syntax `-[r:Knows*2]-`. This is known as a variable length relationship. Here we're saying "Match a Person node with the property name="Susan" with one or two Knows relationships to a person with an interest in "business".  Specifying the length is important in order to limit the depth (or hops) that the query traverses to find a match. In a large graph, a long traversal might take longer than we'd like.
+The new bit is the syntax `-[r:Knows*2]-`. This is known as a variable length relationship. Here we're saying "Match a Person node with the property name="Susan" with one or two `Knows` relationships to a person with an interest in "business".  Specifying the length is important in order to limit the depth (or hops) that the query traverses to find a match. In a large graph, a long traversal might take longer than we'd like.
 
-Referring back to our graph, we can see that if Jane were looking for a chess player we'd have to specify `-[r:Knows*3]-` or three hops to get to Tom - following the green path shown.
+Referring back to our graph, we can see that if Jane were looking for a chess player we'd have to specify `-[r:Knows*3]-` or three hops to get to Tom - following the green path shown below.
 
 <img src="graph6.png" width="300"/>
 
@@ -219,7 +221,7 @@ You may also notice that there is a red path from Jane leading to Tom, which inv
 
 The ability to traverse a network of relationships is one of the great strengths of Graph Databases. You can ask questions, such as find a friend of a friend (or more) who matches a particular criteria.
 
-This is also where relational database systems and their use of joins becomes far less than ideal at scale.  Such queries are also how recommendation engines can be used to promote new products. For example: when Amazon lists products also purchased in conjunction with a product you're considering.
+This is also where relational database systems and their use of joins becomes far less than ideal at scale.  Such queries are also how recommendation engines can be used to promote new products. For example: when Amazon lists products also purchased in conjunction with a product you happen to be considering.
 
 ## Accessing Neo4j from JavaScript
 
@@ -231,7 +233,7 @@ Neo Technologies, the company behind Neo4j, has created the now official [Neo4j 
 
 ### Installing
 
-Installing the Neo4j driver for JavaScript involves a single command. In this example, we create a test project folder called `neo-test` and then use the node npm command to initialize a test project.  Lastly, we install the `neo4j-driver` package.
+Installing the Neo4j driver for JavaScript involves a single command. In this example, we create a test project folder called `neo-test` and then use the NodeJS npm command to initialize a test project.  Lastly, we install the `neo4j-driver` package.
 
 ```shell
 $ mkdir neo-test; cd neo-test
@@ -239,7 +241,7 @@ $ npm init -y
 $ npm install neo4j-driver
 ```
 
-Our project [Github repo](https://github.com/cjus/node-neo4j-presentation) was initialized this way.
+Our project [Github repo](https://github.com/cjus/node-neo4j-presentation) was initialized in this way.
 
 ### Connecting to Neo
 
@@ -260,7 +262,7 @@ driver.onError = (error) => {
 };
 ```
 
-Next, we create a driver session and run (execute) a Cypher query.  Note that the run function accepts two parameters and returns a JavaScript promise. The first parameter to run is the query template and the second is an object with the  query's parameters. This allows Neo to cache query plans (template) for added efficiency. We then use the `.then` and `.catch` functions to handle the promise resolve or reject cases.
+Next, we create a driver session and run (execute) a Cypher query.  Note that the run function accepts two parameters and returns a JavaScript promise. The first parameter to run function is the query template and the second is an object with the  query's parameters. This allows Neo to cache query plans (template) for added efficiency. We then use the `.then` and `.catch` functions to handle the promise resolve or reject cases.
 
 ```javascript
 let session = driver.session();
@@ -346,11 +348,11 @@ Using the code patterns we've seen you'd able to perform insert, update and dele
 
 As we close out our exploration into Graphs and GraphDBs, I'd like to share a practical example of how graphs are being used in the context of our current political climate here in the United States.
 
-No, I'm not referring to the intelligence community - but more about the power of data in the hands of journalist and citizens armed with technology.
+No, I'm not referring to the intelligence community - but more about the power of data in the hands of journalists and citizens armed with technology.
 
-On January 15th 2017, as many New Yorkers were resting on a cold and lazy Sunday morning, social news and entertainment media company, BuzzFeed, posted an article entitled [Help Us Map TrumpWorld](https://www.buzzfeed.com/johntemplon/help-us-map-trumpworld) which compiled a listing of 1,500 people and organizations associated with, in one way or another, to Donald Trump's varied business interests. In the article, the authors asked the public to help validate and contribute to the existing list.
+On January 15th 2017, as many New Yorkers were resting on a cold and lazy Sunday morning, social news and entertainment media company, BuzzFeed, posted an article entitled [Help Us Map TrumpWorld](https://www.buzzfeed.com/johntemplon/help-us-map-trumpworld) which compiled a listing of 1,500 people and organizations associated with, in one way or another, to Donald Trump's varied business interests. In the article, the authors asked the public to help validate and contribute to the existing and quickly emerging list.
 
-The data was compiled into a Google spreadsheet making it difficult to clearly see the rats nest of underlying interconnections. Enter, the team at Neo Technologies who downloaded the data and loaded it into a Neo4j graph. Mark Needham, at Neo Technologies, created a [docker container](https://hub.docker.com/r/markhneedham/neo4j-3.1-trumpworld/) packaging both Neo and the TrumpWorld dataset making it easy for anyone to explore the rabbit hole that is Trump World.
+The data was compiled into a Google spreadsheet making it difficult to clearly see the rats nest of underlying interconnections. Enter, the team at Neo Technologies who downloaded the data and loaded it into a Neo4j graph. Mark Needham, at Neo Technologies, created a [docker container](https://hub.docker.com/r/markhneedham/neo4j-3.1-trumpworld/) packaging both Neo and the TrumpWorld dataset making it easy for anyone to explore the rabbit hole that is Trump World. This dataset is also available online via the [Neo4j Sandbox](https://neo4jsandbox.com/) I mentioned earlier.
 
 <img src="trumpworld-graph-dataset-neo4j-analysis-buzzfeed.png" width="500"/>
 
@@ -364,7 +366,7 @@ MATCH (n1)-[r]->(n2) RETURN r, n1, n2
 
 <img src="trumpworld-highlevel.png" width="500"/>
 
-Here we see only 300 of the 2,620 available nodes. The dashboard limits the size of graph visualizations in order to make interacting with them manageable.
+Here we see only 300 of the 2,620 available nodes. The dashboard limits the size of graph visualizations in order to keep them manageable.
 
 #### Follow the money
 
@@ -380,7 +382,7 @@ RETURN *
 
 #### Most connected organizations
 
-Here we see which organizations are the most connected. Neo4j returns a table view because the following query focuses on the aggregation of the relationship type (r).
+Here we see which organizations are the most connected. Neo4j returns a table view because the following query focuses on the aggregation of the relationship type (r). This is how we're able to see the varied types of relationship without knowing their labels.
 
 ```
 MATCH (o:Organization)-[r]-()
@@ -393,7 +395,7 @@ LIMIT 5
 
 #### Trump and Putin
 
-We can uncover the social ties between Trump and Putin using the following query.
+We can investigate potential social ties between Trump and Putin using the following query.
 
 ```
 MATCH (vp:Person {name:"VLADIMIR PUTIN"}),(dt:Person {name:"DONALD J. TRUMP"})
@@ -410,7 +412,7 @@ By clicking on the links we discover the following:
 * In 2012, Putin awarded Order of Friendship to Rex Tillerson
 * Donald Trump tapped Rex Tillerson as Nominee for Secretary of State
 
-Insights like these help journalist focus their resources and energies.
+Insights like these help journalists focus their resources and energies.
 
 ## Recap
 
@@ -418,18 +420,20 @@ We began our journey by learning about network graphs. Along the way we discover
 
 We also learned that we actually think in terms of graphs and that graph databases are a natural extension for representing our data models and their relationships.
 
-Finally, we saw the power of using graph databases to better understand current events.
+Finally, we saw the power of using graph databases to better understand the current events.
 
-Give graph databases a try. You might just discover they're a great fit for your needs!
+Give graph databases a try. You may just discover that they're an ideal tool to tackle the modern challenges in our highly connected world.
 
 ## Next steps
 
 * If you enjoyed this article say thanks by staring the github repo. https://github.com/cjus/node-neo4j-presentation
 * Visit the Neo4j website: https://neo4j.com and download their free book: https://neo4j.com/graph-databases-book
 * Enroll in a free online training course: https://neo4j.com/graphacademy/online-training/introduction-graph-databases
-* Explore the [TrumpWorld graph](https://github.com/neo4j-contrib/trumpworld-graph)
+* Explore the TrumpWorld graph via the [Docker container](https://github.com/neo4j-contrib/trumpworld-graph) or online on the [Neo4j Sandbox](https://neo4jsandbox.com/)
 
 ### Books
+
+There a lots of books on Graphs and Graph Databases. Here are the ones I've read.
 
 * Graph Databases by Ian Robison, Jim Webber & Emil Eifrem
 * Learning Neo4j by Rik Bruggen
