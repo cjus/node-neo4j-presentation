@@ -56,7 +56,7 @@ If you consider a map of the New York City subway system - or any subway in the 
 
 Nodes are sometimes referred to as hubs when more than one path (or link) coverages.
 
-In New York City, train stations have network hubs (at 34th and 42nd streets) which allow one to switch trains and travel other parts of the subway's network graph. In the map below we can see that at Times Square we can switch to the N, Q, R, S, W, 1, 2, 3, or 7 trains.
+The New York City subway system has hubs at 34th and 42nd street, which allow one to switch trains and travel other parts of the subway's network graph. In the map below we can see that at 42nd street and Times Square we can switch to the N, Q, R, S, W, 1, 2, 3, or 7 trains.
 
 <img src="timessquare.png" width="300"/>
 
