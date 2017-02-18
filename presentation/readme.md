@@ -342,7 +342,7 @@ Using the code patterns we've seen you'd able to perform insert, update and dele
 
 As we close out our exploration into Graphs and GraphDBs, I'd like to share a practical example of how graphs are being used in the context of our current political climate here in the United States.
 
-No, I'm not referring to the NSA - but more about the power of data in the hands of journalist and citizens armed with technology.
+No, I'm not referring to the intelligence community - but more about the power of data in the hands of journalist and citizens armed with technology.
 
 On January 15th 2017, as many New Yorkers were resting on a cold and lazy Sunday morning, social news and entertainment media company, BuzzFeed, posted an article entitled [Help Us Map TrumpWorld](https://www.buzzfeed.com/johntemplon/help-us-map-trumpworld) which compiled a listing of 1,500 people and organizations associated with, in one way or another, to Donald Trump's varied business interests. In the article the authors asked the public to help validate and contribute to the existing list.
 
@@ -408,7 +408,7 @@ By clicking on the links we discover the following:
 
 Insights like these help journalist focus their resources and energies.
 
-## Recap
+## Recap		
 
 We began our journey by learning about network graphs. Along the way we discovered that graphs are literally everywhere we look. In fact, network graphs could not be closer to our hearts - if you consider the network of arteries within our own bodies.
 
