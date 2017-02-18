@@ -119,9 +119,13 @@ Such a graph could become the basis for an intelligent contact management applic
 
 ## Enter Neo4j
 
-There are lots of [graph databases](https://en.wikipedia.org/wiki/Graph_database) to choose from. In this article, we're going to use the world's most popular graph database, Neo4j. Affectionately referred to by fans, as Neo.
+There are lots of [graph databases](https://en.wikipedia.org/wiki/Graph_database) to choose from. In addition, there are products which offer Graph Database functionality combined with document and key/value stores, such as  [OrientDB](http://orientdb.com/) and [ArangoDB](https://www.arangodb.com/). During the past decade, others have been doing interesting work in the graph database space, such as [Microsoft Research's Trinity](https://www.microsoft.com/en-us/research/project/trinity/) project.
 
-You can [download and install](https://neo4j.com/download/community-edition) a free copy of Neo. However, being a big fan of Docker, I prefer to download and run Neo4j from a Docker container.
+In this article, we're going to use the world's most popular graph database, [Neo4j](https://neo4j.com/). Affectionately referred to by fans, as Neo.
+
+Getting started with Neo is easier than with most database products. You can try Neo without installing it by simply provisioning a free instance using the [Neo4j Sandbox](https://neo4jsandbox.com/). It comes complete with user guides and sample datasets. This would have been an invaluable resource when I first embarked on Neo several years ago. Back then, setting up Neo4j involved working with the correct version of the Java JVM and tweaking operating system file handle limits. For beginners, those days are thankfully over.
+
+If you'd rather have a local instance of Neo4j running on your laptop you can [download and install](https://neo4j.com/download/community-edition) a free copy of Neo. However, being a big fan of Docker, I prefer to download and run Neo4j from a Docker container.
 
 ```
 $ docker pull neo4j:3.1.0
