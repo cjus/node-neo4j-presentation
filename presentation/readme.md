@@ -2,7 +2,7 @@
 
 # **THIS ARTICLE IS STILL A WORK IN PROGRESS!**
 
-In this article we're going to look at Graph Databases. Before we explore them, we'll consider the importance of graphs, the underlying data structure that allows GraphDBs to exist.
+In this article, we're going to look at Graph Databases. Before we explore them, we'll consider the importance of graphs, the underlying data structure that allows GraphDBs to exist.
 
 Undoubtedly you're familiar with graphs - those charts showing colored bars, pie slices and points along a line. They're great data visualization tools designed to quickly convey information. However, those are not the types of graphs we'll consider.
 
@@ -22,13 +22,13 @@ Graphs can take on real world meaning, such as revealing relationships between p
 
 <img src="alex-introduces-tom-and-susan.png" width="300"/>
 
-When lots of nodes and links exists, graphs can become quite complex, such as the web of social and business relationships found on Facebook and LinkedIn.
+When lots of nodes and links exist, graphs can become quite complex, such as the web of social and business relationships found on Facebook and LinkedIn.
 
 <img src="graph4.jpg" width="500"/>
 
 ## Graphs revealed
 
-Graph diagrams made their debut in paper written by [Leonard Euler](https://en.m.wikipedia.org/wiki/Leonhard_Euler) a Swiss-born mathematician who is  regarded as one of the most prolific mathematician of all time.
+Graph diagrams made their debut in a paper written by [Leonard Euler](https://en.m.wikipedia.org/wiki/Leonhard_Euler) a Swiss-born mathematician who is regarded as one of the most prolific mathematicians of all time.
 
 <img src="Leonhard_Euler.jpg" width="200"/>
 
@@ -56,7 +56,7 @@ If you consider a map of the New York City subway system - or any subway in the 
 
 Nodes are sometimes referred to as hubs when more than one path (or link) coverages.
 
-In New York City, train stations have network hubs (at 34th and 42nd streets) which allow one to switch trains and travel other parts of the subway's network graph. In the map below we can see that at Times Square we can switch to the N, Q, R, S, W, 1, 2, 3, or 7 train.
+In New York City, train stations have network hubs (at 34th and 42nd streets) which allow one to switch trains and travel other parts of the subway's network graph. In the map below we can see that at Times Square we can switch to the N, Q, R, S, W, 1, 2, 3, or 7 trains.
 
 <img src="timessquare.png" width="300"/>
 
@@ -75,7 +75,7 @@ In fact, the process of applying a skin (texture) to a wire frame model involves
 
 Ever wonder how computer game characters find their way within a game world? Dijkstra's algorithm, employed in computer game AI, is used for finding routes using a weighted graph.
 
-Turning our attention to nature, trees and plants exhibit graphs. In a tree, the points where a branches splits into two or more branches can be considered a nodes, and the branches themselves - links between nodes.
+Turning our attention to nature, trees and plants exhibit graphs. In a tree, the points where a branch splits into two or more branches can be considered nodes, and the branches themselves - links between nodes.
 
 <img src="tree.jpg" width="300"/>
 
@@ -119,7 +119,7 @@ Such a graph could become the basis for an intelligent contact management applic
 
 ## Enter Neo4j
 
-There are lots of [graph databases](https://en.wikipedia.org/wiki/Graph_database) to choose from. In this article we're going to use the world's most popular graph database, Neo4j. Affectionately referred to by fans, as Neo.
+There are lots of [graph databases](https://en.wikipedia.org/wiki/Graph_database) to choose from. In this article, we're going to use the world's most popular graph database, Neo4j. Affectionately referred to by fans, as Neo.
 
 You can [download and install](https://neo4j.com/download/community-edition) a free copy of Neo. However, being a big fan of Docker, I prefer to download and run Neo4j from a Docker container.
 
@@ -205,7 +205,7 @@ MATCH (p1:Person {name: "Susan"})-[r:Knows*2]-(p2:Person {interest: "business"})
 RETURN p1, r, p2;
 ```
 
-The new bit is the syntax `-[r:Knows*2]-`. This is known as a variable length relationship. Here we're saying "Match a Person node with the property name="Susan" with one or two Knows relationships to a person with an interest in "business".  Specifying the length is important in order to limit the depth (or hops) that the query traverses to find a match. In a large graph a long traversal might take longer than we'd like.
+The new bit is the syntax `-[r:Knows*2]-`. This is known as a variable length relationship. Here we're saying "Match a Person node with the property name="Susan" with one or two Knows relationships to a person with an interest in "business".  Specifying the length is important in order to limit the depth (or hops) that the query traverses to find a match. In a large graph, a long traversal might take longer than we'd like.
 
 Referring back to our graph, we can see that if Jane were looking for a chess player we'd have to specify `-[r:Knows*3]-` or three hops to get to Tom - following the green path shown.
 
@@ -344,7 +344,7 @@ As we close out our exploration into Graphs and GraphDBs, I'd like to share a pr
 
 No, I'm not referring to the intelligence community - but more about the power of data in the hands of journalist and citizens armed with technology.
 
-On January 15th 2017, as many New Yorkers were resting on a cold and lazy Sunday morning, social news and entertainment media company, BuzzFeed, posted an article entitled [Help Us Map TrumpWorld](https://www.buzzfeed.com/johntemplon/help-us-map-trumpworld) which compiled a listing of 1,500 people and organizations associated with, in one way or another, to Donald Trump's varied business interests. In the article the authors asked the public to help validate and contribute to the existing list.
+On January 15th 2017, as many New Yorkers were resting on a cold and lazy Sunday morning, social news and entertainment media company, BuzzFeed, posted an article entitled [Help Us Map TrumpWorld](https://www.buzzfeed.com/johntemplon/help-us-map-trumpworld) which compiled a listing of 1,500 people and organizations associated with, in one way or another, to Donald Trump's varied business interests. In the article, the authors asked the public to help validate and contribute to the existing list.
 
 The data was compiled into a Google spreadsheet making it difficult to clearly see the rats nest of underlying interconnections. Enter, the team at Neo Technologies who downloaded the data and loaded it into a Neo4j graph. Mark Needham, at Neo Technologies, created a [docker container](https://hub.docker.com/r/markhneedham/neo4j-3.1-trumpworld/) packaging both Neo and the TrumpWorld dataset making it easy for anyone to explore the rabbit hole that is Trump World.
 
@@ -352,7 +352,7 @@ The data was compiled into a Google spreadsheet making it difficult to clearly s
 
 #### 20,000 foot view
 
-Let's imagine that we're investigative journalist following leads. We begin by accessing the Neo4j dashboard and looking at the 20,000 foot view of TrumpWorld.
+Let's imagine that we're investigative journalist following leads. We begin by accessing the Neo4j dashboard and looking at the 20,000-foot view of TrumpWorld.
 
 ```
 MATCH (n1)-[r]->(n2) RETURN r, n1, n2
@@ -408,7 +408,7 @@ By clicking on the links we discover the following:
 
 Insights like these help journalist focus their resources and energies.
 
-## Recap		
+## Recap
 
 We began our journey by learning about network graphs. Along the way we discovered that graphs are literally everywhere we look. In fact, network graphs could not be closer to our hearts - if you consider the network of arteries within our own bodies.
 
