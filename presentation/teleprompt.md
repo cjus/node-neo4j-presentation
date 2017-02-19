@@ -1,17 +1,15 @@
-
-
-
-
-
-
-> Introduction
+.
+.
+.
+.
+# Introduction
 
 Hello everyone. Thanks for joining us.
-
+.
 In [this] presentation we're going to look at Graph Databases.
-
+.
 Before we [explore] them, we'll consider :the: importance [of] <graphs> the underlying data structure that allows GraphDBs to exist.
-
+.
 ^ Undoubtedly you're familiar with graphs - those charts showing [colored] bars, pie slices and [points] along a line.
 
 [They're] great data visualization tools [designed] to quickly convey information.
@@ -27,8 +25,8 @@ A "thing" ^ is represented by a [vertex] and a "link" is referred to as an [edge
 We can think of the vertices as representing [nodes] ^ and the [edges] as the relationships between them.
 
 From here on out we'll simply refer to them as [nodes] and [links].
-
-
+.
+.
 Graphs can take on [real] world meaning, such as :revealing: the relationships between people.
 
 ^ For example, in this graph, Tom knows Alex but doesn't directly know Bill or even his neighbors, Susan and Jane.
@@ -37,7 +35,7 @@ If Tom wanted to [meet] Susan, ^ he could ask Alex to introduce them.
 
 When lots of [nodes] and [links] exist, graphs can become quite complex, :such as: the web of [social] and [business] relationships found on ^ [Facebook] and [LinkedIn].
 
-> Graphs revealed.
+# Graphs revealed.
 
 Graph diagrams made their debut in a paper written by :Leonard Euler: ^,  a Swiss-born mathematician who is regarded as one of the most [prolific] mathematicians of all time.
 
@@ -59,7 +57,7 @@ He then assigned each of the [nodes] a letter from A to D.
 
 With this, Euler, unknowingly founded an [extensive] branch of mathematics called [graph theory].
 
-> Graphs are everywhere
+# Graphs are everywhere
 
 Hundreds of [years] later, researchers are using graphs to explore topics such as biodiversity, terrorist networks, and the global spread of epidemics.
 
@@ -112,7 +110,7 @@ In truth, we need reflect no further than our [thoughts] to realize that the [ne
 
 Indeed graphs are everywhere.
 
-> Wet-ware
+# Wet-ware
 
 Not only do our :own: bodies consists of graphs, it turns out that graphs are fundamental to how we [actually think]!
 
@@ -138,7 +136,7 @@ It turns out that our [memories] are a sort of graph database.
 In fact, one way of improving memory is to build :more: mental graphs by creating new [links] (or associations) to existing memories.  
 
 
-> Graph databases
+# Graph databases
 
 This all brings us to ^ [Graph Databases] - software tools for building and working with graphs.
 
@@ -160,7 +158,7 @@ This type of [graph] is often referred to as a property graph.
 
 Such a graph could become the basis for an intelligent contact management application.
 
-> Enter Neo4j
+# Enter Neo4j
 
 ^ There are lots of [graph databases] to choose from.
 
@@ -189,7 +187,7 @@ For beginners, those days are thankfully over.
 ^ However, being a big fan of Docker, I prefer to download and run Neo4j from a Docker container.
 
 
-> Neo4j dashboard
+# Neo4j dashboard
 
 Neo4j comes with a web-based [dashboard] that allows you to interact with Neo.
 
@@ -202,7 +200,7 @@ The dashboard is an indispensable tool :and: a real pleasure to use.
 Connecting to :an: instance of Neo is as simple as pointing your browser to http localhost port 7474
 
 
-> Neo4j queries
+# Neo4j queries
 
 Neo4j has a declarative [query] language called Cypher.
 
@@ -319,7 +317,7 @@ Such queries are also how recommendation engines can be used to promote new prod
 
 For example: when Amazon lists products also purchased in conjunction with a product you happen to be considering.
 
-> Accessing Neo4j from JavaScript
+# Accessing Neo4j from JavaScript
 
 ^ Neo4j has an HTTP restful API :that: makes it possible :for: remote clients to connect to it.
 
@@ -334,7 +332,7 @@ You can find it on NPM under the name of Neo4j-redis.
 That's the library we'll use in this presentation. ^
 
 
-> Installing
+# Installing
 
 Installing the Neo4j driver for JavaScript involves a single command. ^
 
@@ -354,7 +352,7 @@ Our project's GitHub repo  was initialized in this way.
 
 
 
-> Connecting to Neo (sample code)
+# Connecting to Neo (sample code)
 
 Here is the `alex.js` example from the Github repo associated with this presentation.
 
@@ -399,7 +397,7 @@ Using the code patterns we've seen you'd able to perform insert, update and dele
 Neo4j is really quite approachable.
 
 
-> Exploring TrumpWorld
+# Exploring TrumpWorld
 
 ^ As we close out our exploration into Graphs and GraphDBs,
 
@@ -427,7 +425,7 @@ Mark Needham, at Neo Technologies, created a docker container packaging both Neo
 
 This dataset is also available online via the [Neo4j Sandbox] I mentioned earlier.
 
-> 20,000 foot view
+## 20,000 foot view
 
 Let's imagine that we're investigative journalist following leads.
 
@@ -443,7 +441,7 @@ Here we see only 300 of the 2,620 available nodes.
 
 The dashboard limits the size of graph visualizations in order to keep them manageable.
 
-> Follow the money
+## Follow the money
 
 We can query the graph for banks and their connections to organizations and individuals.
 
@@ -457,7 +455,7 @@ RETURN *
 
 <img src="trumpworld-banks.png" width="500"/>
 
-> Most connected organizations
+## Most connected organizations
 
 Here we see which organizations are the most connected.
 
@@ -472,7 +470,7 @@ LIMIT 5
 
 <img src="trumpworld-connected-orgs.png"/>
 
-> Trump and Putin
+## Trump and Putin
 
 We can uncover the social ties between Trump and Putin using the following query.
 
@@ -497,7 +495,7 @@ By clicking on the links we discover the following:
 Insights like these help journalist focus their resources and energies.
 
 
-> Recap
+# Recap
 
 We began our journey by learning about network graphs.
 
@@ -515,14 +513,14 @@ Finally, we saw the power of using graph databases to better understand the curr
 
 Give graph databases a try. You may just discover that they're an ideal tool to tackle the modern challenges in our highly connected world.
 
-> Next steps
+# Next steps
 
 * If you enjoyed this article say thanks by staring the github repo. https://github.com/cjus/node-neo4j-presentation
 * Visit the Neo4j website: https://neo4j.com and download their free book: https://neo4j.com/graph-databases-book
 * Enroll in a free online training course: https://neo4j.com/graphacademy/online-training/introduction-graph-databases
 * Explore the TrumpWorld graph via the [Docker container](https://github.com/neo4j-contrib/trumpworld-graph) or online on the [Neo4j Sandbox](https://neo4jsandbox.com/)
 
-> Books
+# Books
 
 There a lots of books on Graphs and Graph Databases. Here are the ones I've read.
 
