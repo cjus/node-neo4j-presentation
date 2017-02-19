@@ -18,7 +18,7 @@ This is the same graph defined in scientific terms, i.e. mathematics and compute
 
 A "thing" is represented by a **vertex** and a "link" is referred to as an **edge**. We can think of the vertices as representing nodes and the edges as the relationships between them. From here on out we'll simply refer to them as **nodes** and **links**.
 
-Graphs can take on real world meaning, such as revealing relationships between people. For example, in this graph, Tom knows Alex but doesn't directly know Bill or even his neighbors, Susan and Jane. If Tom wanted to meet Susan, he could ask Alex to introduce them.
+Graphs can take on real world meaning, such as revealing the relationships between people. For example, in this graph, Tom knows Alex but doesn't directly know Bill or even his neighbors, Susan and Jane. If Tom wanted to meet Susan, he could ask Alex to introduce them.
 
 <img src="alex-introduces-tom-and-susan.png" width="300"/>
 
@@ -42,7 +42,7 @@ Euler represented land masses as nodes and used links to represents bridges. He 
 
 ## Graphs are everywhere
 
-Hundreds of years later, researchers are using graphs to understand diverse topics such as biodiversity, terrorist networks, and the global spread of epidemics.
+Hundreds of years later, researchers are using graphs to explore topics such as biodiversity, terrorist networks, and the global spread of epidemics.
 
 Here is a graph that links 40 of the earliest known AIDS patients by sexual contact.
 
@@ -60,7 +60,7 @@ The New York City subway system has hubs at 34th and 42nd street, which allow on
 
 <img src="timessquare.png" width="300"/>
 
-A look at cities throughout the world reveal airports, and in larger cities - airport hubs - which connect flights to other flights and to destinations around the globe. Yes, the paths of air and ocean travel, also form a network graph.
+A look at cities throughout the world reveals airports, and in larger cities - airport hubs - which connect flights to other flights and to destinations around the globe. Yes, the paths of air and ocean travel, also form a network graph.
 
 <img src="airports.png" width="400"/>
 
@@ -75,7 +75,7 @@ In fact, the process of applying a texture to a wire frame model involves mappin
 
 Ever wonder how computer game characters find their way within a game world? Dijkstra's algorithm, employed in computer game AI, is used for finding routes with the help of a weighted graph.
 
-Turning our attention to nature, trees and plants exhibit graphs. In a tree, the points where a branches split into two or more branches can be considered nodes, and the branches themselves - links between nodes.
+Turning our attention to nature, trees and plants also exhibit graphs. In a tree, the points where a branches split into two or more branches can be considered nodes, and the branches themselves - links between nodes.
 
 <img src="tree.jpg" width="300"/>
 
@@ -87,7 +87,7 @@ Upon even closer examination - the leaves of a tree reveal a network of passages
 
 <img src="leaf.jpg" width="300"/>
 
-If you recall your high school biology class then this image might seem similar to our own nervous system and arteries!
+If you recall your high school biology class then this image might seem similar to textbook diagrams illustrating our own nervous system and arteries!
 
 In truth, we need reflect no further than our thoughts to realize that the neurons in our own brains form a network graph.
 
@@ -211,7 +211,7 @@ MATCH (p1:Person {name: "Susan"})-[r:Knows*2]-(p2:Person {interest: "business"})
 RETURN p1, r, p2;
 ```
 
-The new bit is the syntax `-[r:Knows*2]-`. This is known as a variable length relationship. Here we're saying "Match a Person node with the property name="Susan" with one or two `Knows` relationships to a person with an interest in "business". Specifying the length is important in order to limit the depth (or hops) that the query traverses to find a match. In a large graph, a long traversal might take longer than we'd like.
+The new bit is the syntax `-[r:Knows*2]-`. This is referred to as a variable length relationship. Here we're saying "Match a Person node with the property name="Susan" with one or two `Knows` relationships to a person with an interest in "business". Specifying the length is important in order to limit the depth (or hops) that the query traverses to find a match. In a large graph, a long traversal might take longer than we'd like.
 
 Referring back to our graph, we can see that if Jane were looking for a chess player we'd have to specify `-[r:Knows*3]-` or three hops to get to Tom - following the green path shown below.
 
@@ -227,7 +227,7 @@ This is also where relational database systems and their use of joins becomes fa
 
 Neo4j has an HTTP restful API that makes it possible for remote clients to connect to it. You can find a number of libraries on NPM which essential act as wrappers for Neo's restful endpoints.
 
-In fact, I wrote a limited and highly opinionated Node library that facilitates working with  Neo4j and optionally caching results using Redis. You can find it on NPM under the name of Neo4j-redis.
+In fact, I wrote a limited and opinionated Node library that facilitates working with  Neo4j and optionally caching results using Redis. You can find it on NPM under the name of Neo4j-redis.
 
 Neo Technologies, the company behind Neo4j, has created the now official [Neo4j Driver for Javascript](https://www.npmjs.com/package/neo4j-driver). That's the library we'll use in this article.
 

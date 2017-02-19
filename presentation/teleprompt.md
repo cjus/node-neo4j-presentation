@@ -29,13 +29,13 @@ We can think of the vertices as representing [nodes] ^ and the [edges] as the re
 From here on out we'll simply refer to them as [nodes] and [links].
 
 
-Graphs can take on [real] world meaning, such as revealing relationships between people.
+Graphs can take on [real] world meaning, such as :revealing: the relationships between people.
 
 ^ For example, in this graph, Tom knows Alex but doesn't directly know Bill or even his neighbors, Susan and Jane.
 
 If Tom wanted to [meet] Susan, ^ he could ask Alex to introduce them.
 
-When lots of nodes and links exist, graphs can become quite complex, such as the web of social and business relationships found on ^ Facebook and LinkedIn.
+When lots of [nodes] and [links] exist, graphs can become quite complex, :such as: the web of [social] and [business] relationships found on ^ [Facebook] and [LinkedIn].
 
 > Graphs revealed.
 
@@ -61,7 +61,7 @@ With this, Euler, unknowingly founded an [extensive] branch of mathematics calle
 
 > Graphs are everywhere
 
-Hundreds of years later, researchers are  using graphs to understand [diverse] topics such as biodiversity, terrorist networks, and the global spread of epidemics.
+Hundreds of [years] later, researchers are using graphs to explore topics such as biodiversity, terrorist networks, and the global spread of epidemics.
 
 Here is a graph ^ that links [40] of the earliest known AIDS patients by sexual contact.
 
@@ -74,12 +74,12 @@ and if you label the train stations as [nodes] and the routes connecting station
 
 Nodes are sometimes referred to as [hubs] when more :than: one path (or link) coverages.
 
-The New York City [subway system has hubs] at 34th and 42nd street, which allow one to switch trains and travel other parts of the subway's network graph.
+The New York City [subway system has hubs] at 34th and 42nd street, which allow :one: to switch trains :and: travel other parts of the subway's network graph.
 
-As this subway sign shows ^ at 42nd street and Times Square we can switch to the 1, 2, 3, 7, N, Q, R, S, W, or S trains.
+As this subway sign shows ^ at 42nd street and Times Square we can switch to the 1, 2, 3, 7, N, Q, R, W, [or] S trains.
 
 
-A look at cities ^ throughout the world reveal [airports], and in larger cities - [airport hubs] -
+A look at cities ^ throughout the :world: [reveals airports], and in larger cities - [airport hubs] -
 
 which connect flights to [other] flights and :to: destinations around the globe.
 
@@ -98,28 +98,27 @@ Ever wonder how computer game characters ^ find their way within a game world?
 Dijkstra's algorithm, employed in computer game AI, is used for finding routes with the help of a weighted graph.
 
 
-Turning our attention to [nature] ^, trees and plants [exhibit] graphs.
+Turning our attention to [nature] ^, trees and plants :also: [exhibit] graphs.
 
 In a tree, the points where branches [split] into two or more branches can be considered [nodes] and the branches themselves - [links] between nodes.
 
 The [roots] ^ of a tree are almost identical to the branches as shown here in this plant.
 
-^ Upon even closer examination the leaves of a tree reveal a [network of passages] which deliver water and nutrients to vibrant leafy greens.
+^ Upon :even: closer examination - the leaves of a tree reveal a [network of passages] which [deliver water] and [nutrients] to vibrant leafy greens.
 
-If you recall your high school biology class then this image might seem [similar] to our own nervous system and arteries! ^
+If you recall your high school biology class then this image might seem [similar] to :textbook: diagrams illustrating our own nervous system and arteries! ^
 
 In truth, we need reflect no further than our [thoughts] to realize that the [neurons] ^ in our own brains form a network graph.
 
 Indeed graphs are everywhere.
 
-
 > Wet-ware
 
-Not only do our own bodies consists of graphs, it turns out that graphs are fundamental to how we actually think!
+Not only do our :own: bodies consists of graphs, it turns out that graphs are fundamental to how we [actually think]!
 
 Since [infancy], ^ we catalog objects and assign properties to them, we then map objects :to one: another based on their relationship.
 
-This process continues well into our adult lives.
+This process continues well into [our] adult lives.
 
 
 ^ Think about any complex topic you've had to learn.
@@ -130,7 +129,7 @@ During :that: process, you were exposed to new terms.
 
 And as you learned more about them you were able to associate characteristics or properties to those terms.
 
-As you continued learning, you were able to identify relationships allowing you to associate a topic to other topics you already understood.
+As you :continued: learning, you were able to identify relationships allowing you to [associate] a topic to other topics you already [understood].
 
 Our minds [organize information] by creating [mental graphs] called [memories].
 
@@ -143,9 +142,9 @@ In fact, one way of improving memory is to build :more: mental graphs by creatin
 
 This all brings us to ^ [Graph Databases] - software tools for building and working with graphs.
 
-Rather than organize data as collections of tables, rows, and columns -
+Rather than organize [data] as collections of [tables], [rows], and [columns] -
 
-or even as collections of documents -
+or even as [collections of documents] -
 
 graph databases allow us to model data :and: [relationships] in ways that closely mirror how we [naturally think] about them.
 
@@ -153,7 +152,7 @@ Let's take a closer look.
 
 ^ In this graph, we have [nodes] and [links] that have :associated: properties.
 
-This type of graph is often referred to as a property graph.
+This type of [graph] is often referred to as a property graph.
 
 ^ We have [age] and [interest] properties associated with [each] person, and we could have easily added other [personal] characteristics.
 
@@ -161,10 +160,9 @@ This type of graph is often referred to as a property graph.
 
 Such a graph could become the basis for an intelligent contact management application.
 
-
 > Enter Neo4j
 
-There are lots of [graph databases] to choose from.^
+^ There are lots of [graph databases] to choose from.
 
 In addition, there are products which offer Graph Database functionality combined with document and key/value stores, such as [OrientDB] and [ArangoDB].
 
@@ -178,7 +176,7 @@ Getting started with Neo is easier than with most database products.
 
 ^ You can try Neo without installing it by simply provisioning a free instance using the [Neo4j Sandbox].
 
-It comes complete with user guides and sample datasets.
+^ It comes complete with user guides and sample datasets.
 
 This would have been an invaluable resource when I first embarked on Neo several years ago.
 
@@ -201,7 +199,7 @@ The dashboard is an indispensable tool :and: a real pleasure to use.
 
 ^ Here we see a dashboard  view which allows us to enter [queries] and graphically see the results.  
 
-Connecting to an instance of Neo is as simple as pointing your browser to http localhost port 7474
+Connecting to :an: instance of Neo is as simple as pointing your browser to http localhost port 7474
 
 
 > Neo4j queries
@@ -265,9 +263,7 @@ Perhaps better than usual.
 
 He yells out to the bartender "The next round is on me!".  
 
-Here we omit the [Knows] relationship ^ label because
-
-it's unlikely that Alex [knows] everyone in the bar.
+Here we omit the [Knows] relationship ^ label because it's unlikely that Alex [knows] everyone in the bar.
 
 
 Let's consider another example.
@@ -280,7 +276,7 @@ Here's one way to write the query: ^
 
 The new bit is the syntax r knows star 2. ^
 
-This is known as a variable length relationship.
+This is referred to as a :variable: length [relationship].
 
 Here we're saying
 
@@ -329,7 +325,7 @@ For example: when Amazon lists products also purchased in conjunction with a pro
 
 You can find a number of libraries on NPM which essential act as wrappers for [Neo's restful endpoints].
 
-In fact, I wrote a limited and highly opinionated Node library that facilitates working with Neo4j and optionally caching results using Redis.
+In fact, I wrote a limited and :opinionated: Node library that facilitates working with Neo4j and optionally caching results using Redis.
 
 You can find it on NPM under the name of Neo4j-redis.
 
