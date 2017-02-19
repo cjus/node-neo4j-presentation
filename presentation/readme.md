@@ -73,9 +73,9 @@ Consider 3D games, the characters and terrains are built from wire frame models 
 
 In fact, the process of applying a texture to a wire frame model involves mapping an image onto the surface area within vertices and edges - a process known as texture mapping.
 
-Ever wonder how computer game characters find their way within a game world? Dijkstra's algorithm, employed in computer game AI, is used for finding routes using a weighted graph.
+Ever wonder how computer game characters find their way within a game world? Dijkstra's algorithm, employed in computer game AI, is used for finding routes with the help of a weighted graph.
 
-Turning our attention to nature, trees and plants exhibit graphs. In a tree, the points where a branch splits into two or more branches can be considered nodes, and the branches themselves - links between nodes.
+Turning our attention to nature, trees and plants exhibit graphs. In a tree, the points where a branches split into two or more branches can be considered nodes, and the branches themselves - links between nodes.
 
 <img src="tree.jpg" width="300"/>
 
@@ -211,7 +211,7 @@ MATCH (p1:Person {name: "Susan"})-[r:Knows*2]-(p2:Person {interest: "business"})
 RETURN p1, r, p2;
 ```
 
-The new bit is the syntax `-[r:Knows*2]-`. This is known as a variable length relationship. Here we're saying "Match a Person node with the property name="Susan" with one or two `Knows` relationships to a person with an interest in "business".  Specifying the length is important in order to limit the depth (or hops) that the query traverses to find a match. In a large graph, a long traversal might take longer than we'd like.
+The new bit is the syntax `-[r:Knows*2]-`. This is known as a variable length relationship. Here we're saying "Match a Person node with the property name="Susan" with one or two `Knows` relationships to a person with an interest in "business". Specifying the length is important in order to limit the depth (or hops) that the query traverses to find a match. In a large graph, a long traversal might take longer than we'd like.
 
 Referring back to our graph, we can see that if Jane were looking for a chess player we'd have to specify `-[r:Knows*3]-` or three hops to get to Tom - following the green path shown below.
 
