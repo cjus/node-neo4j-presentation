@@ -1,12 +1,16 @@
 
 
+
+
+
+
 > Introduction
 
 Hello everyone. Thanks for joining us.
 
 In [this] presentation we're going to look at Graph Databases.
 
-Before we [explore] them, we'll consider _the_ importance [of] <graphs> the underlying data structure that allows GraphDBs to exist.
+Before we [explore] them, we'll consider :the: importance [of] <graphs> the underlying data structure that allows GraphDBs to exist.
 
 ^ Undoubtedly you're familiar with graphs - those charts showing [colored] bars, pie slices and [points] along a line.
 
@@ -33,16 +37,15 @@ If Tom wanted to [meet] Susan, ^ he could ask Alex to introduce them.
 
 When lots of nodes and links exist, graphs can become quite complex, such as the web of social and business relationships found on ^ Facebook and LinkedIn.
 
-
 > Graphs revealed.
 
-Graph diagrams made their debut in a paper written by _Leonard Euler_ ^,  a Swiss-born mathematician who is regarded as one of the most [prolific] mathematicians of all time.
+Graph diagrams made their debut in a paper written by :Leonard Euler: ^,  a Swiss-born mathematician who is regarded as one of the most [prolific] mathematicians of all time.
 
 In 1735, from his home in Saint Petersburg,
 
-Euler turned his attention to a puzzle which was debated by the people of the nearby town of _Königsberg_ - which is now the Russian city of _Kaliningrad_.
+Euler turned his attention to a puzzle which was debated by the people of the nearby town of :Königsberg: - which is now the Russian city of :Kaliningrad:.
 
-During a time of prosperity, the people of _Königsberg_ [constructed] seven bridges ^ across the Pregel [River] to connect two islands to the surrounding landscape.
+During a time of prosperity, the people of :Königsberg: [constructed] seven bridges ^ across the Pregel [River] to connect two islands to the surrounding landscape.
 
 The town's people later pondered whether it was possible to cross the seven bridges without crossing one twice.
 
@@ -55,7 +58,6 @@ Euler represented ^ land masses as [nodes] and used [links] to represents bridge
 He then assigned each of the [nodes] a letter from A to D.
 
 With this, Euler, unknowingly founded an [extensive] branch of mathematics called [graph theory].
-
 
 > Graphs are everywhere
 
@@ -70,7 +72,7 @@ If you consider a map of the New York City [subway] system ^ - or any subway in 
 
 and if you label the train stations as [nodes] and the routes connecting stations as [links] - you'll quickly see a graph emerge.
 
-Nodes are sometimes referred to as [hubs] when more _than_ one path (or link) coverages.
+Nodes are sometimes referred to as [hubs] when more :than: one path (or link) coverages.
 
 The New York City [subway system has hubs] at 34th and 42nd street, which allow one to switch trains and travel other parts of the subway's network graph.
 
@@ -79,11 +81,11 @@ As this subway sign shows ^ at 42nd street and Times Square we can switch to the
 
 A look at cities ^ throughout the world reveal [airports], and in larger cities - [airport hubs] -
 
-which connect flights to [other] flights and _to_ destinations around the globe.
+which connect flights to [other] flights and :to: destinations around the globe.
 
-Yes, the paths of air _and_ ocean travel, also form a network graph.
+Yes, the paths of air [and] ocean travel, also form a network graph.
 
-If you look closely you can see _where_ lots of lines converge [indicating] network nodes which are hubs. They're the [yellow] circles shown.
+If you look closely you can see :where: lots of lines converge [indicating] network nodes which are hubs. They're the [yellow] circles shown.
 
 
 Consider 3D games ^, the characters and terrains are built from wire frame models called meshes, which are essentially graphs.  
@@ -115,16 +117,16 @@ Indeed graphs are everywhere.
 
 Not only do our own bodies consists of graphs, it turns out that graphs are fundamental to how we actually think!
 
-Since [infancy], ^ we catalog objects and assign properties to them, we then map objects _to one_ another based on their relationship.
+Since [infancy], ^ we catalog objects and assign properties to them, we then map objects :to one: another based on their relationship.
 
 This process continues well into our adult lives.
 
 
 ^ Think about any complex topic you've had to learn.
 
-Perhaps you began by reading _introductory_ material that provided you with a high-level overview.
+Perhaps you began by reading :introductory: material that provided you with a high-level overview.
 
-During _that_ process, you were exposed to new terms.
+During :that: process, you were exposed to new terms.
 
 And as you learned more about them you were able to associate characteristics or properties to those terms.
 
@@ -134,7 +136,7 @@ Our minds [organize information] by creating [mental graphs] called [memories].
 
 It turns out that our [memories] are a sort of graph database.
 
-In fact, one way of improving memory is to build _more_ mental graphs by creating new [links] (or associations) to existing memories.  
+In fact, one way of improving memory is to build :more: mental graphs by creating new [links] (or associations) to existing memories.  
 
 
 > Graph databases
@@ -145,11 +147,11 @@ Rather than organize data as collections of tables, rows, and columns -
 
 or even as collections of documents -
 
-graph databases allow us to model data _and_ [relationships] in ways that closely mirror how we [naturally think] about them.
+graph databases allow us to model data :and: [relationships] in ways that closely mirror how we [naturally think] about them.
 
 Let's take a closer look.
 
-^ In this graph, we have [nodes] and [links] that have _associated_ properties.
+^ In this graph, we have [nodes] and [links] that have :associated: properties.
 
 This type of graph is often referred to as a property graph.
 
@@ -195,7 +197,7 @@ Neo4j comes with a web-based [dashboard] that allows you to interact with Neo.
 
 It's a great way to learn about Neo and later create and test your data models.
 
-The dashboard is an indispensable tool _and_ a real pleasure to use.
+The dashboard is an indispensable tool :and: a real pleasure to use.
 
 ^ Here we see a dashboard  view which allows us to enter [queries] and graphically see the results.  
 
@@ -243,18 +245,18 @@ Alex is [connected] to Susan ^ by a [relationship link] with a label of `Knows`.
 
 That link also has a [property] called `since`.
 
-We could write a [query] ^ that includes the relationship _by_ using square brackets.
+We could write a [query] ^ that includes the relationship :by: using square brackets.
 
 Notice that we assign the variable `r` to the relationship link. ^
 
 We also use the [label] `Knows` to specify the type of link we're interested in.
 
-The label [could have] been something else such as _worked_with_ or hired_by.
+The label [could have] been something else such as :worked_with: or :hired_by:.
 
 
-Let's say that [Alex] is planning a party and would like to invite his closest _acquaintances_.
+Let's say that [Alex] is planning a party and would like to invite his closest :acquaintances:.
 
-Here we omit ^ the query fragment for the [Person's name property] ^ so we match any person _that_ Alex directly knows.
+Here we omit ^ the query fragment for the [Person's name property] ^ so we match any person :that: Alex directly knows.
 
 
 Now let's say that Alex ^ is at a bar and is feeling pretty good.
@@ -290,7 +292,7 @@ to a person with an interest in [business]".^
 
 
 An important [call out here] is that specifying the length [is important]
-_in_ order to limit the depth or
+:in: order to limit the depth or
 number of [hops] that the query [traverses] to find a match.
 
 In a large graph a [long] traversal might take longer than we'd like.
@@ -323,7 +325,7 @@ For example: when Amazon lists products also purchased in conjunction with a pro
 
 > Accessing Neo4j from JavaScript
 
-^ Neo4j has an HTTP restful API _that_ makes it possible _for_ remote clients to connect to it.
+^ Neo4j has an HTTP restful API :that: makes it possible :for: remote clients to connect to it.
 
 You can find a number of libraries on NPM which essential act as wrappers for [Neo's restful endpoints].
 
@@ -540,5 +542,5 @@ Photos / diagrams created by author or licensed from iStockPhoto.
 
 [ ] emphasis
 < > strong emphasis
-_ _ pronounce
+: : pronounce
 ^ advance slide
