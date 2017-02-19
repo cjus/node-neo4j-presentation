@@ -8,7 +8,7 @@ In [this] presentation we're going to look at Graph Databases.
 
 Before we [explore] them, we'll consider _the_ importance [of] <graphs> the underlying data structure that allows GraphDBs to exist.
 
-Undoubtedly you're familiar with graphs - ^ those charts showing [colored] bars, pie slices and [points] along a line.
+^ Undoubtedly you're familiar with graphs - those charts showing [colored] bars, pie slices and [points] along a line.
 
 [They're] great data visualization tools [designed] to quickly convey information.
 
@@ -20,7 +20,7 @@ Here ^ :is: the same graph defined in scientific terms, that is, mathematics and
 
 A "thing" ^ is represented by a [vertex] and a "link" is referred to as an [edge]. ^
 
-We can think of the vertices as representing [nodes] * and the [edges] as the relationships between them.
+We can think of the vertices as representing [nodes] ^ and the [edges] as the relationships between them.
 
 From here on out we'll simply refer to them as [nodes] and [links].
 
@@ -31,7 +31,7 @@ Graphs can take on [real] world meaning, such as revealing relationships between
 
 If Tom wanted to [meet] Susan, ^ he could ask Alex to introduce them.
 
-When lots of nodes and links exist, graphs can become quite complex, such as the web of social and business relationships ^ found on Facebook and LinkedIn.
+When lots of nodes and links exist, graphs can become quite complex, such as the web of social and business relationships found on ^ Facebook and LinkedIn.
 
 
 > Graphs revealed.
@@ -74,7 +74,7 @@ Nodes are sometimes referred to as [hubs] when more _than_ one path (or link) co
 
 The New York City [subway system has hubs] at 34th and 42nd street, which allow one to switch trains and travel other parts of the subway's network graph.
 
-In the map below we can see that at 42nd street and Times Square we can switch to the N, Q, R, S, W, 1, 2, 3, or 7 trains.
+As this subway sign shows ^ at 42nd street and Times Square we can switch to the 1, 2, 3, 7, N, Q, R, S, W, or S trains.
 
 
 A look at cities ^ throughout the world reveal [airports], and in larger cities - [airport hubs] -
@@ -104,7 +104,7 @@ The [roots] ^ of a tree are almost identical to the branches as shown here in th
 
 ^ Upon even closer examination the leaves of a tree reveal a [network of passages] which deliver water and nutrients to vibrant leafy greens.
 
-If you recall your high school biology class then this last image might seem [similar] to our own nervous system and arteries! ^
+If you recall your high school biology class then this image might seem [similar] to our own nervous system and arteries! ^
 
 In truth, we need reflect no further than our [thoughts] to realize that the [neurons] ^ in our own brains form a network graph.
 
@@ -162,19 +162,19 @@ Such a graph could become the basis for an intelligent contact management applic
 
 > Enter Neo4j
 
-There are lots of [graph databases] to choose from.
+There are lots of [graph databases] to choose from.^
 
 In addition, there are products which offer Graph Database functionality combined with document and key/value stores, such as [OrientDB] and [ArangoDB].
 
 During the past decade, others have been doing interesting work in the graph database space, such as [Microsoft Research's] [Trinity] project.
 
-In this talk we're going to use the world's most popular graph database, Neo4j.
+^ In this talk we're going to use the world's most popular graph database, Neo4j.
 
 Affectionately referred to by fans, as Neo.
 
 Getting started with Neo is easier than with most database products.
 
-You can try Neo without installing it by simply provisioning a free instance using the [Neo4j Sandbox].
+^ You can try Neo without installing it by simply provisioning a free instance using the [Neo4j Sandbox].
 
 It comes complete with user guides and sample datasets.
 
@@ -184,7 +184,7 @@ Back then, setting up Neo4j involved working with the correct version of the Jav
 
 For beginners, those days are thankfully over.
 
-If you'd rather have a local instance of Neo4j running on your laptop you can [download and install] a free copy of Neo.
+^ If you'd rather have a local instance of Neo4j running on your laptop you can [download and install] a free copy of Neo.
 
 ^ However, being a big fan of Docker, I prefer to download and run Neo4j from a Docker container.
 
@@ -236,7 +236,7 @@ We can enhance our queries by specify the use of properties and values and listi
 
 So, `{name: "Alex"}` says we're interested in only matching nodes which have a name property containing the value of "Alex".
 
-If we wanted to return all the people in our graph, our query would be even simpler: *
+If we wanted to return all the people in our graph, our query would be even simpler: ^
 
 
 Alex is [connected] to Susan ^ by a [relationship link] with a label of `Knows`.
@@ -268,9 +268,9 @@ Here we omit the [Knows] relationship ^ label because
 it's unlikely that Alex [knows] everyone in the bar.
 
 
-Let's consider another example. ^
+Let's consider another example.
 
-[Susan] is planning to open her first dance studio and needs [business] advice.
+^ [Susan] is planning to open her first dance studio and needs [business] advice.
 
 She doesn't directly know a person with an [interest in business], but her dad Bill does.
 
@@ -286,7 +286,7 @@ Here we're saying
 
 with a path of one or two [Knows] relationships
 
-to a person with an interest in [business]".  ^
+to a person with an interest in [business]".^
 
 
 An important [call out here] is that specifying the length [is important]
@@ -322,6 +322,7 @@ Such queries are also how recommendation engines can be used to promote new prod
 For example: when Amazon lists products also purchased in conjunction with a product you happen to be considering.
 
 > Accessing Neo4j from JavaScript
+
 ^ Neo4j has an HTTP restful API _that_ makes it possible _for_ remote clients to connect to it.
 
 You can find a number of libraries on NPM which essential act as wrappers for [Neo's restful endpoints].
@@ -355,7 +356,7 @@ Our project's GitHub repo  was initialized in this way.
 
 
 
-> Connecting to Neo
+> Connecting to Neo (sample code)
 
 Here is the `alex.js` example from the Github repo associated with this presentation.
 
@@ -383,7 +384,7 @@ Here is the output from the previous code.
 
 We see the information returned from the Cypher query.
 
-> To learn more about the neo4j-driver check out the project [documentation](http://neo4j.com/docs/api/javascript-driver/current).
+> To learn more about the neo4j-driver check out the project [documentation].
 
 In this next example, we run the query where Susan is checking her network for a person who has an interest in business.
 
