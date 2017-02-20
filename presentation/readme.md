@@ -420,7 +420,7 @@ We began our journey by learning about network graphs. Along the way, we discove
 
 We also learned that we actually think in terms of graphs and that a graph database is a natural tool for representing our data models and their relationships.
 
-Finally, we saw the power of using graph databases to better understand the current events.
+Finally, we saw the power of using graph databases to better understand current events.
 
 Give graph databases a try. You may just discover that they're an ideal tool to tackle the modern challenges in our highly connected world.
 

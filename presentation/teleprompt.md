@@ -466,9 +466,11 @@ RETURN *
 ---
 ## Most connected organizations
 
-Here we see which organizations are the most coHere we see which organizations are the most connected. Neo4j returns a table view because the following query focuses on the aggregation of the relationship type (r). This is how we're able to see the varied types of relationships without knowing their labels.
+Here we see which organizations are the most connected.
 
 Neo4j returns a table view because the following query focuses on the aggregation of the relationship type (r).
+
+This is how we're able to see the varied types of relationships without knowing their labels.
 
 ```
 MATCH (o:Organization)-[r]-()
@@ -519,7 +521,7 @@ We also learned that we actually think in terms of graphs
 
 and that a graph database is a natural tool for representing our data models and their relationships.
 
-Finally, we saw the power of using graph databases to better understand the current events.
+Finally, we saw the power of using graph databases to better understand current events.
 
 Give graph databases a try. You may just discover that they're an ideal tool to tackle the modern challenges in our highly connected world.
 
