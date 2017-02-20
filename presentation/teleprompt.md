@@ -1,15 +1,18 @@
-.
-.
-.
-.
+
+
+
+
+
+
+
 # Introduction
 
 Hello everyone. Thanks for joining us.
-.
+
 In [this] presentation we're going to look at Graph Databases.
-.
+
 Before we [explore] them, we'll consider :the: importance [of] <graphs> the underlying data structure that allows GraphDBs to exist.
-.
+
 ^ Undoubtedly you're familiar with graphs - those charts showing [colored] bars, pie slices and [points] along a line.
 
 [They're] great data visualization tools [designed] to quickly convey information.
@@ -25,8 +28,8 @@ A "thing" ^ is represented by a [vertex] and a "link" is referred to as an [edge
 We can think of the vertices as representing [nodes] ^ and the [edges] as the relationships between them.
 
 From here on out we'll simply refer to them as [nodes] and [links].
-.
-.
+
+
 Graphs can take on [real] world meaning, such as :revealing: the relationships between people.
 
 ^ For example, in this graph, Tom knows Alex but doesn't directly know Bill or even his neighbors, Susan and Jane.
