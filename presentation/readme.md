@@ -28,17 +28,17 @@ When lots of nodes and links exist, graphs can become quite complex, such as the
 
 ## Graphs revealed
 
-Graph diagrams made their debut in a paper written by [Leonard Euler](https://en.m.wikipedia.org/wiki/Leonhard_Euler) a Swiss-born mathematician who is regarded as one of the most prolific mathematicians of all time.
+Graph diagrams made their debut in a paper written by [Leonard Euler](https://en.m.wikipedia.org/wiki/Leonhard_Euler) a Swiss-born mathematician who is regarded as the most prolific mathematician of all time.
 
 <img src="Leonhard_Euler.jpg" width="200"/>
 
-In 1735, from his home in Saint Petersburg, Euler turned his attention to a puzzle which was debated by the people of the nearby town of Königsberg - which is now the Russian city of Kaliningrad. During a time of prosperity, the people of Königsberg constructed seven bridges across the Pregel River to connect two islands to the surrounding landscape. The town's people later pondered whether it was possible to cross the seven bridges without crossing one twice.
+In 1735, from his home in Saint Petersburg, Euler turned his attention to a problem debated by the people of the nearby town of Königsberg - which is now the Russian city of Kaliningrad. During a time of prosperity, the people of Königsberg constructed seven bridges across the Pregel River to connect two islands to the surrounding landscape. The town's people later pondered whether it was possible to cross the seven bridges without crossing one twice.
 
-In his [short paper](http://eulerarchive.maa.org//docs/originals/E053.pdf) entitled "The solution of a problem relating to the geometry of position", Euler offered a proof that such a path could not exist. We won't get into the proof here because it isn't the proof that we're interested in, but rather the way in which Euler approached the problem.
+In his [short paper](http://eulerarchive.maa.org//docs/originals/E053.pdf) entitled "The solution of a problem relating to the geometry of position", Euler offered a proof that such a path could not exist. We won't get into the proof here because it isn't the proof that we're interested in, but rather the way that Euler approached the problem.
 
 <img src="Seven_Bridges_of_Konigsberg.png"/>
 
-Euler represented land masses as nodes and used links to represents bridges. He then assigned each of the nodes a letter from A to D. With this, Euler, unknowingly founded an extensive branch of mathematics called graph theory.
+Euler represented land masses as nodes and used links to represents bridges. He then assigned each node a letter from A to D. With this, Euler, unknowingly founded an extensive branch of mathematics called graph theory.
 
 ## Graphs are everywhere
 
@@ -56,7 +56,7 @@ If you consider a map of the New York City subway system - or any subway in the 
 
 Nodes are sometimes referred to as hubs when more than one path (or link) converges.
 
-The New York City subway system has hubs at 34th and 42nd street, which allow one to switch trains and travel other parts of the subway's network graph. In the map below we can see that at 42nd street and Times Square we can switch to the N, Q, R, S, W, 1, 2, 3, or 7 trains.
+The New York City subway system has hubs at 34th and 42nd street, which allow one to switch trains and travel other parts of the subway's network graph. In the map below, at 42nd street and Times Square we can switch to the N, Q, R, S, W, 1, 2, 3, or 7 trains.
 
 <img src="timessquare.png" width="300"/>
 
@@ -73,9 +73,9 @@ Consider 3D games, the characters and terrains are built from wire frame models 
 
 In fact, the process of applying a texture to a wire frame model involves mapping an image onto the surface area within vertices and edges - a process known as texture mapping.
 
-Ever wonder how computer game characters find their way within a game world? Dijkstra's algorithm, employed in computer game AI, is used for finding routes with the help of a weighted graph.
+Ever wonder how computer game characters find their way within a game world? Dijkstra's algorithm, employed in computer game AI, uses a weighted graph to find routes.
 
-Turning our attention to nature, trees and plants also exhibit graphs. In a tree, the points where a branches split into two or more branches can be considered nodes, and the branches themselves - links between nodes.
+Turning our attention to nature, trees and plants also exhibit graphs. In a tree, the points where branches split into two or more branches can be considered nodes, and the branches themselves - links between nodes.
 
 <img src="tree.jpg" width="300"/>
 
@@ -103,7 +103,7 @@ Since infancy, we catalog objects and assign properties to them, we then map obj
 
 <img src="infant.jpg" width="300"/>
 
-Think about any complex topic you've had to learn. Perhaps you began by reading introductory material that provided you with a high-level overview. During that process, you were exposed to new terms. And as you learned more about them you were able to associate characteristics or properties to those terms. As you continued learning, you were able to identify relationships allowing you to associate a topic to other topics you already understood.
+Think about any complex topic you've had to learn. Perhaps you began by reading introductory material that provided you with a high-level overview. During that process, you were exposed to new terms. And as you learned more about them you associated characteristics or properties to those terms. As you continued learning, you identified relationships allowing you to associate a topic to other topics you already understood.
 
 Our minds organize information by creating mental graphs called memories. It turns out that our memories are a sort of graph database. In fact, one way of improving memory is to build more mental graphs by creating new links (or associations) to existing memories.
 
@@ -121,7 +121,7 @@ Such a graph could become the basis for an intelligent contact management applic
 
 ## Enter Neo4j
 
-There are lots of [graph databases](https://en.wikipedia.org/wiki/Graph_database) to choose from. In addition, there are products which offer Graph Database functionality combined with document and key/value stores, such as  [OrientDB](http://orientdb.com/) and [ArangoDB](https://www.arangodb.com/). During the past decade, others have been doing interesting work in the graph database space, such as [Microsoft Research's Trinity](https://www.microsoft.com/en-us/research/project/trinity/) project.
+There are many [graph databases](https://en.wikipedia.org/wiki/Graph_database) to choose from. Additionally, some products offer Graph Database functionality combined with document and key/value stores, such as  [OrientDB](http://orientdb.com/) and [ArangoDB](https://www.arangodb.com/). During the past decade, others have been doing interesting work in the graph database space, such as [Microsoft Research's Trinity](https://www.microsoft.com/en-us/research/project/trinity/) project.
 
 In this article, we're going to use the world's most popular graph database, [Neo4j](https://neo4j.com/). Affectionately referred to by fans, as Neo.
 
@@ -168,7 +168,7 @@ RETURN p;
 
 There are a few important characteristics in the query shown. On the first line, we see that we're trying to match a node, represented by a query enclosed in parentheses. The p:Person fragment says "map a variable called p with a label of Person". So here we learn that nodes can have labels (Person) and that we can assign them to variables (p).  On line two we simply return the contents of p.
 
-We can enhance our queries by specify the use of properties and values and listing them within curly braces. So, `{name: "Alex"}` says we're interested in only matching nodes which have a name property containing the value of "Alex".
+We can enhance our queries by specifying the use of properties and values and listing them within curly braces. So, `{name: "Alex"}` says we're interested in only matching nodes which have a name property containing the value of "Alex".
 
 If we wanted to return all the people in our graph, our query would be even simpler:
 
@@ -211,9 +211,9 @@ MATCH (p1:Person {name: "Susan"})-[r:Knows*2]-(p2:Person {interest: "business"})
 RETURN p1, r, p2;
 ```
 
-The new bit is the syntax `-[r:Knows*2]-`. This is referred to as a variable length relationship. Here we're saying "Match a Person node with the property name="Susan" with one or two `Knows` relationships to a person with an interest in "business". Specifying the length is important in order to limit the depth (or hops) that the query traverses to find a match. In a large graph, a long traversal might take longer than we'd like.
+The new bit is the syntax `-[r:Knows*2]-`. This is referred to as a variable length relationship. Here we're saying "Match a Person node with the property name="Susan" with one or two `Knows` relationships to a person with an interest in "business". Specifying the length is important to limit the depth (or hops) that the query traverses to find a match. In a large graph, a long traversal might take longer than we'd like.
 
-Referring back to our graph, we can see that if Jane was looking for a chess player we'd have to specify `-[r:Knows*3]-` or three hops to get to Tom - following the green path shown below.
+Referring back to our graph, if Jane was looking for a chess player we'd have to specify `-[r:Knows*3]-` or three hops to get to Tom - following the green path shown below.
 
 <img src="graph6.png" width="300"/>
 
@@ -262,7 +262,7 @@ driver.onError = (error) => {
 };
 ```
 
-Next, we create a driver session and run (execute) a Cypher query.  Note that the run function accepts two parameters and returns a JavaScript promise. The first parameter to run function is the query template and the second is an object with the  query's parameters. This allows Neo to cache query plans (template) for added efficiency. We then use the `.then` and `.catch` functions to handle the promise resolve or reject cases.
+Next, we create a driver session and run (execute) a Cypher query.  Note that the run function accepts two parameters and returns a JavaScript promise. The first parameter to the run function is the query template and the second is an object with the query parameters. This allows Neo to cache query plans (template) for added efficiency. We then use the `.then` and `.catch` functions to handle the promise resolve or reject cases.
 
 ```javascript
 let session = driver.session();
@@ -416,9 +416,9 @@ Insights like these help journalists focus their resources and energies.
 
 ## Recap
 
-We began our journey by learning about network graphs. Along the way we discovered that graphs are literally everywhere we look. In fact, network graphs could not be closer to our hearts - if you consider the network of arteries within our own bodies.
+We began our journey by learning about network graphs. Along the way, we discovered that graphs are literally everywhere we look. In fact, network graphs could not be closer to our hearts - if you consider the network of arteries within our own bodies.
 
-We also learned that we actually think in terms of graphs and that graph databases are a natural extension for representing our data models and their relationships.
+We also learned that we actually think in terms of graphs and that a graph database is a natural tool for representing our data models and their relationships.
 
 Finally, we saw the power of using graph databases to better understand the current events.
 
@@ -426,14 +426,14 @@ Give graph databases a try. You may just discover that they're an ideal tool to 
 
 ## Next steps
 
-* If you enjoyed this article say thanks by staring the github repo. https://github.com/cjus/node-neo4j-presentation
+* If you enjoyed this article say thanks by staring the GitHub repo. https://github.com/cjus/node-neo4j-presentation
 * Visit the Neo4j website: https://neo4j.com and download their free book: https://neo4j.com/graph-databases-book
 * Enroll in a free online training course: https://neo4j.com/graphacademy/online-training/introduction-graph-databases
 * Explore the TrumpWorld graph via the [Docker container](https://github.com/neo4j-contrib/trumpworld-graph) or online on the [Neo4j Sandbox](https://neo4jsandbox.com/)
 
 ### Books
 
-There a lots of books on Graphs and Graph Databases. Here are the ones I've read.
+There are many books on Graphs and Graph Databases. Here are the ones I've read.
 
 * Graph Databases by Ian Robison, Jim Webber & Emil Eifrem
 * Learning Neo4j by Rik Bruggen

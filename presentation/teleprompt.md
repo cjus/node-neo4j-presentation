@@ -41,12 +41,12 @@ When lots of [nodes] and [links] exist, graphs can become quite complex, :such a
 
 # Graphs revealed.
 -------------------------------------
-Graph diagrams made their debut in a paper written by :Leonard Euler: ^,  a Swiss-born mathematician who is regarded as one of the most [prolific] mathematicians of all time.
+Graph diagrams made their debut in a paper written by :Leonard Euler: ^,  a Swiss-born mathematician who is regarded as the most [prolific] mathematician of all time.
 
 ---
 In 1735, from his home in Saint Petersburg,
 
-Euler turned his attention to a puzzle which was debated by the people of the nearby town of :Königsberg: - which is now the Russian city of :Kaliningrad:.
+Euler turned his attention to a problem debated by the people of the nearby town of :Königsberg: - which is now the Russian city of :Kaliningrad:.
 
 During a time of prosperity, the people of :Königsberg: [constructed] seven bridges ^ across the Pregel [River] to connect two islands to the surrounding landscape.
 
@@ -54,11 +54,11 @@ The town's people later pondered whether it was possible to cross the seven brid
 
 In his short [paper] entitled "The solution of a problem relating to the geometry of position",  Euler offered a proof that such a path [could not] exist.
 
-We won't get into the proof here because it isn't the [proof] that we're interested in, but rather [the way] in which Euler approached the problem.
+We won't get into the proof here because it isn't the [proof] that we're interested in, but rather [the way] that Euler approached the problem.
 
 Euler represented ^ land masses as [nodes] and used [links] to represents bridges.
 
-He then assigned each of the [nodes] a letter from A to D.
+He then assigned each [node] a letter from A to D.
 
 With this, Euler, unknowingly founded an [extensive] branch of mathematics called [graph theory].
 
@@ -99,7 +99,7 @@ In fact, the  process of applying a [texture] to a wire frame model involves map
 ---
 Ever wonder how computer game characters ^ find their way within a game world?
 
-Dijkstra's algorithm, employed in computer game AI, is used for finding routes with the help of a weighted graph.
+Dijkstra's algorithm, employed in computer game AI, uses a weighted graph to find routes.
 
 ---
 Turning our attention to [nature] ^, trees and plants :also: [exhibit] graphs.
@@ -131,9 +131,9 @@ Perhaps you began by reading :introductory: material that provided you with a hi
 
 During :that: process, you were exposed to new terms.
 
-And as you learned more about them you were able to associate characteristics or properties to those terms.
+And as you learned more about them you associated characteristics or properties to those terms.
 
-As you :continued: learning, you were able to identify relationships allowing you to [associate] a topic to other topics you already [understood].
+As you :continued: learning, you identified relationships allowing you to [associate] a topic to other topics you already [understood].
 
 Our minds [organize information] by creating [mental graphs] called [memories].
 
@@ -167,9 +167,9 @@ Such a graph could become the basis for an intelligent contact management applic
 
 # Enter Neo4j
 -------------------------------------
-^ There are lots of [graph databases] to choose from.
+^ There many [graph databases] to choose from.
 
-In addition, there are products which offer Graph Database functionality combined with document and key/value stores, such as [OrientDB] and [ArangoDB].
+Additionally, some products offer Graph Database functionality combined with document and key/value stores, such as [OrientDB] and [ArangoDB].
 
 During the past decade, others have been doing interesting work in the graph database space, such as [Microsoft Research's] [Trinity] project.
 
@@ -237,7 +237,7 @@ So here we learn that nodes can have labels (Person) and that we can assign them
 
 On line two ^ we simply return the contents of p.
 
-We can enhance our queries by specify the use of properties and values and listing them within curly braces.^
+We can enhance our queries by specifying the use of properties and values and listing them within curly braces.^
 
 So, `{name: "Alex"}` says we're interested in only matching nodes which have a name property containing the value of "Alex".
 
@@ -292,8 +292,7 @@ with a path of one or two [Knows] relationships
 to a person with an interest in [business]".^
 
 ---
-An important [call out here] is that specifying the length [is important]
-:in: order to limit the depth or
+An important [call out here] is that specifying the length [is important] to limit the depth or
 number of [hops] that the query [traverses] to find a match.
 
 In a large graph a [long] traversal might take longer than we'd like.
@@ -301,7 +300,7 @@ In a large graph a [long] traversal might take longer than we'd like.
 ---
 Referring back to our graph, ^
 
-we can see that if Jane was looking for a [chess] player
+if Jane was looking for a [chess] player
 
 we'd have to specify [knows star 3] for three hops to get to Tom - following the [green] path shown.
 
@@ -377,7 +376,7 @@ Next, we create a driver session and run (execute) a Cypher query.
 
 Note that the run function accepts two parameters and returns a JavaScript promise.
 
-The first parameter to run is the query template and the second is an object with the  query's parameters.
+The first parameter to the run function is the query template and the second is an object with the  query's parameters.
 
 This allows Neo to cache query plans (template) for added efficiency.
 
@@ -518,7 +517,7 @@ if you consider the network of arteries within our own bodies.
 
 We also learned that we actually think in terms of graphs
 
-and that graph databases are a natural extension for representing our data models and their relationships.
+and that a graph database is a natural tool for representing our data models and their relationships.
 
 Finally, we saw the power of using graph databases to better understand the current events.
 
@@ -535,7 +534,7 @@ Give graph databases a try. You may just discover that they're an ideal tool to 
 
 # Books
 -------------------------------------
-There a lots of books on Graphs and Graph Databases. Here are the ones I've read.
+There are many books on Graphs and Graph Databases. Here are the ones I've read.
 
 * Graph Databases by Ian Robison, Jim Webber & Emil Eifrem
 * Learning Neo4j by Rik Bruggen
