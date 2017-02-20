@@ -29,7 +29,7 @@ We can think of the vertices as representing [nodes] ^ and the [edges] as the re
 
 From here on out we'll simply refer to them as [nodes] and [links].
 
-
+---
 Graphs can take on [real] world meaning, such as :revealing: the relationships between people.
 
 ^ For example, in this graph, Tom knows Alex but doesn't directly know Bill or even his neighbors, Susan and Jane.
@@ -38,10 +38,12 @@ If Tom wanted to [meet] Susan, ^ he could ask Alex to introduce them.
 
 When lots of [nodes] and [links] exist, graphs can become quite complex, :such as: the web of [social] and [business] relationships found on ^ [Facebook] and [LinkedIn].
 
-# Graphs revealed.
 
+# Graphs revealed.
+-------------------------------------
 Graph diagrams made their debut in a paper written by :Leonard Euler: ^,  a Swiss-born mathematician who is regarded as one of the most [prolific] mathematicians of all time.
 
+---
 In 1735, from his home in Saint Petersburg,
 
 Euler turned his attention to a puzzle which was debated by the people of the nearby town of :Königsberg: - which is now the Russian city of :Kaliningrad:.
@@ -60,26 +62,27 @@ He then assigned each of the [nodes] a letter from A to D.
 
 With this, Euler, unknowingly founded an [extensive] branch of mathematics called [graph theory].
 
-# Graphs are everywhere
 
+# ^Graphs are everywhere
+-------------------------------------
 Hundreds of [years] later, researchers are using graphs to explore topics such as biodiversity, terrorist networks, and the global spread of epidemics.
 
 Here is a graph ^ that links [40] of the earliest known AIDS patients by sexual contact.
 
-
+---
 ^ On a lighter note, you may have [recently] taken a train ride. Did you enjoy [riding] a graph?
 
 If you consider a map of the New York City [subway] system ^ - or any subway in the world for that matter -
 
 and if you label the train stations as [nodes] and the routes connecting stations as [links] - you'll quickly see a graph emerge.
 
-Nodes are sometimes referred to as [hubs] when more :than: one path (or link) coverages.
+Nodes are sometimes referred to as [hubs] when more :than: one path (or link) converges.
 
 The New York City [subway system has hubs] at 34th and 42nd street, which allow :one: to switch trains :and: travel other parts of the subway's network graph.
 
 As this subway sign shows ^ at 42nd street and Times Square we can switch to the 1, 2, 3, 7, N, Q, R, W, [or] S trains.
 
-
+---
 A look at cities ^ throughout the :world: [reveals airports], and in larger cities - [airport hubs] -
 
 which connect flights to [other] flights and :to: destinations around the globe.
@@ -88,17 +91,17 @@ Yes, the paths of air [and] ocean travel, also form a network graph.
 
 If you look closely you can see :where: lots of lines converge [indicating] network nodes which are hubs. They're the [yellow] circles shown.
 
-
+---
 Consider 3D games ^, the characters and terrains are built from wire frame models called meshes, which are essentially graphs.  
 
 In fact, the  process of applying a [texture] to a wire frame model involves mapping an image [onto] the surface area within vertices and edges - a process known as texture mapping. ^
 
-
+---
 Ever wonder how computer game characters ^ find their way within a game world?
 
 Dijkstra's algorithm, employed in computer game AI, is used for finding routes with the help of a weighted graph.
 
-
+---
 Turning our attention to [nature] ^, trees and plants :also: [exhibit] graphs.
 
 In a tree, the points where branches [split] into two or more branches can be considered [nodes] and the branches themselves - [links] between nodes.
@@ -109,19 +112,19 @@ The [roots] ^ of a tree are almost identical to the branches as shown here in th
 
 If you recall your high school biology class then this image might seem [similar] to :textbook: diagrams illustrating our own nervous system and arteries! ^
 
-In truth, we need reflect no further than our [thoughts] to realize that the [neurons] ^ in our own brains form a network graph.
+In truth, we need reflect no further than our own thoughts to realize that the [neurons] ^ in our brains form a network graph.
 
 Indeed graphs are everywhere.
 
 # Wet-ware
-
-Not only do our :own: bodies consists of graphs, it turns out that graphs are fundamental to how we [actually think]!
+-------------------------------------
+Not only do our :own: bodies consist of graphs, it turns out that graphs are fundamental to how we [actually think]!
 
 Since [infancy], ^ we catalog objects and assign properties to them, we then map objects :to one: another based on their relationship.
 
 This process continues well into [our] adult lives.
 
-
+---
 ^ Think about any complex topic you've had to learn.
 
 Perhaps you began by reading :introductory: material that provided you with a high-level overview.
@@ -140,7 +143,7 @@ In fact, one way of improving memory is to build :more: mental graphs by creatin
 
 
 # Graph databases
-
+-------------------------------------
 This all brings us to ^ [Graph Databases] - software tools for building and working with graphs.
 
 Rather than organize [data] as collections of [tables], [rows], and [columns] -
@@ -161,8 +164,9 @@ This type of [graph] is often referred to as a property graph.
 
 Such a graph could become the basis for an intelligent contact management application.
 
-# Enter Neo4j
 
+# Enter Neo4j
+-------------------------------------
 ^ There are lots of [graph databases] to choose from.
 
 In addition, there are products which offer Graph Database functionality combined with document and key/value stores, such as [OrientDB] and [ArangoDB].
@@ -191,7 +195,7 @@ For beginners, those days are thankfully over.
 
 
 # Neo4j dashboard
-
+-------------------------------------
 Neo4j comes with a web-based [dashboard] that allows you to interact with Neo.
 
 It's a great way to learn about Neo and later create and test your data models.
@@ -204,7 +208,7 @@ Connecting to :an: instance of Neo is as simple as pointing your browser to http
 
 
 # Neo4j queries
-
+-------------------------------------
 Neo4j has a declarative [query] language called Cypher.
 
 ^ Cypher queries consist of statements that use patterns to specify [paths] within a graph.
@@ -239,7 +243,7 @@ So, `{name: "Alex"}` says we're interested in only matching nodes which have a n
 
 If we wanted to return all the people in our graph, our query would be even simpler: ^
 
-
+---
 Alex is [connected] to Susan ^ by a [relationship link] with a label of `Knows`.
 
 That link also has a [property] called `since`.
@@ -252,12 +256,12 @@ We also use the [label] `Knows` to specify the type of link we're interested in.
 
 The label [could have] been something else such as :worked_with: or :hired_by:.
 
-
+---
 Let's say that [Alex] is planning a party and would like to invite his closest :acquaintances:.
 
 Here we omit ^ the query fragment for the [Person's name property] ^ so we match any person :that: Alex directly knows.
 
-
+---
 Now let's say that Alex ^ is at a bar and is feeling pretty good.
 
 Perhaps better than usual.  
@@ -266,7 +270,7 @@ He yells out to the bartender "The next round is on me!".
 
 Here we omit the [Knows] relationship ^ label because it's unlikely that Alex [knows] everyone in the bar.
 
-
+---
 Let's consider another example.
 
 ^ [Susan] is planning to open her first dance studio and needs [business] advice.
@@ -287,17 +291,17 @@ with a path of one or two [Knows] relationships
 
 to a person with an interest in [business]".^
 
-
+---
 An important [call out here] is that specifying the length [is important]
 :in: order to limit the depth or
 number of [hops] that the query [traverses] to find a match.
 
 In a large graph a [long] traversal might take longer than we'd like.
 
-
+---
 Referring back to our graph, ^
 
-we can see that if Jane were looking for a [chess] player
+we can see that if Jane was looking for a [chess] player
 
 we'd have to specify [knows star 3] for three hops to get to Tom - following the [green] path shown.
 
@@ -307,7 +311,7 @@ which involves [four] hops.
 
 Neo4j returns the shorter of the two paths.
 
-
+---
 The ability to traverse a network of relationships is [one of the great strengths] of graph databases.
 
 You can ask questions, such as find a friend of a friend ([or more]) who matches a particular criteria.
@@ -320,11 +324,12 @@ Such queries are also how recommendation engines can be used to promote new prod
 
 For example: when Amazon lists products also purchased in conjunction with a product you happen to be considering.
 
-# Accessing Neo4j from JavaScript
 
+# Accessing Neo4j from JavaScript
+-------------------------------------
 ^ Neo4j has an HTTP restful API :that: makes it possible :for: remote clients to connect to it.
 
-You can find a number of libraries on NPM which essential act as wrappers for [Neo's restful endpoints].
+You can find a number of libraries on NPM which essentially act as wrappers for [Neo's restful endpoints].
 
 In fact, I wrote a limited and :opinionated: Node library that facilitates working with Neo4j and optionally caching results using Redis.
 
@@ -336,7 +341,7 @@ That's the library we'll use in this presentation. ^
 
 
 # Installing
-
+-------------------------------------
 Installing the Neo4j driver for JavaScript involves a single command. ^
 
 ```shell
@@ -354,9 +359,8 @@ Lastly, we install the `neo4j-driver` package.
 Our project's GitHub repo  was initialized in this way.
 
 
-
 # Connecting to Neo (sample code)
-
+-------------------------------------
 Here is the `alex.js` example from the Github repo associated with this presentation.
 
 We begin by defining the location of our neo4j database instance.
@@ -395,13 +399,13 @@ That person turns out to be Jane.
 
 And the output is:
 
-Using the code patterns we've seen you'd able to perform insert, update and delete operations to build more complex applications.
+Using the code patterns we've seen you'd be able to perform insert, update and delete operations to build more complex applications.
 
 Neo4j is really quite approachable.
 
 
 # Exploring TrumpWorld
-
+-------------------------------------
 ^ As we close out our exploration into Graphs and GraphDBs,
 
 I'd like to share a practical example of how graphs are being used in the context of our current political climate here in the United States.
@@ -428,6 +432,7 @@ Mark Needham, at Neo Technologies, created a docker container packaging both Neo
 
 This dataset is also available online via the [Neo4j Sandbox] I mentioned earlier.
 
+---
 ## 20,000 foot view
 
 Let's imagine that we're investigative journalist following leads.
@@ -444,6 +449,7 @@ Here we see only 300 of the 2,620 available nodes.
 
 The dashboard limits the size of graph visualizations in order to keep them manageable.
 
+---
 ## Follow the money
 
 We can query the graph for banks and their connections to organizations and individuals.
@@ -458,9 +464,10 @@ RETURN *
 
 <img src="trumpworld-banks.png" width="500"/>
 
+---
 ## Most connected organizations
 
-Here we see which organizations are the most connected.
+Here we see which organizations are the most coHere we see which organizations are the most connected. Neo4j returns a table view because the following query focuses on the aggregation of the relationship type (r). This is how we're able to see the varied types of relationships without knowing their labels.
 
 Neo4j returns a table view because the following query focuses on the aggregation of the relationship type (r).
 
@@ -473,6 +480,7 @@ LIMIT 5
 
 <img src="trumpworld-connected-orgs.png"/>
 
+---
 ## Trump and Putin
 
 We can uncover the social ties between Trump and Putin using the following query.
@@ -499,7 +507,7 @@ Insights like these help journalist focus their resources and energies.
 
 
 # Recap
-
+-------------------------------------
 We began our journey by learning about network graphs.
 
 Along the way we discovered that graphs are literally everywhere we look.
@@ -516,15 +524,17 @@ Finally, we saw the power of using graph databases to better understand the curr
 
 Give graph databases a try. You may just discover that they're an ideal tool to tackle the modern challenges in our highly connected world.
 
-# Next steps
 
+# Next steps
+-------------------------------------
 * If you enjoyed this article say thanks by staring the github repo. https://github.com/cjus/node-neo4j-presentation
 * Visit the Neo4j website: https://neo4j.com and download their free book: https://neo4j.com/graph-databases-book
 * Enroll in a free online training course: https://neo4j.com/graphacademy/online-training/introduction-graph-databases
 * Explore the TrumpWorld graph via the [Docker container](https://github.com/neo4j-contrib/trumpworld-graph) or online on the [Neo4j Sandbox](https://neo4jsandbox.com/)
 
-# Books
 
+# Books
+-------------------------------------
 There a lots of books on Graphs and Graph Databases. Here are the ones I've read.
 
 * Graph Databases by Ian Robison, Jim Webber & Emil Eifrem

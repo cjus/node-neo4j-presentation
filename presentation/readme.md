@@ -54,7 +54,7 @@ If you consider a map of the New York City subway system - or any subway in the 
 
 <img src="subwaymap.png" width="500"/>
 
-Nodes are sometimes referred to as hubs when more than one path (or link) coverages.
+Nodes are sometimes referred to as hubs when more than one path (or link) converges.
 
 The New York City subway system has hubs at 34th and 42nd street, which allow one to switch trains and travel other parts of the subway's network graph. In the map below we can see that at 42nd street and Times Square we can switch to the N, Q, R, S, W, 1, 2, 3, or 7 trains.
 
@@ -89,7 +89,7 @@ Upon even closer examination - the leaves of a tree reveal a network of passages
 
 If you recall your high school biology class then this image might seem similar to textbook diagrams illustrating our own nervous system and arteries!
 
-In truth, we need reflect no further than our thoughts to realize that the neurons in our own brains form a network graph.
+In truth, we need reflect no further than our own thoughts to realize that the neurons in our brains form a network graph.
 
 <img src="neurons.jpg" width="300"/>
 
@@ -97,7 +97,7 @@ Indeed graphs are everywhere.
 
 ## Wet-ware
 
-Not only do our own bodies consists of graphs, it turns out that graphs are fundamental to how we actually think!
+Not only do our own bodies consist of graphs, it turns out that graphs are fundamental to how we actually think!
 
 Since infancy, we catalog objects and assign properties to them, we then map objects to one another based on their relationship. This process continues in our minds throughout our lives.
 
@@ -213,7 +213,7 @@ RETURN p1, r, p2;
 
 The new bit is the syntax `-[r:Knows*2]-`. This is referred to as a variable length relationship. Here we're saying "Match a Person node with the property name="Susan" with one or two `Knows` relationships to a person with an interest in "business". Specifying the length is important in order to limit the depth (or hops) that the query traverses to find a match. In a large graph, a long traversal might take longer than we'd like.
 
-Referring back to our graph, we can see that if Jane were looking for a chess player we'd have to specify `-[r:Knows*3]-` or three hops to get to Tom - following the green path shown below.
+Referring back to our graph, we can see that if Jane was looking for a chess player we'd have to specify `-[r:Knows*3]-` or three hops to get to Tom - following the green path shown below.
 
 <img src="graph6.png" width="300"/>
 
@@ -225,9 +225,9 @@ This is also where relational database systems and their use of joins becomes fa
 
 ## Accessing Neo4j from JavaScript
 
-Neo4j has an HTTP restful API that makes it possible for remote clients to connect to it. You can find a number of libraries on NPM which essential act as wrappers for Neo's restful endpoints.
+Neo4j has an HTTP restful API that makes it possible for remote clients to connect to it. You can find a number of libraries on NPM which essentially act as wrappers for Neo's restful endpoints.
 
-In fact, I wrote a limited and opinionated Node library that facilitates working with  Neo4j and optionally caching results using Redis. You can find it on NPM under the name of Neo4j-redis.
+In fact, I wrote a limited and opinionated Node library that facilitates working with Neo4j and optionally caching results using Redis. You can find it on NPM under the name of Neo4j-redis.
 
 Neo Technologies, the company behind Neo4j, has created the now official [Neo4j Driver for Javascript](https://www.npmjs.com/package/neo4j-driver). That's the library we'll use in this article.
 
@@ -342,7 +342,7 @@ $ node business.js
 Susan discovered Jane
 ```
 
-Using the code patterns we've seen you'd able to perform insert, update and delete operations to build more complex applications. Neo4j is really quite approachable.
+Using the code patterns we've seen you'd be able to perform insert, update and delete operations to build more complex applications. Neo4j is really quite approachable.
 
 ## Exploring TrumpWorld
 
@@ -382,7 +382,7 @@ RETURN *
 
 #### Most connected organizations
 
-Here we see which organizations are the most connected. Neo4j returns a table view because the following query focuses on the aggregation of the relationship type (r). This is how we're able to see the varied types of relationship without knowing their labels.
+Here we see which organizations are the most connected. Neo4j returns a table view because the following query focuses on the aggregation of the relationship type (r). This is how we're able to see the varied types of relationships without knowing their labels.
 
 ```
 MATCH (o:Organization)-[r]-()
