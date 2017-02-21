@@ -54,7 +54,7 @@ If you consider a map of the New York City subway system - or any subway in the 
 
 Nodes are sometimes referred to as hubs when more than one path (or link) converges.
 
-The New York City subway system has hubs at 34th and 42nd street, which allow one to switch trains and travel other parts of the subway's network graph. In the map below, at 42nd street and Times Square we can switch to the N, Q, R, S, W, 1, 2, 3, or 7 trains.
+The New York City subway system has hubs at 34th and 42nd street, which allow one to switch trains and travel other parts of the subway's network graph. In the map below, at 42nd street and Times Square, we can switch to the N, Q, R, S, W, 1, 2, 3, or 7 trains.
 
 <img src="timessquare.png" width="300"/>
 
@@ -350,7 +350,7 @@ Using the code patterns we've seen you'd be able to perform insert, update and d
 
 As we close out our exploration into Graphs and GraphDBs, I'd like to share a practical example of how graphs are being used in the context of our current political climate here in the United States.
 
-No, I'm not referring to the intelligence community - but rather  about the power of data in the hands of journalists and citizens armed with technology.
+No, I'm not referring to the intelligence community - but rather about the power of data in the hands of journalists and citizens armed with technology.
 
 On January 15th 2017, as many New Yorkers were resting on a cold and lazy Sunday morning, social news and entertainment media company, BuzzFeed, posted an article entitled [Help Us Map TrumpWorld](https://www.buzzfeed.com/johntemplon/help-us-map-trumpworld) which compiled a listing of 1,500 people and organizations associated with, in one way or another, to Donald Trump's varied business interests. In the article, the authors asked the public to help validate and contribute to the existing and quickly emerging list.
 
@@ -445,9 +445,9 @@ There are many books on Graphs and Graph Databases. Here are the ones I've read.
 
 * Graph Databases by Ian Robison, Jim Webber & Emil Eifrem
 * Learning Neo4j by Rik Bruggen
-* Linked: The New Science Of Networks Science Of Networks by Albert-laszlo Barabasi
+* Linked: The New Science Of Networks Science Of Networks by Albert-Laszlo Barabasi
 * The Tipping Point: How Little Things Can Make a Big Difference by Malcolm Gladwell
 * Six Degrees: The Science of a Connected Age by Duncan J. Watts
 
 ---
-Photos / diagrams created by author or licensed from iStockPhoto.
+Photos/diagrams created by the author or licensed from iStockPhoto.
