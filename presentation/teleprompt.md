@@ -172,7 +172,7 @@ Such a graph could become the basis for an intelligent contact management applic
 
 Additionally, some products offer Graph Database functionality combined with document and key/value stores, such as [OrientDB] and [ArangoDB].
 
-During the past decade, we've seen an increase of interest in the graph database space. 
+During the past decade, we've seen an increase of interest in the graph database space.
 
 One such project is [Microsoft Research's] [Trinity] project, which is now named Graph Engine.
 
@@ -205,7 +205,7 @@ The dashboard is an indispensable tool :and: a real pleasure to use.
 
 Here we see a dashboard view which allows us to enter [queries] and graphically see the results.   
 
-Looking closely at this screenshot you can see many of the concepts we've encountered in this talk. 
+Looking closely at this screenshot you can see many of the concepts we've encountered in this talk.
 
 Connecting to the dashboard is as simple as pointing your browser to http localhost port 7474
 
@@ -335,7 +335,7 @@ You can find it on NPM under the name of Neo4j-redis.
 
 [Neo Technologies], the company behind Neo4j, has created the now official [Neo4j Driver for Javascript].
 
-That's the library we'll use in this presentation. 
+That's the library we'll use in this presentation.
 
 # Installing
 -------------------------------------
@@ -421,7 +421,7 @@ but rather :about: the power of [data] in the hands of journalists and citizens 
 
 In the article the authors asked the public to help validate and contribute to the existing list.
 
-The data was compiled into a Google spreadsheet making it difficult to clearly see the rats nest of underlying interconnections. 
+The data was compiled into a Google spreadsheet making it difficult to clearly see the rats nest of underlying interconnections.
 
 ^ Later that day Sanchez Castro posted a tweet asking @Neo4j to help make sense of the compiled data.
 
@@ -434,10 +434,11 @@ This dataset is also available online via the [Neo4j Sandbox] I mentioned earlie
 ---
 ## 20,000 foot view
 
-Let's imagine that we're investigative journalist following leads.
+Let's imagine that we're investigative journalist following leads,
 
-We begin by accessing the Neo4j dashboard and looking at the 20,000 foot view of TrumpWorld.^
+we jump on the crazy bus for a quick ride over to Trump World.
 
+While there we open our laptops and begin by accessing the Neo4j dashboard for a 20,000 foot view of TrumpWorld.^
 
 ```
 MATCH (n1)-[r]->(n2) RETURN r, n1, n2
@@ -507,7 +508,6 @@ We began our journey by learning about network graphs.
 Along the way we discovered that graphs are literally everywhere we look.
 
 In fact, network graphs could not be closer to our hearts -
-
 if you consider the network of arteries within our own bodies.
 
 ^ We also learned that we actually think in terms of graphs

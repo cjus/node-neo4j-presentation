@@ -138,9 +138,11 @@ $ docker run -d -p 7474:7474 -p 7687:7687 -v ~/data:/data --name neo4j neo4j:3.1
 
 Neo4j comes with a web-based dashboard that allows you to interact with Neo. It's a great way to learn about Neo and later create and test your data models. The dashboard is an indispensable tool and a real pleasure to use.
 
-Here we see a dashboard view which allows us to enter queries and graphically see the results.  Connecting to an instance of Neo is as simple as pointing your browser to http://localhost:7474
+Here we see a dashboard view which allows us to enter queries and graphically see the results. Looking closely at the screenshot below you can see many of the concepts we've encountered earlier in this article.
 
 <img src="neo4j_browser.png" width="400"/>
+
+Connecting to the dashboard is as simple as pointing your browser to http://localhost:7474
 
 ## Neo4j queries
 
