@@ -1,7 +1,5 @@
 # Graphs, GraphDBs and JavaScript
 
-# **THIS ARTICLE IS STILL A WORK IN PROGRESS!**
-
 In this article, we're going to look at Graph Databases. Before we explore them, we'll consider the importance of graphs, the underlying data structure that allows GraphDBs to exist.
 
 Undoubtedly you're familiar with graphs - those charts showing colored bars, pie slices and points along a line. They're great data visualization tools designed to quickly convey information. However, those are not the types of graphs we'll consider.
@@ -127,7 +125,7 @@ There are many [graph databases](https://en.wikipedia.org/wiki/Graph_database) t
 
 In this article, we're going to use the world's most popular graph database, [Neo4j](https://neo4j.com/). Affectionately referred to by fans, as Neo.
 
-Getting started with Neo is easier than with most database products. You can try Neo without installing it by simply provisioning a free instance using the [Neo4j Sandbox](https://neo4jsandbox.com/). It comes complete with user guides and sample datasets. This would have been an invaluable resource when I first embarked on Neo several years ago. Back then, setting up Neo4j involved working with the correct version of the Java JVM and tweaking operating system file handle limits. For beginners, those days are thankfully over.
+Getting started with Neo is easier than with most database products. You can try Neo without installing it by simply provisioning a free instance using the [Neo4j Sandbox](https://neo4jsandbox.com/). It comes complete with user guides and sample datasets. This would have been an invaluable resource when I first embarked on Neo several years ago. Back then, setting up Neo4j involved working with the correct version of the Java JVM and tweaking operating system file handles.
 
 If you'd rather have a local instance of Neo4j running on your laptop you can [download and install](https://neo4j.com/download/community-edition) a free copy of Neo. However, being a big fan of Docker, I prefer to download and run Neo4j from a Docker container.
 
