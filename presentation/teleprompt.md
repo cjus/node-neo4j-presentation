@@ -436,7 +436,7 @@ This dataset is also available online via the [Neo4j Sandbox] I mentioned earlie
 
 Let's imagine that we're investigative journalist following leads,
 
-we jump on the crazy bus for a quick ride over to Trump World.
+we jump in our cars for a quick ride over to Trump World.
 
 While there we open our laptops and begin by accessing the Neo4j dashboard for a 20,000 foot view of TrumpWorld.^
 
