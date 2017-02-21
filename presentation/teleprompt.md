@@ -29,7 +29,6 @@ We can think of the vertices as representing [nodes] ^ and the [edges] as the re
 
 From here on out we'll simply refer to them as [nodes] and [links].
 
----
 Graphs can take on [real] world meaning, such as :revealing: the relationships ^ between people.
 
 For example, in this graph, Tom knows Alex but ^ doesn't directly know Bill ^ or even his neighbors, Susan and Jane.
@@ -52,7 +51,6 @@ During a time of prosperity, the people of :Königsberg: [constructed] seven bri
 
 The town's people later pondered whether it was possible to cross the seven bridges without crossing one twice. ^
 
-
 ^
 
 In his short [paper] ^ entitled "The solution of a problem relating to the geometry of position",  Euler offered a proof that such a path [could not] exist.
@@ -64,7 +62,6 @@ Euler represented ^ land masses as [nodes] and used [links] to represents bridge
 He then assigned each [node] a letter from A to D.
 
 With this, Euler, unknowingly founded an [extensive] branch of mathematics called [graph theory].
-
 
 # ^Graphs are everywhere
 -------------------------------------
@@ -85,7 +82,6 @@ The New York City [subway system has hubs] at 34th and 42nd street, which allow 
 As this subway sign shows ^ at 42nd street and Times Square we can switch to the 1, 2, 3, 7, N, Q, R, W, [or] S trains.
 
 
----
 A look at cities ^ throughout the :world: [reveals airports], and in larger cities - [airport hubs] -
 
 which connect flights to [other] flights and :to: destinations around the globe.
@@ -142,13 +138,11 @@ In fact, one way of improving memory is to build :more: mental graphs by creatin
 
 It turns out that our [brains] are a sort of graph database.
 
-
 # ^Graph databases
 -------------------------------------
 This all brings us to [Graph Databases] - software tools for building and working with graphs.
 
 Rather than organize [data] as collections of [tables], [rows], and [columns] -
-
 or even as [collections of documents] -
 
 graph databases allow us to model data :and: [relationships] in ways that closely mirror how we [naturally think] about them.
@@ -165,14 +159,13 @@ This type of [graph] is often referred to as a property graph.
 
 Such a graph could become the basis for an intelligent contact management application.
 
-
 # Enter Neo4j
 -------------------------------------
 ^ There many [graph databases] to choose from.
 
 Additionally, some products offer Graph Database functionality combined with document and key/value stores, such as [OrientDB] and [ArangoDB].
 
-During the past decade, we've seen an increase of interest in the graph database space.
+During the past decade, we've seen an [increase] of [interest] in :the: [graph database] space.
 
 One such project is [Microsoft Research's] [Trinity] project, which is now named Graph Engine.
 
@@ -182,18 +175,17 @@ Affectionately referred to by fans, as Neo.
 
 Getting started with Neo is easier than with most database products.
 
-^ You can try Neo without installing it by simply provisioning a free instance using the [Neo4j Sandbox].
+^ You can :try: Neo [without installing it] by simply provisioning a free instance using the [Neo4j Sandbox].
 
-^ It comes complete with user guides and sample datasets.
+^ It comes complete with [user guides] and [sample datasets].
 
 This would have been an invaluable resource when I first embarked on Neo several years ago.
 
-Back then, setting up Neo4j involved working with the correct version of the Java JVM and tweaking operating system file handle handles.
+Back then, setting up Neo4j involved working with the correct version of :the: [Java JVM] and tweaking operating system file handles.
 
-^ If you'd rather have a local instance of Neo4j running on your laptop you can [download and install] a free copy of Neo.
+^ If you'd rather have a local instance of Neo4j running on your laptop you can [download and install] a free copy.
 
 ^ However, being a big fan of Docker, I prefer to download and run Neo4j from a Docker container.
-
 
 # Neo4j dashboard
 -------------------------------------
@@ -201,11 +193,11 @@ Back then, setting up Neo4j involved working with the correct version of the Jav
 
 It's a great way to learn about Neo and later create and test your data models.
 
-The dashboard is an indispensable tool :and: a real pleasure to use.
+The [dashboard] is :an: indispensable tool :and: a real pleasure to use.
 
-Here we see a dashboard view which allows us to enter [queries] and graphically see the results.   
+Here we see a dashboard view which allows us to enter [queries] and [graphically] see the results.   
 
-Looking closely at this screenshot you can see many of the concepts we've encountered in this talk.
+Looking [closely] at this screenshot you can see many of the concepts we've :encountered: in this talk.
 
 Connecting to the dashboard is as simple as pointing your browser to http localhost port 7474
 
@@ -233,7 +225,7 @@ On the first line ^ , we see that we're trying to [match a node], represented by
 
 The [p:Person] ^ fragment says
 
-"map a variable called p with a label of Person".
+"[map a variable] :called: [p] with a [label of Person]".
 
 So here we learn that nodes can have labels (Person) and that we can assign them to variables (p).  
 
@@ -252,9 +244,9 @@ That link also has a [property] called `since`.
 
 We could write a [query] ^ that includes the relationship :by: using square brackets.
 
-Notice that we assign the variable `r` to the relationship link. ^
+Notice that we assign the variable [r] to the relationship link. ^
 
-We also use the [label] `Knows` to specify the type of link we're interested in.
+We also use the [label] [Knows] to specify the type of link we're interested in.
 
 The label [could have] been something else such as :worked_with: or :hired_by:.
 
@@ -287,13 +279,14 @@ This is referred to as a :variable: length [relationship].
 
 Here we're saying
 
-"[Match] a Person node with the property named Susan
+"^ [Match] a Person with the property named Susan
 
-with a path of one or two [Knows] relationships
+^ with a path of one or two [Knows] relationships
 
-to a person with an interest in [business]".^
+^ to a person with an interest in [business]".
 
----
+^
+
 An important [call out here] is that specifying the length [is important] to limit the depth or
 number of [hops] that the query [traverses] to find a match.
 
@@ -333,7 +326,7 @@ In fact, I wrote a limited and :opinionated: Node library that facilitates worki
 
 You can find it on NPM under the name of Neo4j-redis.
 
-[Neo Technologies], the company behind Neo4j, has created the now official [Neo4j Driver for Javascript].
+[Neo Technologies], the company behind [Neo4j], has created the now official [Neo4j Driver for Javascript].
 
 That's the library we'll use in this presentation.
 
@@ -343,12 +336,11 @@ Installing the Neo4j driver for JavaScript involves a single command. ^
 
 In this example we create a test project folder called `neo-test` and
 
-then use the NodeJS npm command to initialize a test project.
+then use the [NodeJS] npm command to initialize a test project.
 
-Lastly, we install the `neo4j-driver` package.
+Lastly, we install the [neo4j-driver] package.
 
-Our project's GitHub repo  was initialized in this way.
-
+Our project's GitHub repo was initialized in this way.
 
 # ^Connecting to Neo (sample code)
 -------------------------------------
@@ -356,49 +348,49 @@ Our project's GitHub repo  was initialized in this way.
 Here is the `alex.js` example from the Github repo associated with this presentation.
 
 
-We begin by defining the location of our neo4j database instance.
+We begin by :defining: the location of our neo4j database instance.
 
 
-I'm running mine on my laptop, so I specify `localhost`.  
+I'm [running] mine on my laptop, so I specify [localhost].  
 
-The `bolt://` portion tells Neo that we'd like to use the faster binary connection protocol, instead of the HTTP version.
-
-
-We then require the neo4j-driver and prepare an auth object to pass to the neo4j.driver setup.
+The `bolt://` portion tells Neo :that: [we'd like to use the faster binary connection protocol], instead of the HTTP version.
 
 
-With a driver created we define an error handler.
+We then require the [neo4j-driver] and prepare :an: [auth object] to pass to the [neo4j.driver] setup.
 
 
-Next, we create a driver session and run (execute) a Cypher query.  
+With :a: [driver created] we define an error handler.
 
 
-Note that the run function accepts two parameters and returns a JavaScript promise.
+Next, we create a [driver session] and run a Cypher query.  
 
 
-The first parameter to the run function is the query template and the second is an object with the  query's parameters.
+Note that the [run function] accepts [two] parameters and returns a JavaScript promise.
 
 
-This allows Neo to cache query plans (template) for added efficiency.
+The [first parameter] to the run function is the [query template] and the second is an object with the [query's parameters].
+
+
+This allows Neo to cache query plans (as template) for added efficiency.
 
 
 We then use the `.then` and `.catch` functions to handle the promise resolve or reject cases.
 
 
-
-Here is the output from the previous code.
+Let see the output.
 
 We see the information returned from the Cypher query.
 
 ---
 
-In this next example, we run the query where Susan is checking her network for a person who has an interest in business.
+In this [next example], we run the [query] :where: Susan is checking her network for a person who has an interest in business.
 
-Our query attempts to find a path from Susan to a person with an interest in business.  
+Our query attempts to [find a path] from Susan to a person with an [interest in business].  
 
 That person turns out to be Jane.
 
 And the output is:
+
 
 Using the code patterns we've seen you'd be able to perform insert, update and delete operations to build more complex applications.
 
@@ -436,7 +428,7 @@ This dataset is also available online via the [Neo4j Sandbox] I mentioned earlie
 
 Let's imagine that we're investigative journalist following leads,
 
-we jump in our cars for a quick ride over to Trump World.
+^ we jump in our cars for a quick ride over to Trump World.
 
 While there we open our laptops and begin by accessing the Neo4j dashboard for a 20,000 foot view of TrumpWorld.^
 
@@ -512,7 +504,7 @@ if you consider the network of arteries within our own bodies.
 
 ^ We also learned that we actually think in terms of graphs
 
-and that a graph database is a natural tool for representing our data models and their relationships.
+and that :a: graph database is :a: [natural tool] for representing :our: [data models and their relationships].
 
 Finally, we saw the power of using graph databases to better understand current events.
 
