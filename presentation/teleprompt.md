@@ -7,11 +7,13 @@
 
 # Introduction
 
-Hello everyone. Thanks for joining us.
+Hello everyone.
+
+Thanks for joining us.
 
 In [this] presentation we're going to look at Graph Databases.
 
-Before we [explore] them, we'll consider :the: importance [of] <graphs> the underlying data structure that powers GraphDBs.
+Before we [explore] them, we'll consider :the: importance [of] <graphs> the underlying [data structure] that powers GraphDBs.
 
 ^ Undoubtedly you're familiar with graphs - those charts showing [colored] bars, pie slices and [points] along a line.
 
@@ -27,16 +29,16 @@ A "thing" ^ is represented by a [vertex] and a "link" is referred to as an [edge
 
 We can think of the vertices as representing [nodes] ^ and the [edges] as the relationships between them.
 
-From here on out we'll simply refer to them as [nodes] and [links].
+From here on out we'll :simply: refer to them as [nodes] and [links].
 
 ---
-Graphs can take on [real] world meaning, such as :revealing: the relationships between people.
+Graphs can take on :real: [world] meaning, such as :revealing: the relationships between people.
 
 ^ For example, in this graph, Tom knows Alex but doesn't directly know Bill or even his neighbors, Susan and Jane.
 
 If Tom wanted to [meet] Susan, ^ he could ask Alex to introduce them.
 
-When lots of [nodes] and [links] exist, graphs can become quite complex, :such as: the web of [social] and [business] relationships found on ^ [Facebook] and [LinkedIn].
+When lots of [nodes] and [links] exist, graphs can become quite complex, :such as: in the web of [social] and [business] relationships found on ^ [Facebook] and [LinkedIn].
 
 # ^Graphs revealed.
 -------------------------------------
@@ -110,7 +112,7 @@ The [roots] ^ of a tree are almost identical to the branches as shown here in th
 
 ^ Upon :even: closer examination - the leaves of a tree reveal a [network of passages] which [deliver water] and [nutrients] to vibrant leafy greens.
 
-If you recall your high school biology class then this image might seem [similar] to :textbook: diagrams illustrating our own nervous system and arteries! ^
+If you recall your high school biology class [then] this image might seem [similar] to :textbook: diagrams illustrating our own nervous system and arteries! ^
 
 In truth, we need reflect no further than our own thoughts to realize that the [neurons] ^ in our brains form a network graph.
 
@@ -132,13 +134,11 @@ During :that: process, you were exposed to new terms.
 
 And as you learned more about them you associated characteristics or properties to those terms.
 
-As you :continued: learning, you identified relationships allowing you to [associate] a topic to other topics you already [understood].
-
-Our minds [organize information] by creating [mental graphs] called [memories].
-
-It turns out that our [memories] are a sort of graph database.
+Our minds [organize information] by creating the [mental graphs] we call [memories].
 
 In fact, one way of improving memory is to build :more: mental graphs by creating new [links] (or associations) to existing memories.  
+
+It turns out that our [brains] are a sort of graph database.
 
 
 # ^Graph databases
@@ -146,7 +146,6 @@ In fact, one way of improving memory is to build :more: mental graphs by creatin
 This all brings us to [Graph Databases] - software tools for building and working with graphs.
 
 Rather than organize [data] as collections of [tables], [rows], and [columns] -
-
 or even as [collections of documents] -
 
 graph databases allow us to model data :and: [relationships] in ways that closely mirror how we [naturally think] about them.
@@ -157,7 +156,7 @@ Let's take a closer look.
 
 This type of [graph] is often referred to as a property graph.
 
-^ We have [age] and [interest] properties associated with [each] person, and we could have easily added other [personal] characteristics.
+^ We have [age] and [interest] properties associated with [each] person, and we could have easily added :other: [personal] characteristics.
 
 ^ In the relationship links, we've stored information about when a relationship began.
 
@@ -166,11 +165,13 @@ Such a graph could become the basis for an intelligent contact management applic
 
 # Enter Neo4j
 -------------------------------------
-^ There many [graph databases] to choose from.
+^ There are many [graph databases] to choose from.
 
 Additionally, some products offer Graph Database functionality combined with document and key/value stores, such as [OrientDB] and [ArangoDB].
 
-During the past decade, others have been doing interesting work in the graph database space, such as [Microsoft Research's] [Trinity] project.
+During the past decade we've increased interest in the graph database space.
+
+One such as project is [Microsoft Research's Trinity] project, which is now named Graph Engine.
 
 ^ In this talk we're going to use the world's most popular graph database, Neo4j.
 
@@ -335,7 +336,7 @@ You can find it on NPM under the name of Neo4j-redis.
 
 [Neo Technologies], the company behind Neo4j, has created the now official [Neo4j Driver for Javascript].
 
-That's the library we'll use in this presentation. 
+That's the library we'll use in this presentation.
 
 # Installing
 -------------------------------------
@@ -421,7 +422,7 @@ but rather :about: the power of [data] in the hands of journalists and citizens 
 
 In the article the authors asked the public to help validate and contribute to the existing list.
 
-The data was compiled into a Google spreadsheet making it difficult to clearly see the rats nest of underlying interconnections. 
+The data was compiled into a Google spreadsheet making it difficult to clearly see the rats nest of underlying interconnections.
 
 ^ Later that day Sanchez Castro posted a tweet asking @Neo4j to help make sense of the compiled data.
 

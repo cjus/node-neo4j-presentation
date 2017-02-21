@@ -22,7 +22,7 @@ Graphs can take on real world meaning, such as revealing the relationships betwe
 
 <img src="alex-introduces-tom-and-susan.png" width="300"/>
 
-When lots of nodes and links exist, graphs can become quite complex, such as the web of social and business relationships found on Facebook and LinkedIn.
+When lots of nodes and links exist, graphs can become quite complex, such as in the web of social and business relationships found on Facebook and LinkedIn.
 
 <img src="graph4.jpg" width="500"/>
 
@@ -103,9 +103,11 @@ Since infancy, we catalog objects and assign properties to them, we then map obj
 
 <img src="infant.jpg" width="300"/>
 
-Think about any complex topic you've had to learn. Perhaps you began by reading introductory material that provided you with a high-level overview. During that process, you were exposed to new terms. And as you learned more about them you associated characteristics or properties to those terms. As you continued learning, you identified relationships allowing you to associate a topic to other topics you already understood.
+Think about any complex topic you've had to learn. Perhaps you began by reading introductory material that provided you with a high-level overview. During that process, you were exposed to new terms. And as you learned more about them you associated characteristics or properties to those terms.
 
-Our minds organize information by creating mental graphs called memories. It turns out that our memories are a sort of graph database. In fact, one way of improving memory is to build more mental graphs by creating new links (or associations) to existing memories.
+Our minds organize information by creating the mental graphs we call memories. In fact, one way of improving memory is to build more mental graphs by creating new links (or associations) to existing memories.
+
+It turns out that our brains are a sort of graph database.
 
 ## Graph databases
 
@@ -121,7 +123,7 @@ Such a graph could become the basis for an intelligent contact management applic
 
 ## Enter Neo4j
 
-There are many [graph databases](https://en.wikipedia.org/wiki/Graph_database) to choose from. Additionally, some products offer Graph Database functionality combined with document and key/value stores, such as  [OrientDB](http://orientdb.com/) and [ArangoDB](https://www.arangodb.com/). During the past decade, others have been doing interesting work in the graph database space, such as [Microsoft Research's Trinity](https://www.microsoft.com/en-us/research/project/trinity/) project.
+There are many [graph databases](https://en.wikipedia.org/wiki/Graph_database) to choose from. Additionally, some products offer Graph Database functionality combined with document and key/value stores, such as  [OrientDB](http://orientdb.com/) and [ArangoDB](https://www.arangodb.com/). During the past decade, we've seen an increase of interest in the graph database space. One such project is [Microsoft Research's Trinity](https://www.microsoft.com/en-us/research/project/trinity/) project, which is now named Graph Engine.
 
 In this article, we're going to use the world's most popular graph database, [Neo4j](https://neo4j.com/). Affectionately referred to by fans, as Neo.
 
@@ -354,7 +356,7 @@ On January 15th 2017, as many New Yorkers were resting on a cold and lazy Sunday
 
 The data was compiled into a Google spreadsheet making it difficult to clearly see the rats nest of underlying interconnections.
 
-^Later that day Sanchez Castro posted a tweet asking @Neo4j to help make sense of the compiled data.
+Later that day Sanchez Castro posted a tweet asking @Neo4j to help make sense of the compiled data.
 
 The team at Neo Technologies was happy to oblige and proceeded to load the data into a Neo4j graph.
 
