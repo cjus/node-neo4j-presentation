@@ -11,7 +11,7 @@ Hello everyone. Thanks for joining us.
 
 In [this] presentation we're going to look at Graph Databases.
 
-Before we [explore] them, we'll consider :the: importance [of] <graphs> the underlying data structure that allows GraphDBs to exist.
+Before we [explore] them, we'll consider :the: importance [of] <graphs> the underlying data structure that powers GraphDBs.
 
 ^ Undoubtedly you're familiar with graphs - those charts showing [colored] bars, pie slices and [points] along a line.
 
@@ -38,8 +38,7 @@ If Tom wanted to [meet] Susan, ^ he could ask Alex to introduce them.
 
 When lots of [nodes] and [links] exist, graphs can become quite complex, :such as: the web of [social] and [business] relationships found on ^ [Facebook] and [LinkedIn].
 
-
-# Graphs revealed.
+# ^Graphs revealed.
 -------------------------------------
 Graph diagrams made their debut in a paper written by :Leonard Euler: ^,  a Swiss-born mathematician who is regarded as the most [prolific] mathematician of all time.
 
@@ -73,7 +72,6 @@ Here is a graph ^ that links [40] of the earliest known AIDS patients by sexual 
 ^ On a lighter note, you may have [recently] taken a train ride. Did you enjoy [riding] a graph?
 
 If you consider a map of the New York City [subway] system ^ - or any subway in the world for that matter -
-
 and if you label the train stations as [nodes] and the routes connecting stations as [links] - you'll quickly see a graph emerge.
 
 Nodes are sometimes referred to as [hubs] when more :than: one path (or link) converges.
@@ -82,21 +80,23 @@ The New York City [subway system has hubs] at 34th and 42nd street, which allow 
 
 As this subway sign shows ^ at 42nd street and Times Square we can switch to the 1, 2, 3, 7, N, Q, R, W, [or] S trains.
 
+
 ---
 A look at cities ^ throughout the :world: [reveals airports], and in larger cities - [airport hubs] -
 
 which connect flights to [other] flights and :to: destinations around the globe.
 
-Yes, the paths of air [and] ocean travel, also form a network graph.
+Yes, the paths of [air] and [ocean] travel, also form a network graph.
 
 If you look closely you can see :where: lots of lines converge [indicating] network nodes which are hubs. They're the [yellow] circles shown.
+
+So it shouldn't be a surprise that Google map directions are also powered by graphs.
 
 ---
 Consider 3D games ^, the characters and terrains are built from wire frame models called meshes, which are essentially graphs.  
 
-In fact, the  process of applying a [texture] to a wire frame model involves mapping an image [onto] the surface area within vertices and edges - a process known as texture mapping. ^
+In fact, the  process of applying a [texture] to a wire frame model involves mapping an image [onto] the surface area within vertices and edges - a process known as texture mapping.
 
----
 Ever wonder how computer game characters ^ find their way within a game world?
 
 Dijkstra's algorithm, employed in computer game AI, uses a weighted graph to find routes.
@@ -124,7 +124,6 @@ Since [infancy], ^ we catalog objects and assign properties to them, we then map
 
 This process continues well into [our] adult lives.
 
----
 ^ Think about any complex topic you've had to learn.
 
 Perhaps you began by reading :introductory: material that provided you with a high-level overview.
@@ -142,9 +141,9 @@ It turns out that our [memories] are a sort of graph database.
 In fact, one way of improving memory is to build :more: mental graphs by creating new [links] (or associations) to existing memories.  
 
 
-# Graph databases
+# ^Graph databases
 -------------------------------------
-This all brings us to ^ [Graph Databases] - software tools for building and working with graphs.
+This all brings us to [Graph Databases] - software tools for building and working with graphs.
 
 Rather than organize [data] as collections of [tables], [rows], and [columns] -
 
@@ -324,9 +323,9 @@ Such queries are also how recommendation engines can be used to promote new prod
 For example: when Amazon lists products also purchased in conjunction with a product you happen to be considering.
 
 
-# Accessing Neo4j from JavaScript
+# ^Accessing Neo4j ...
 -------------------------------------
-^ Neo4j has an HTTP restful API :that: makes it possible :for: remote clients to connect to it.
+Neo4j has an HTTP restful API :that: makes it possible :for: remote clients to connect to it.
 
 You can find a number of libraries on NPM which essentially act as wrappers for [Neo's restful endpoints].
 
@@ -336,18 +335,11 @@ You can find it on NPM under the name of Neo4j-redis.
 
 [Neo Technologies], the company behind Neo4j, has created the now official [Neo4j Driver for Javascript].
 
-That's the library we'll use in this presentation. ^
-
+That's the library we'll use in this presentation. 
 
 # Installing
 -------------------------------------
 Installing the Neo4j driver for JavaScript involves a single command. ^
-
-```shell
-$ mkdir neo-test; cd neo-test
-$ npm init -y
-$ npm install neo4j-driver
-```
 
 In this example we create a test project folder called `neo-test` and
 
@@ -358,35 +350,45 @@ Lastly, we install the `neo4j-driver` package.
 Our project's GitHub repo  was initialized in this way.
 
 
-# Connecting to Neo (sample code)
+# ^Connecting to Neo (sample code)
 -------------------------------------
+
 Here is the `alex.js` example from the Github repo associated with this presentation.
+
 
 We begin by defining the location of our neo4j database instance.
 
+
 I'm running mine on my laptop, so I specify `localhost`.  The `bolt://` portion tells Neo that we'd like to use the faster binary connection protocol, instead of the HTTP version.
 
-> You can find out more about bolt [here](https://neo4j.com/blog/neo4j-3-0-language-drivers).
 
 We then require the neo4j-driver and prepare an auth object to pass to the neo4j.driver setup.
 
+
 With a driver created we define an error handler.
+
 
 Next, we create a driver session and run (execute) a Cypher query.  
 
+
 Note that the run function accepts two parameters and returns a JavaScript promise.
+
 
 The first parameter to the run function is the query template and the second is an object with the  query's parameters.
 
+
 This allows Neo to cache query plans (template) for added efficiency.
 
+
 We then use the `.then` and `.catch` functions to handle the promise resolve or reject cases.
+
+
 
 Here is the output from the previous code.
 
 We see the information returned from the Cypher query.
 
-> To learn more about the neo4j-driver check out the project [documentation].
+---
 
 In this next example, we run the query where Susan is checking her network for a person who has an interest in business.
 
@@ -410,24 +412,22 @@ Neo4j is really quite approachable.
 I'd like to share a practical example of how graphs are being used in the context of our current political climate here in the United States.
 
 No, I'm not referring to the Intelligence community -
+but rather :about: the power of [data] in the hands of journalists and citizens armed with technology.
 
-but more about the power of data in the hands of journalists and citizens armed with technology.
+^ On January 15th 2017, as many [New Yorkers] were resting on a [cold and lazy] Sunday morning,
 
-On January 15th 2017, as many New Yorkers were resting on a cold and lazy Sunday morning,
-
-social news and entertainment media company, BuzzFeed, posted an article entitled
-
-"Help Us Map TrumpWorld", which compiled a listing of 1,500 people and organizations associated with,
-
-in one way or another, to Donald Trump's varied business interests.
+[social news] and [entertainment media company], BuzzFeed, posted an article ^ entitled:
+"Help Us Map TrumpWorld", which compiled a listing of 1,500 people and organizations associated with, in one way or another, to Donald Trump's varied business interests.
 
 In the article the authors asked the public to help validate and contribute to the existing list.
 
-The data was compiled into a Google spreadsheet making it difficult to clearly see the rats nest of underlying interconnections.
+The data was compiled into a Google spreadsheet making it difficult to clearly see the rats nest of underlying interconnections. 
 
-Enter, the team at Neo Technologies who downloaded the data and loaded it into a Neo4j graph.
+^ Later that day Sanchez Castro posted a tweet asking @Neo4j to help make sense of the compiled data.
 
-Mark Needham, at Neo Technologies, created a docker container packaging both Neo and the TrumpWorld dataset making it easy for anyone to explore the rabbit hole that is Trump World. ^
+The team at Neo Technologies was happy to oblige and proceeded to load the data into a Neo4j graph.
+
+Mark Needham, at Neo Technologies, later created a docker container packaging both Neo and the TrumpWorld dataset making it easy for anyone to explore the rabbit hole that is Trump World. ^
 
 This dataset is also available online via the [Neo4j Sandbox] I mentioned earlier.
 
@@ -441,8 +441,6 @@ We begin by accessing the Neo4j dashboard and looking at the 20,000 foot view of
 ```
 MATCH (n1)-[r]->(n2) RETURN r, n1, n2
 ```
-
-<img src="trumpworld-highlevel.png" width="500"/>
 
 Here we see only 300 of the 2,620 available nodes.
 
@@ -461,8 +459,6 @@ WHERE bank.name contains "BANK"
 RETURN *
 ```
 
-<img src="trumpworld-banks.png" width="500"/>
-
 ---
 ## Most connected organizations
 
@@ -479,8 +475,6 @@ ORDER BY count(*) DESC
 LIMIT 5
 ```
 
-<img src="trumpworld-connected-orgs.png"/>
-
 ---
 ## Trump and Putin
 
@@ -491,8 +485,6 @@ MATCH (vp:Person {name:"VLADIMIR PUTIN"}),(dt:Person {name:"DONALD J. TRUMP"})
 MATCH path = allShortestPaths( (vp)-[*]-(dt) )
 RETURN path
 ```
-
-<img src="trumpworld-putin.png" width="200"/>
 
 By clicking on the links we discover the following:
 

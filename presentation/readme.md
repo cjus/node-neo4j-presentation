@@ -348,11 +348,17 @@ Using the code patterns we've seen you'd be able to perform insert, update and d
 
 As we close out our exploration into Graphs and GraphDBs, I'd like to share a practical example of how graphs are being used in the context of our current political climate here in the United States.
 
-No, I'm not referring to the intelligence community - but more about the power of data in the hands of journalists and citizens armed with technology.
+No, I'm not referring to the intelligence community - but rather  about the power of data in the hands of journalists and citizens armed with technology.
 
 On January 15th 2017, as many New Yorkers were resting on a cold and lazy Sunday morning, social news and entertainment media company, BuzzFeed, posted an article entitled [Help Us Map TrumpWorld](https://www.buzzfeed.com/johntemplon/help-us-map-trumpworld) which compiled a listing of 1,500 people and organizations associated with, in one way or another, to Donald Trump's varied business interests. In the article, the authors asked the public to help validate and contribute to the existing and quickly emerging list.
 
-The data was compiled into a Google spreadsheet making it difficult to clearly see the rats nest of underlying interconnections. Enter, the team at Neo Technologies who downloaded the data and loaded it into a Neo4j graph. Mark Needham, at Neo Technologies, created a [docker container](https://hub.docker.com/r/markhneedham/neo4j-3.1-trumpworld/) packaging both Neo and the TrumpWorld dataset making it easy for anyone to explore the rabbit hole that is Trump World. This dataset is also available online via the [Neo4j Sandbox](https://neo4jsandbox.com/) I mentioned earlier.
+The data was compiled into a Google spreadsheet making it difficult to clearly see the rats nest of underlying interconnections.
+
+^Later that day Sanchez Castro posted a tweet asking @Neo4j to help make sense of the compiled data.
+
+The team at Neo Technologies was happy to oblige and proceeded to load the data into a Neo4j graph.
+
+Mark Needham, at Neo Technologies, later created a [docker container](https://hub.docker.com/r/markhneedham/neo4j-3.1-trumpworld/) packaging both Neo and the TrumpWorld dataset making it easy for anyone to explore the rabbit hole that is Trump World. This dataset is also available online via the [Neo4j Sandbox](https://neo4jsandbox.com/) I mentioned earlier.
 
 <img src="trumpworld-graph-dataset-neo4j-analysis-buzzfeed.png" width="500"/>
 
