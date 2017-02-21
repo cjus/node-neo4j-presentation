@@ -175,7 +175,7 @@ Affectionately referred to by fans, as Neo.
 
 Getting started with Neo is easier than with most database products.
 
-^ You can :try: Neo [without installing it] by simply provisioning a free instance using the [Neo4j Sandbox].
+^ You can try Neo [without installing it] by simply provisioning a free instance using the [Neo4j Sandbox].
 
 ^ It comes complete with [user guides] and [sample datasets].
 
@@ -225,7 +225,7 @@ On the first line ^ , we see that we're trying to [match a node], represented by
 
 The [p:Person] ^ fragment says
 
-"[map a variable] :called: [p] with a [label of Person]".
+"[map a variable] called [p] with a [label of Person]".
 
 So here we learn that nodes can have labels (Person) and that we can assign them to variables (p).  
 
@@ -279,7 +279,7 @@ This is referred to as a :variable: length [relationship].
 
 Here we're saying
 
-"^ [Match] a Person with the property named Susan
+"^ [Match] a Person node with the property named Susan
 
 ^ with a path of one or two [Knows] relationships
 
@@ -287,6 +287,7 @@ Here we're saying
 
 ^
 
+---
 An important [call out here] is that specifying the length [is important] to limit the depth or
 number of [hops] that the query [traverses] to find a match.
 
@@ -340,7 +341,7 @@ then use the [NodeJS] npm command to initialize a test project.
 
 Lastly, we install the [neo4j-driver] package.
 
-Our project's GitHub repo was initialized in this way.
+Our project's GitHub repo  was initialized in this way.
 
 # ^Connecting to Neo (sample code)
 -------------------------------------
@@ -353,31 +354,32 @@ We begin by :defining: the location of our neo4j database instance.
 
 I'm [running] mine on my laptop, so I specify [localhost].  
 
-The `bolt://` portion tells Neo :that: [we'd like to use the faster binary connection protocol], instead of the HTTP version.
+The `bolt://` portion tells Neo that [we'd like to use the faster binary connection protocol], instead of the HTTP version.
 
 
-We then require the [neo4j-driver] and prepare :an: [auth object] to pass to the [neo4j.driver] setup.
+We then require the [neo4j-driver] and prepare an auth object to pass to the [neo4j.driver] setup.
 
 
 With :a: [driver created] we define an error handler.
 
 
-Next, we create a [driver session] and run a Cypher query.  
+Next, we create a [driver session] and run (execute) a Cypher query.  
 
 
 Note that the [run function] accepts [two] parameters and returns a JavaScript promise.
 
 
-The [first parameter] to the run function is the [query template] and the second is an object with the [query's parameters].
+The [first parameter] to the run function is the [query template] and the second is an object with the  [query's parameters].
 
 
-This allows Neo to cache query plans (as template) for added efficiency.
+This allows Neo to cache query plans (template) for added efficiency.
 
 
 We then use the `.then` and `.catch` functions to handle the promise resolve or reject cases.
 
 
-Let see the output.
+
+Let's see the output. 
 
 We see the information returned from the Cypher query.
 
@@ -403,7 +405,7 @@ Neo4j is really quite approachable.
 
 I'd like to share a practical example of how graphs are being used in the context of our current political climate here in the United States.
 
-No, I'm not referring to the Intelligence community -
+No, I'm not :referring: to the Intelligence community -
 but rather :about: the power of [data] in the hands of journalists and citizens armed with technology.
 
 ^ On January 15th 2017, as many [New Yorkers] were resting on a [cold and lazy] Sunday morning,
@@ -417,9 +419,9 @@ The data was compiled into a Google spreadsheet making it difficult to clearly s
 
 ^ Later that day Sanchez Castro posted a tweet asking @Neo4j to help make sense of the compiled data.
 
-The team at Neo Technologies was happy to oblige and proceeded to load the data into a Neo4j graph.
+The team at Neo Technologies was happy to :oblige: and proceeded to load the data into a Neo4j graph.
 
-Mark Needham, at Neo Technologies, later created a docker container packaging both Neo and the TrumpWorld dataset making it easy for anyone to explore the rabbit hole that is Trump World. ^
+Mark Needham, at Neo Technologies, later created a [docker container] packaging both [Neo and the TrumpWorld dataset] making it easy for anyone to explore the [rabbit hole] that is Trump World. ^
 
 This dataset is also available online via the [Neo4j Sandbox] I mentioned earlier.
 
@@ -428,9 +430,9 @@ This dataset is also available online via the [Neo4j Sandbox] I mentioned earlie
 
 Let's imagine that we're investigative journalist following leads,
 
-^ we jump in our cars for a quick ride over to Trump World.
+^ we jump :in: our cars for [a quick ride] over to Trump World.
 
-While there we open our laptops and begin by accessing the Neo4j dashboard for a 20,000 foot view of TrumpWorld.^
+While there, we open our laptops and begin by accessing the Neo4j dashboard for a 20,000 foot view of TrumpWorld. ^
 
 ```
 MATCH (n1)-[r]->(n2) RETURN r, n1, n2
@@ -495,18 +497,17 @@ Insights like these help journalist focus their resources and energies.
 
 # ^Recap
 -------------------------------------
-We began our journey by learning about network graphs.
+We began our journey by learning about [network graphs].
 
-Along the way we discovered that graphs are literally everywhere we look.
+Along the way we [discovered] that graphs are :literally: [everywhere we look].
 
-In fact, network graphs could not be closer to our hearts -
+In fact, network graphs [could not be closer] to our hearts -
 if you consider the network of arteries within our own bodies.
 
-^ We also learned that we actually think in terms of graphs
+^ We also learned that we [actually think in terms of graphs]
+and that :a: graph database is :a: [natural tool] for representing our [data models and their relationships].
 
-and that :a: graph database is :a: [natural tool] for representing :our: [data models and their relationships].
-
-Finally, we saw the power of using graph databases to better understand current events.
+Finally, we saw the [power] of using [graph databases] to better understand current events.
 
 Give graph databases a try. You may just discover that they're an ideal tool to tackle the modern challenges in our highly connected world.
 
